@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VBM._pages._main.login_page"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource vbmwhite}">
+    <ScrollView>
+
+        <Grid>
+
+            <ff:CachedImage Source="bgloginpage" 
+                            Aspect="Fill"/>
+
+            <StackLayout HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         HeightRequest="598"
+                         WidthRequest="400"
+                         Margin="0,120,0,0">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid>
+
+                        <Label Text="Makeline" 
+                               FontSize="36" 
+                               LineHeight="40" 
+                               FontAttributes="Bold"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Center"/>
+
+                        <ff:CachedImage Source="onbttn_"
+                                        Aspect="AspectFill"
+                                        HeightRequest="180"
+                                        WidthRequest="150"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="Center"/>
+
+                    </Grid>
+
+                    <StackLayout Grid.Row="1">
+
+                        <border:SfBorder CornerRadius="30"
+                                         BackgroundColor="{StaticResource vbmlightgray}"
+                                         BorderColor="{StaticResource vbmlightgray}"
+                                         HasShadow="False"
+                                         WidthRequest="450"
+                                         HeightRequest="100"
+                                         Margin="0,20">
+
+                            <Grid Padding="10">
+
+                                <ff:CachedImage Source="shopicon"
+                                                Aspect="Fill"
+                                                HeightRequest="50"
+                                                WidthRequest="50"
+                                                HorizontalOptions="Start"
+                                                VerticalOptions="Center"/>
+
+                                <Label Text="Danh sách cửa hàng" 
+                                       FontSize="25" 
+                                       TextColor="#707b77"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+
+                                <ff:CachedImage Source="Polygon"
+                                                Aspect="Fill"
+                                                HorizontalOptions="End"
+                                                VerticalOptions="Center"
+                                                Margin="0,0,28,0"/>
+
+                            </Grid>
+
+                        </border:SfBorder>
+
+                        <border:SfBorder CornerRadius="30"
+                                         BackgroundColor="{StaticResource vbmlightgray}"
+                                         BorderColor="{StaticResource vbmlightgray}"
+                                         HasShadow="False"
+                                         WidthRequest="450"
+                                         HeightRequest="100"
+                                         Margin="0,20">
+
+                            <Grid Padding="10">
+
+                                <ff:CachedImage Source="mobileicon"
+                                                Aspect="Fill"
+                                                HorizontalOptions="Start"
+                                                VerticalOptions="Center"/>
+
+                                <Entry FontSize="25"
+                                       Placeholder="Số điện thoại"
+                                       HorizontalTextAlignment="Start"
+                                       Margin="100,0,0,0"
+                                       VerticalOptions="Center"/>
+
+                            </Grid>
+
+                        </border:SfBorder>
+
+                        <border:SfBorder CornerRadius="30"
+                                         BackgroundColor="{StaticResource vbmlightgray}"
+                                         BorderColor="{StaticResource vbmlightgray}"
+                                         HasShadow="False"
+                                         WidthRequest="450"
+                                         HeightRequest="100"
+                                         Margin="0,20">
+
+                            <Grid Padding="10">
+
+                                <ff:CachedImage Source="passicon"
+                                                Aspect="Fill"
+                                                HorizontalOptions="Start"
+                                                VerticalOptions="Center"/>
+
+                                <Entry FontSize="25"
+                                       Placeholder="Mật khẩu"
+                                       IsPassword="True"
+                                       VerticalOptions="Center"
+                                       Margin="100,0,0,0"/>
+
+                            </Grid>
+
+                        </border:SfBorder>
+
+                        <border:SfBorder BackgroundColor="{StaticResource vbmlightyellow}"
+                                         BorderColor="{StaticResource vbmlightyellow}"
+                                         HasShadow="False"
+                                         HeightRequest="86"
+                                         WidthRequest="278"
+                                         CornerRadius="50"
+                                         Margin="60,30,60,0">
+
+                            <Label Text="Đăng nhập"
+                                   TextColor="{StaticResource vbmgreen}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   FontSize="24"/>
+
+                            <border:SfBorder.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="login_Tapped"/>
+                            </border:SfBorder.GestureRecognizers>
+
+                        </border:SfBorder>
+
+                    </StackLayout>
+
+                </Grid>
+
+            </StackLayout>
+
+        </Grid>
+
+    </ScrollView>
+
+</ContentPage>

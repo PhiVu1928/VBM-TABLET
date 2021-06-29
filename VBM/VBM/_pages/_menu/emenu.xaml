@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="VBM._pages._menu.emenu"
+             BackgroundColor="{StaticResource vbmwhite}">
+    
+    <Grid>
+
+        <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                         HeightRequest="197"
+                         WidthRequest="161"
+                         BorderWidth="0"
+                         BorderColor="Transparent"
+                         HasShadow="True"
+                         ShadowColor="WhiteSmoke"
+                         CornerRadius="30"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+            <Grid>                
+
+                <Label Text="{Binding Name}"
+                       FontSize="18"
+                       Margin="0,0,0,10"
+                       HorizontalOptions="Center"
+                       VerticalOptions="End"
+                       HorizontalTextAlignment="Center"/>
+
+            </Grid>
+
+
+
+        </border:SfBorder>
+
+        <border:SfBorder WidthRequest="123"
+                         HeightRequest="138"
+                         CornerRadius="20"
+                         HasShadow="False"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Start">
+            <ff:CachedImage Source="{Binding Image}"
+                            Aspect="Fill"/>
+        </border:SfBorder>
+
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+        </Grid.GestureRecognizers>
+
+    </Grid>
+
+</ContentView>

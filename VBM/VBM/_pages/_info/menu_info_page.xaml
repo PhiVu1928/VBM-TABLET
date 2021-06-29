@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="VBM._pages._info.menu_info_page"
+             Title="vbm"
+             BackgroundColor="{StaticResource vbmwhite}">
+
+    <StackLayout Orientation="Vertical"
+                 Margin="10,74,0,0"
+                 Spacing="40">
+
+        <Grid>
+
+            <ff:CachedImage Source="usericon"
+                            Aspect="Fill"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"/>
+
+            <Label Text="Nguyễn Văn Hải "
+                   FontSize="25"
+                   Margin="64,0,0,0"
+                   HorizontalTextAlignment="Start"/>
+            
+        </Grid>
+
+        <Grid x:Name="tinhtrang">
+
+            <ff:CachedImage Source="viewicon"
+                            Aspect="Fill"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"/>
+
+            <Label Text="Xem tình trạng đơn"
+                   FontSize="25"
+                   Margin="64,0,0,0"
+                   HorizontalTextAlignment="Start"/>
+
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Tinhtrangdon_Tapped"/>
+            </Grid.GestureRecognizers>
+            
+        </Grid>
+
+        <Grid x:Name="ready">
+
+            <ff:CachedImage Source="chuanbiicon"
+                            Aspect="Fill"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"/>
+
+            <Label Text="Chuẩn bị nguyên liệu"
+                   FontSize="25"
+                   Margin="64,0,0,0"
+                   HorizontalTextAlignment="Start"/>
+
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Grid.GestureRecognizers>
+            
+        </Grid>
+
+        <Grid>
+
+            <ff:CachedImage Source="sudungicon"
+                            Aspect="Fill"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"/>
+
+            <Label Text="Sử dụng nguyên liệu"
+                   FontSize="25"
+                   Margin="64,0,0,0"
+                   HorizontalTextAlignment="Start"/>
+
+        </Grid>
+
+        <Grid>
+
+            <ff:CachedImage Source="extokenicon"
+                            Aspect="Fill"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"/>
+
+            <Label Text="Lấy Extoken của tiệm"
+                   FontSize="25"
+                   Margin="64,0,0,0"
+                   HorizontalTextAlignment="Start"/>
+
+        </Grid>
+
+
+        <Grid>
+
+            <ff:CachedImage Source="logouticon"
+                            Aspect="Fill"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"/>
+
+            <Label Text="Đăng xuất"
+                   FontSize="25"
+                   Margin="64,0,0,0"
+                   HorizontalTextAlignment="Start"/>
+
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

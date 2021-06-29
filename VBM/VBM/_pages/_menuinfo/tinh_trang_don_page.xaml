@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="VBM._pages._menuinfo.tinh_trang_don_page"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource vbmwhite}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Orientation="Vertical"
+                     Margin="0,46,0,0"
+                     Spacing="40">
+
+            <Grid>
+
+                <ff:CachedImage Source="Stroke"
+                                WidthRequest="50"
+                                HeightRequest="25"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Margin="42,0,0,0">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="FF_left_Tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+
+                <Label Text="Đơn Hàng Đã Hoàn Thành"
+                       FontSize="36"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+
+                
+            </Grid>
+
+            <StackLayout Orientation="Vertical"
+                         Margin="88,0,88,0"
+                         Spacing="26">
+
+                <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                 BorderColor="White"
+                                 HasShadow="False"
+                                 WidthRequest="624"
+                                 HeightRequest="83"
+                                 CornerRadius="30">
+
+                    <Grid>
+
+                        <ff:CachedImage Source="searchicon"
+                                        HeightRequest="30"
+                                        WidthRequest="30"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        Margin="29,0,0,0"/>
+
+                        <Entry Placeholder="Nhập địa chỉ"
+                               FontSize="22"
+                               TextColor="{StaticResource vbmgray}"
+                               VerticalOptions="Center"
+                               Margin="82,0,0,0"/>
+
+                    </Grid>
+
+                </border:SfBorder>
+
+                <Grid>
+
+                    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                     BorderColor="White"
+                                     HasShadow="False"
+                                     HorizontalOptions="Start"
+                                     VerticalOptions="Center"
+                                     HeightRequest="67"
+                                     WidthRequest="260"
+                                     CornerRadius="30">
+
+                        <Label Text="HIỆN BILL TẠI TIỆM"
+                               FontSize="20"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+
+                    </border:SfBorder>
+
+                    <border:SfBorder BackgroundColor="{StaticResource vbmgray}"
+                                     BorderColor="White"
+                                     HasShadow="False"
+                                     HorizontalOptions="End"
+                                     VerticalOptions="Center"
+                                     HeightRequest="67"
+                                     WidthRequest="260"
+                                     CornerRadius="30">
+
+                        <Label Text="HIỆN BILL DELIVERY"
+                               FontSize="20"
+                               TextColor="{StaticResource vbmwhite}"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+
+                    </border:SfBorder>
+
+                </Grid>
+
+            </StackLayout>
+
+        </StackLayout>
+
+        <ScrollView Grid.Row="1">
+
+            <Grid>
+
+                <StackLayout Orientation="Vertical">
+
+                    <border:SfBorder HeightRequest="370"
+                                     WidthRequest="750"
+                                     CornerRadius="30"
+                                     BorderColor="White"
+                                     BackgroundColor="{StaticResource vbmlightgray}"
+                                     HasShadow="False"
+                                     Margin="10">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="102"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Padding="10"
+                                  BackgroundColor="{StaticResource vbmgray}">
+
+                                <Label Text="Nguyễn Văn Khải"
+                                       HorizontalTextAlignment="Start"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="25"
+                                       Margin="20,0"/>
+
+                                <Label Text="89232"
+                                       HorizontalTextAlignment="Start"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="25"/>
+
+                                <Label Text="11:31:00 02/06/2021"
+                                       HorizontalTextAlignment="End"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="25"
+                                       WidthRequest="152"
+                                       Margin="0,0,20,0"/>
+
+                            </Grid>
+
+                            <StackLayout Orientation="Vertical"
+                                         Padding="20"
+                                         Spacing="20"
+                                         Grid.Row="1"
+                                         Margin="43,0,0,0">
+
+                                <Grid>
+
+                                    <Label Text="Đặt tại chỗ"
+                                           FontSize="30"
+                                           TextColor="{StaticResource vbmgray}"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"/>
+
+                                    <Label Text="Đơn đã xong"
+                                           FontSize="30"
+                                           TextColor="{StaticResource vbmgreen}"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+
+                                    <Label Text="40.000"
+                                           FontSize="30"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"/>
+
+
+                                </Grid>
+
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="0,55,0,0"
+                                             Spacing="20">
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmgreen}"
+                                                     BorderColor="{StaticResource vbmwhite}"
+                                                     HasShadow="False"
+                                                     WidthRequest="160"
+                                                     HeightRequest="67"
+                                                     CornerRadius="30">
+
+                                        <Label Text="IN BILL"
+                                               TextColor="{StaticResource vbmlightyellow}"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+                                    </border:SfBorder>
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmlightyellow}"
+                                                     BorderColor="{StaticResource vbmwhite}"
+                                                     HasShadow="False"
+                                                     WidthRequest="160"
+                                                     HeightRequest="67"
+                                                     CornerRadius="30">
+
+                                        <Label Text="IN LABEL"
+                                               TextColor="{StaticResource vbmgreen}"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+
+                                    </border:SfBorder>
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmgray}"
+                                                     BorderColor="{StaticResource vbmwhite}"
+                                                     HasShadow="False"
+                                                     WidthRequest="190"
+                                                     HeightRequest="67"
+                                                     CornerRadius="30"
+                                                     Margin="100,0,0,0">
+
+                                        <Label Text="XEM CHI TIẾT"
+                                               TextColor="{StaticResource vbmwhite}"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+
+                                    </border:SfBorder>
+
+                                </StackLayout>
+
+                            </StackLayout>
+
+                        </Grid>
+
+                    </border:SfBorder>
+
+                    <border:SfBorder HeightRequest="370"
+                                     WidthRequest="750"
+                                     CornerRadius="30"
+                                     BorderColor="White"
+                                     BackgroundColor="{StaticResource vbmlightgray}"
+                                     HasShadow="False"
+                                     Margin="10">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="102"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Padding="10"
+                                  BackgroundColor="{StaticResource vbmgray}">
+
+                                <Label Text="Nguyễn Văn Khải"
+                                       HorizontalTextAlignment="Start"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="25"
+                                       Margin="20,0"/>
+
+                                <Label Text="89232"
+                                       HorizontalTextAlignment="Start"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="25"/>
+
+                                <Label Text="11:31:00 02/06/2021"
+                                       HorizontalTextAlignment="End"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="25"
+                                       WidthRequest="152"
+                                       Margin="0,0,20,0"/>
+
+                            </Grid>
+
+                            <StackLayout Orientation="Vertical"
+                                         Padding="20"
+                                         Spacing="20"
+                                         Grid.Row="1"
+                                         Margin="43,0,0,0">
+
+                                <Grid>
+
+                                    <Label Text="Đặt tại chỗ"
+                                           FontSize="30"
+                                           TextColor="{StaticResource vbmgray}"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"/>
+
+                                    <Label Text="Bill Đang Xử Lý"
+                                           FontSize="30"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+
+                                    <Label Text="40.000"
+                                           FontSize="30"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"/>
+
+
+                                </Grid>
+
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="0,55,0,0"
+                                             Spacing="20">
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmgreen}"
+                                                     BorderColor="{StaticResource vbmwhite}"
+                                                     HasShadow="False"
+                                                     WidthRequest="160"
+                                                     HeightRequest="67"
+                                                     CornerRadius="30">
+
+                                        <Label Text="IN BILL"
+                                               TextColor="{StaticResource vbmlightyellow}"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+                                    </border:SfBorder>
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmlightyellow}"
+                                                     BorderColor="{StaticResource vbmwhite}"
+                                                     HasShadow="False"
+                                                     WidthRequest="160"
+                                                     HeightRequest="67"
+                                                     CornerRadius="30">
+
+                                        <Label Text="IN LABEL"
+                                               TextColor="{StaticResource vbmgreen}"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+
+                                    </border:SfBorder>
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmgray}"
+                                                     BorderColor="{StaticResource vbmwhite}"
+                                                     HasShadow="False"
+                                                     WidthRequest="190"
+                                                     HeightRequest="67"
+                                                     CornerRadius="30"
+                                                     Margin="100,0,0,0">
+
+                                        <Label Text="XEM CHI TIẾT"
+                                               TextColor="{StaticResource vbmwhite}"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+
+                                    </border:SfBorder>
+
+                                </StackLayout>
+
+                            </StackLayout>
+
+                        </Grid>
+
+                    </border:SfBorder>
+
+                    <border:SfBorder HeightRequest="370"
+                                     WidthRequest="750"
+                                     CornerRadius="30"
+                                     BorderColor="White"
+                                     BackgroundColor="{StaticResource vbmlightgray}"
+                                     HasShadow="False"
+                                     Margin="10">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="102"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Padding="10"
+                                  BackgroundColor="{StaticResource vbmgray}">
+
+                                <Label Text="Nguyễn Văn Khải"
+                                       HorizontalTextAlignment="Start"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="25"
+                                       Margin="20,0"/>
+
+                                <Label Text="89232"
+                                       HorizontalTextAlignment="Start"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="25"/>
+
+                                <Label Text="11:31:00 02/06/2021"
+                                       HorizontalTextAlignment="End"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="25"
+                                       WidthRequest="152"
+                                       Margin="0,0,20,0"/>
+
+                            </Grid>
+
+                            <StackLayout Orientation="Vertical"
+                                         Padding="20"
+                                         Spacing="20"
+                                         Grid.Row="1"
+                                         Margin="43,0,0,0">
+
+                                <Grid>
+
+                                    <Label Text="Đặt tại chỗ"
+                                           FontSize="30"
+                                           TextColor="{StaticResource vbmgray}"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"/>
+
+                                    <Label Text="Đơn đã xong"
+                                           FontSize="30"
+                                           TextColor="{StaticResource vbmgreen}"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+
+                                    <Label Text="40.000"
+                                           FontSize="30"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"/>
+
+
+                                </Grid>
+
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="0,55,0,0"
+                                             Spacing="20">
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmgreen}"
+                                                     BorderColor="{StaticResource vbmwhite}"
+                                                     HasShadow="False"
+                                                     WidthRequest="160"
+                                                     HeightRequest="67"
+                                                     CornerRadius="30">
+
+                                        <Label Text="IN BILL"
+                                               TextColor="{StaticResource vbmlightyellow}"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+                                    </border:SfBorder>
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmlightyellow}"
+                                                     BorderColor="{StaticResource vbmwhite}"
+                                                     HasShadow="False"
+                                                     WidthRequest="160"
+                                                     HeightRequest="67"
+                                                     CornerRadius="30">
+
+                                        <Label Text="IN LABEL"
+                                               TextColor="{StaticResource vbmgreen}"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+
+                                    </border:SfBorder>
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmgray}"
+                                                     BorderColor="{StaticResource vbmwhite}"
+                                                     HasShadow="False"
+                                                     WidthRequest="190"
+                                                     HeightRequest="67"
+                                                     CornerRadius="30"
+                                                     Margin="100,0,0,0">
+
+                                        <Label Text="XEM CHI TIẾT"
+                                               TextColor="{StaticResource vbmwhite}"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+
+                                    </border:SfBorder>
+
+                                </StackLayout>
+
+                            </StackLayout>
+
+                        </Grid>
+
+                    </border:SfBorder>
+
+
+                </StackLayout>
+
+            </Grid>
+
+        </ScrollView>
+
+    </Grid>
+    
+</ContentPage>

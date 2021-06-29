@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:sf="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             xmlns:local="clr-namespace:VBM._pages._menu"
+             x:Class="VBM._pages._menu.menu_page"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource vbmwhite}">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="115"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="115"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Margin="0,46,0,0"
+                     Orientation="Vertical"
+                     Spacing="40">
+
+            <Grid>
+
+                <ff:CachedImage Source="Stroke"
+                                WidthRequest="50"
+                                HeightRequest="25"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Margin="42,0,0,0">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ff_backicon_tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+
+                <Label Text="Nguyễn Văn Khải"
+                       FontSize="36"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+
+                <ff:CachedImage Source="refreshicon"
+                                HorizontalOptions="End"
+                                VerticalOptions="Center"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                Margin="0,0,28,0"/>
+
+
+            </Grid>
+
+        </StackLayout>
+
+        <Grid Grid.Row="1"
+              Margin="10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <sf:SfListView ItemsSource="{Binding titleGroups}"
+                           Orientation="Horizontal"
+                           SelectionBackgroundColor="Transparent"
+                           ItemSize="170"
+                           ItemSpacing="0,0,70,0"
+                           IsScrollBarVisible="False"
+                           x:Name="lstTitle">
+
+                <sf:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <StackLayout Orientation="Vertical"
+                                         VerticalOptions="Start">
+
+                                <Label Text="{Binding name}"
+                                       TextColor="{Binding Color}"
+                                       FontSize="23"
+                                       HorizontalTextAlignment="Center"/>
+
+                                <BoxView BackgroundColor="{Binding BoxColor}"
+                                         HeightRequest="7"/>
+
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="stlTitle_tapped"/>
+                                </StackLayout.GestureRecognizers>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </sf:SfListView.ItemTemplate>
+            </sf:SfListView>
+
+            <sf:SfListView ItemsSource="{Binding rowsRender}"
+                           x:Name="lstemes"
+                           LoadMoreCommand="{Binding LoadMoreItemsCommand}"
+                           LoadMoreOption="AutoOnScroll"
+                           ItemSize="250"
+                           SelectionBackgroundColor="Transparent"
+                           ItemSpacing="0,0,0,20"
+                           Grid.Row="1">
+                <sf:SfListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <StackLayout Orientation="Horizontal"
+                                     Spacing="100"
+                                     VerticalOptions="Center"
+                                     HorizontalOptions="Center"
+                                     BindableLayout.ItemsSource="{Binding emes}">
+
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <local:emenu />
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+
+
+                                
+                        </StackLayout>
+                    </DataTemplate>
+                </sf:SfListView.ItemTemplate>
+                <sf:SfListView.FooterTemplate>
+                    <DataTemplate>
+                        <busyindicator:SfBusyIndicator
+                            AnimationType="Material"
+                            HeightRequest="50"
+                            HorizontalOptions="Center"
+                            IsBusy="{Binding isbusy}"
+                            IsVisible="{Binding isbusy}"
+                            TextColor="{StaticResource vbmgreen}"
+                            VerticalOptions="Center"
+                            WidthRequest="40" />
+                    </DataTemplate>
+                </sf:SfListView.FooterTemplate>
+            </sf:SfListView>
+
+            <busyindicator:SfBusyIndicator
+            x:Name="busyindicator"
+            AnimationType="Cupertino"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            IsBusy="True"
+            TextColor="#1d5234"
+            VerticalOptions="Center"
+            WidthRequest="50" />
+
+        </Grid>
+
+
+        <Grid Grid.Row="2">
+
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         Spacing="100">
+
+                <ff:CachedImage Source="khachicon"
+                                x:Name="khachicon"
+                                Aspect="Fill"
+                                WidthRequest="30"
+                                HeightRequest="30">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ff_khachicon_tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+
+                <ff:CachedImage Source="menuiconpress"
+                                x:Name="menuicon"
+                                Aspect="Fill"
+                                WidthRequest="30"
+                                HeightRequest="30">                    
+                </ff:CachedImage>
+
+                <ff:CachedImage Source="promotionicon"
+                                x:Name="promoicon"
+                                Aspect="Fill"
+                                WidthRequest="30"
+                                HeightRequest="30">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ff_promo_tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+
+            </StackLayout>
+
+            <Grid HorizontalOptions="End"
+                  VerticalOptions="Center">
+
+                <border:SfBorder WidthRequest="193"
+                                 HeightRequest="93"
+                                 CornerRadius="50"
+                                 BackgroundColor="{StaticResource vbmlightyellow}"
+                                 BorderColor="{StaticResource vbmwhite}"
+                                 HasShadow="False"
+                                 HorizontalOptions="End"
+                                 VerticalOptions="Center"
+                                 Margin="0,0,-65,10"
+                                 x:Name="carticon">
+
+                    <ff:CachedImage Source="promotionicon1"
+                                    WidthRequest="30"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Center"
+                                    Margin="30,0"
+                                    Aspect="Fill"/>
+                    <border:SfBorder.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ff_cart_tapped"/>
+                    </border:SfBorder.GestureRecognizers>
+                </border:SfBorder>
+
+                <border:SfBorder WidthRequest="34"
+                                 HeightRequest="34"
+                                 CornerRadius="30"
+                                 BackgroundColor="Red"
+                                 BorderColor="{StaticResource vbmwhite}"
+                                 HasShadow="False"
+                                 HorizontalOptions="Start"
+                                 VerticalOptions="Start">
+
+                    <Label Text="2"
+                           FontSize="20"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="{StaticResource vbmwhite}"/>
+
+                </border:SfBorder>
+
+            </Grid>
+
+
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

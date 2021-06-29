@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VBM._pages._menuinfo.chuan_bi_nguyen_lieu_page"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource vbmwhite}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Orientation="Vertical"
+                     Margin="0,46,0,0"
+                     Spacing="40">
+
+            <Grid>
+
+                <ff:CachedImage Source="Stroke"
+                                WidthRequest="50"
+                                HeightRequest="25"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Margin="42,0,0,0">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ff_backicon_tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+
+                <Label Text="Chuẩn Bị Nguyên Liệu"
+                       FontSize="36"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+
+
+            </Grid>
+
+        </StackLayout>
+
+        <ScrollView Grid.Row="1">
+
+            <Grid Margin="86,0,0,0">
+
+                <StackLayout Orientation="Vertical"
+                             Spacing="71">
+
+                    <StackLayout Orientation="Horizontal"
+                                 Spacing="47">
+
+                        <ff:CachedImage Source="qricon"
+                                        Aspect="Fill"
+                                        HeightRequest="100"
+                                        WidthRequest="100"
+                                        VerticalOptions="Center"/>
+
+                        <Label Text="SCAN BARCODE"
+                               TextColor="{StaticResource vbmgreen}"
+                               FontSize="30"
+                               VerticalOptions="Center"/>
+
+                    </StackLayout>
+
+                    <Grid>
+
+                        <Label Text="Nguyên liệu:"
+                               FontSize="30"
+                               TextColor="{StaticResource vbmgreen}"
+                               VerticalOptions="Center"/>
+
+                    </Grid>
+
+                    <Grid>
+
+                        <Label Text="Số lượng còn lại:"
+                               FontSize="30"
+                               TextColor="{StaticResource vbmgreen}"
+                               VerticalOptions="Center"/>
+
+                    </Grid>
+
+                    <Grid>
+
+                        <Label Text="Barcode:"
+                               FontSize="30"
+                               TextColor="{StaticResource vbmgreen}"
+                               VerticalOptions="Center"/>
+
+                    </Grid>
+
+                    <Grid>
+
+                        <Label Text="Ngày hết hạn:"
+                               FontSize="30"
+                               TextColor="{StaticResource vbmgreen}"
+                               VerticalOptions="Center"/>
+
+                    </Grid>
+
+                    <StackLayout Orientation="Vertical">
+
+                        <Label Text="Lượng sử dụng:"
+                               FontSize="30"
+                               TextColor="{StaticResource vbmgreen}"
+                               VerticalOptions="Center"/>
+
+                        <Entry FontSize="22"
+                               VerticalOptions="Center"                           
+                               Margin="0,50,90,0"/>
+
+                        <Label Text="*Phần số lẻ ngăn cách bằng dấu chấm (.)"
+                               FontSize="30"
+                               FontAttributes="Italic"
+                               TextColor="{StaticResource vbmgreen}"
+                               VerticalOptions="Center"/>
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+
+                        <Label Text="Ghi chú:"
+                               FontSize="30"
+                               TextColor="{StaticResource vbmgreen}"
+                               VerticalOptions="Center"/>
+
+                        <Entry FontSize="22"
+                               VerticalOptions="Center"                           
+                               Margin="0,50,90,0"/>
+
+                    </StackLayout>
+
+                </StackLayout>
+
+            </Grid>
+
+        </ScrollView>
+
+        <border:SfBorder BackgroundColor="{StaticResource vbmlightyellow}"
+                         BorderColor="{StaticResource vbmwhite}"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         WidthRequest="160"
+                         HeightRequest="67"
+                         CornerRadius="30"
+                         HasShadow="False"
+                         Margin="10"
+                         Grid.Row="2">
+
+            <Label Text="Lưu"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="20"/>
+
+        </border:SfBorder>
+
+    </Grid>
+    
+</ContentPage>

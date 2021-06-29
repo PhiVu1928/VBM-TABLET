@@ -1,0 +1,1223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:sf="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:local="clr-namespace:VBM._pages._thanhtoan"
+             xmlns:sfbutton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="VBM._pages._thanhtoan.thanh_toan_page"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource vbmwhite}">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="115"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Margin="0,46,0,0"
+                     Orientation="Vertical"
+                     Spacing="40">
+
+            <Grid>
+
+                <ff:CachedImage Source="Stroke"
+                                WidthRequest="50"
+                                HeightRequest="25"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Margin="42,0,0,0">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ff_backicon_tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+
+                <Label Text="Nguyễn Văn Khải"
+                       FontSize="36"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+
+                <ff:CachedImage Source="refreshicon"
+                                HorizontalOptions="End"
+                                VerticalOptions="Center"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                Margin="0,0,28,0"/>
+
+
+            </Grid>
+
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical"
+                     x:Name="stlayout"
+                     Grid.Row="1">
+
+            <ScrollView VerticalOptions="Start"
+                        x:Name="scroll">
+
+                <StackLayout Orientation="Vertical"
+                             Margin="20,0">
+
+
+                    <border:SfBorder CornerRadius="60"
+                                     BorderColor="WhiteSmoke"
+                                     BorderWidth="2"
+                                     BackgroundColor="{StaticResource vbmwhite}"
+                                     HasShadow="False"
+                                     Margin="10">
+
+                        <Grid RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="71"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Padding="20"
+                                  BackgroundColor="{StaticResource vbmdeepgreen}"
+                                  Grid.ColumnSpan="4">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start"
+                                             Margin="17,0,0,0"
+                                             Spacing="20">
+
+
+                                    <Label Text="×"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                           TextColor="{StaticResource vbmwhite}"/>
+
+                                    <Label Text="49,000"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                           TextColor="{StaticResource vbmlightyellow}"/>
+
+                                </StackLayout>
+
+                                <Label Text="Dòng combo"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       Margin="0,0,17,0"/>
+
+                            </Grid>
+
+                            <Grid Grid.Row="1"
+                                  Grid.ColumnSpan="2"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start"
+                                             Spacing="10">
+
+                                    <Label Text="Bánh mì thịt chả"
+                                           TextColor="{StaticResource vbmgray}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=30}"/>
+
+                                    <Label Text="S"
+                                           TextColor="{StaticResource vbmgray}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=30}"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="1"
+                                  Grid.ColumnSpan="4"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="End"
+                                             VerticalOptions="Center"
+                                             Spacing="15">
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                                     BorderColor="Transparent"
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     HeightRequest="60"
+                                                     WidthRequest="173"
+                                                     HorizontalOptions="End"
+                                                     VerticalOptions="Center">
+
+                                        <StackLayout Orientation="Horizontal"
+                                                     VerticalOptions="Center"
+                                                     HorizontalOptions="Center"
+                                                     Spacing="15">
+
+                                            <Label Text="-"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                            <Label Text="0"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                            <Label Text="+"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                        </StackLayout>
+
+                                    </border:SfBorder>
+
+                                    <Label Text="25,000"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="2"
+                                  Grid.ColumnSpan="4"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             Spacing="20">
+
+                                    <Label Text="Nhiều dưa leo"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=small,Tablet=20}"/>
+
+                                    <Label Text="Nhiều dưa leo"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=small,Tablet=20}"/>
+
+                                    <Label Text="Nhiều dưa leo"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=small,Tablet=20}"/>
+
+                                    <Label Text="Nhiều dưa leo"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=small,Tablet=20}"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="3"
+                                  Grid.ColumnSpan="4"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start"
+                                             Spacing="15">
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmdeeplightgray}"
+                                                     BorderColor="Transparent"
+                                                     WidthRequest="181"                                                     
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     HeightRequest="60">
+
+                                        <Label Text="Thêm chả x1"
+                                               FontSize="{OnIdiom Phone=small,Tablet=20}"
+                                               TextColor="{StaticResource vbmwhite}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+                                    </border:SfBorder>
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmdeeplightgray}"
+                                                     BorderColor="Transparent"
+                                                     WidthRequest="181"
+                                                     
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     HeightRequest="60">
+
+                                        <Label Text="Thêm chả x1"
+                                               FontSize="{OnIdiom Phone=small,Tablet=20}"
+                                               TextColor="{StaticResource vbmwhite}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+                                    </border:SfBorder>
+
+                                </StackLayout>
+
+
+                                <Label Text="25,000"
+                                       TextColor="{StaticResource vbmpinttext}"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"/>
+
+                            </Grid>
+
+                            <Grid Grid.Row="4"
+                                  Grid.ColumnSpan="2"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start">
+
+                                    <Label Text="Cà phê sữa"
+                                           TextColor="{StaticResource vbmgray}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=30}"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="4"
+                                  Grid.ColumnSpan="4"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="End"
+                                             VerticalOptions="Center">
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                                     BorderColor="Transparent"
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     WidthRequest="173"
+                                                     HeightRequest="60"
+                                                     HorizontalOptions="End"
+                                                     VerticalOptions="Center">
+
+                                        <StackLayout Orientation="Horizontal"
+                                                     VerticalOptions="Center"
+                                                     HorizontalOptions="Center"
+                                                     Spacing="15">
+
+                                            <Label Text="-"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                            <Label Text="0"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                            <Label Text="+"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                        </StackLayout>
+
+                                    </border:SfBorder>
+
+                                    <Label Text="25,000"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"/>
+
+                                </StackLayout>
+
+
+                            </Grid>
+
+                        </Grid>
+
+                    </border:SfBorder>
+
+                    <border:SfBorder CornerRadius="60"
+                                     BorderColor="WhiteSmoke"
+                                     BorderWidth="2"
+                                     BackgroundColor="{StaticResource vbmwhite}"
+                                     HasShadow="False"
+                                     Margin="10">
+
+                        <Grid RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="71"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Padding="20"
+                                  BackgroundColor="{StaticResource vbmdeepgreen}"
+                                  Grid.ColumnSpan="4">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start"
+                                             Margin="17,0,0,0"
+                                             Spacing="20">
+
+
+                                    <Label Text="×"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                           TextColor="{StaticResource vbmwhite}"/>
+
+                                    <Label Text="49,000"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                           TextColor="{StaticResource vbmlightyellow}"/>
+
+                                </StackLayout>
+
+                                <Label Text="Dòng combo"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       Margin="0,0,17,0"/>
+
+                            </Grid>
+
+                            <Grid Grid.Row="1"
+                                  Grid.ColumnSpan="2"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start"
+                                             Spacing="10">
+
+                                    <Label Text="Bánh mì thịt chả"
+                                           TextColor="{StaticResource vbmgray}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=30}"/>
+
+                                    <Label Text="S"
+                                           TextColor="{StaticResource vbmgray}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=30}"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="1"
+                                  Grid.ColumnSpan="4"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="End"
+                                             VerticalOptions="Center"
+                                             Spacing="15">
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                                     BorderColor="Transparent"
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     HeightRequest="60"
+                                                     WidthRequest="173"
+                                                     HorizontalOptions="End"
+                                                     VerticalOptions="Center">
+
+                                        <StackLayout Orientation="Horizontal"
+                                                     VerticalOptions="Center"
+                                                     HorizontalOptions="Center"
+                                                     Spacing="15">
+
+                                            <Label Text="-"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                            <Label Text="0"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                            <Label Text="+"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                        </StackLayout>
+
+                                    </border:SfBorder>
+
+                                    <Label Text="25,000"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="2"
+                                  Grid.ColumnSpan="4"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             Spacing="20">
+
+                                    <Label Text="Nhiều dưa leo"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=small,Tablet=20}"/>
+
+                                    <Label Text="Nhiều dưa leo"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=small,Tablet=20}"/>
+
+                                    <Label Text="Nhiều dưa leo"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=small,Tablet=20}"/>
+
+                                    <Label Text="Nhiều dưa leo"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=small,Tablet=20}"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="3"
+                                  Grid.ColumnSpan="4"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start"
+                                             Spacing="15">
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmdeeplightgray}"
+                                                     BorderColor="Transparent"
+                                                     WidthRequest="181"                                                     
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     HeightRequest="60">
+
+                                        <Label Text="Thêm chả x1"
+                                               FontSize="{OnIdiom Phone=small,Tablet=20}"
+                                               TextColor="{StaticResource vbmwhite}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+                                    </border:SfBorder>
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmdeeplightgray}"
+                                                     BorderColor="Transparent"
+                                                     WidthRequest="181"
+                                                     
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     HeightRequest="60">
+
+                                        <Label Text="Thêm chả x1"
+                                               FontSize="{OnIdiom Phone=small,Tablet=20}"
+                                               TextColor="{StaticResource vbmwhite}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+                                    </border:SfBorder>
+
+                                </StackLayout>
+
+
+                                <Label Text="25,000"
+                                       TextColor="{StaticResource vbmpinttext}"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"/>
+
+                            </Grid>
+
+                            <Grid Grid.Row="4"
+                                  Grid.ColumnSpan="2"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start">
+
+                                    <Label Text="Cà phê sữa"
+                                           TextColor="{StaticResource vbmgray}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=30}"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="4"
+                                  Grid.ColumnSpan="4"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="End"
+                                             VerticalOptions="Center">
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                                     BorderColor="Transparent"
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     WidthRequest="173"
+                                                     HeightRequest="60"
+                                                     HorizontalOptions="End"
+                                                     VerticalOptions="Center">
+
+                                        <StackLayout Orientation="Horizontal"
+                                                     VerticalOptions="Center"
+                                                     HorizontalOptions="Center"
+                                                     Spacing="15">
+
+                                            <Label Text="-"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                            <Label Text="0"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                            <Label Text="+"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                        </StackLayout>
+
+                                    </border:SfBorder>
+
+                                    <Label Text="25,000"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"/>
+
+                                </StackLayout>
+
+
+                            </Grid>
+
+                        </Grid>
+
+                    </border:SfBorder>
+
+                    <border:SfBorder CornerRadius="60"
+                                     BorderColor="WhiteSmoke"
+                                     BorderWidth="2"
+                                     BackgroundColor="{StaticResource vbmwhite}"
+                                     HasShadow="False"
+                                     Margin="10">
+
+                        <Grid RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="71"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Padding="20"
+                                  BackgroundColor="{StaticResource vbmdeepgreen}"
+                                  Grid.ColumnSpan="4">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start"
+                                             Margin="17,0,0,0"
+                                             Spacing="20">
+
+
+                                    <Label Text="×"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                           TextColor="{StaticResource vbmwhite}"/>
+
+                                    <Label Text="49,000"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                           TextColor="{StaticResource vbmlightyellow}"/>
+
+                                </StackLayout>
+
+                                <Label Text="Dòng combo"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       Margin="0,0,17,0"/>
+
+                            </Grid>
+
+                            <Grid Grid.Row="1"
+                                  Grid.ColumnSpan="2"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start"
+                                             Spacing="10">
+
+                                    <Label Text="Bánh mì thịt chả"
+                                           TextColor="{StaticResource vbmgray}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=30}"/>
+
+                                    <Label Text="S"
+                                           TextColor="{StaticResource vbmgray}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=30}"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="1"
+                                  Grid.ColumnSpan="4"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="End"
+                                             VerticalOptions="Center"
+                                             Spacing="15">
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                                     BorderColor="Transparent"
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     HeightRequest="60"
+                                                     WidthRequest="173"
+                                                     HorizontalOptions="End"
+                                                     VerticalOptions="Center">
+
+                                        <StackLayout Orientation="Horizontal"
+                                                     VerticalOptions="Center"
+                                                     HorizontalOptions="Center"
+                                                     Spacing="15">
+
+                                            <Label Text="-"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                            <Label Text="0"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                            <Label Text="+"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                        </StackLayout>
+
+                                    </border:SfBorder>
+
+                                    <Label Text="25,000"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="2"
+                                  Grid.ColumnSpan="4"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             Spacing="20">
+
+                                    <Label Text="Nhiều dưa leo"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=small,Tablet=20}"/>
+
+                                    <Label Text="Nhiều dưa leo"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=small,Tablet=20}"/>
+
+                                    <Label Text="Nhiều dưa leo"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=small,Tablet=20}"/>
+
+                                    <Label Text="Nhiều dưa leo"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=small,Tablet=20}"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="3"
+                                  Grid.ColumnSpan="4"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start"
+                                             Spacing="15">
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmdeeplightgray}"
+                                                     BorderColor="Transparent"
+                                                     WidthRequest="181"                                                     
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     HeightRequest="60">
+
+                                        <Label Text="Thêm chả x1"
+                                               FontSize="{OnIdiom Phone=small,Tablet=20}"
+                                               TextColor="{StaticResource vbmwhite}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+                                    </border:SfBorder>
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmdeeplightgray}"
+                                                     BorderColor="Transparent"
+                                                     WidthRequest="181"
+                                                     
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     HeightRequest="60">
+
+                                        <Label Text="Thêm chả x1"
+                                               FontSize="{OnIdiom Phone=small,Tablet=20}"
+                                               TextColor="{StaticResource vbmwhite}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+                                    </border:SfBorder>
+
+                                </StackLayout>
+
+
+                                <Label Text="25,000"
+                                       TextColor="{StaticResource vbmpinttext}"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"/>
+
+                            </Grid>
+
+                            <Grid Grid.Row="4"
+                                  Grid.ColumnSpan="2"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start">
+
+                                    <Label Text="Cà phê sữa"
+                                           TextColor="{StaticResource vbmgray}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=30}"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="4"
+                                  Grid.ColumnSpan="4"
+                                  Margin="20,0">
+
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="End"
+                                             VerticalOptions="Center">
+
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                                     BorderColor="Transparent"
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     WidthRequest="173"
+                                                     HeightRequest="60"
+                                                     HorizontalOptions="End"
+                                                     VerticalOptions="Center">
+
+                                        <StackLayout Orientation="Horizontal"
+                                                     VerticalOptions="Center"
+                                                     HorizontalOptions="Center"
+                                                     Spacing="15">
+
+                                            <Label Text="-"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                            <Label Text="0"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                            <Label Text="+"
+                                                   FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                        </StackLayout>
+
+                                    </border:SfBorder>
+
+                                    <Label Text="25,000"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"/>
+
+                                </StackLayout>
+
+
+                            </Grid>
+
+                        </Grid>
+
+                    </border:SfBorder>
+
+
+                </StackLayout>
+
+
+            </ScrollView>
+
+            <StackLayout BackgroundColor="White"
+                         Margin="20,0">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             VerticalOptions="End"
+                             Grid.ColumnSpan="2">
+
+                    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                     BorderColor="Transparent"
+                                     WidthRequest="322"
+                                     HeightRequest="77"
+                                     CornerRadius="50"
+                                     HasShadow="False"
+                                     x:Name="borderwallet">
+                        
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     Spacing="50"
+                                     Margin="20,0">
+
+                            <ff:CachedImage Source="walleticon"
+                                            x:Name="walleticon"
+                                            Aspect="Fill"/>
+
+                            <Label Text="TIỀN MẶT"
+                                   x:Name="labelwallet"
+                                   FontSize="{OnIdiom Phone=small,Tablet=18}"
+                                   TextColor="{StaticResource vbmgray}"
+                                   FontAttributes="Bold"/>
+
+                        </StackLayout>
+
+                        <border:SfBorder.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ff_thanhtoan_tapped"/>
+                        </border:SfBorder.GestureRecognizers>
+                        
+                    </border:SfBorder>
+
+                    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                     BorderColor="Transparent"
+                                     WidthRequest="322"
+                                     HeightRequest="77"
+                                     CornerRadius="50"
+                                     HasShadow="False"
+                                     x:Name="voucherborder">
+
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     Spacing="50"
+                                     Margin="20,0">
+
+                            <ff:CachedImage Source="vouchericon"
+                                            x:Name="vouchericon"
+                                            Aspect="Fill"/>
+
+                            <Label Text="MÃ GIẢM GIÁ"
+                                   x:Name="voucherlable"
+                                   FontSize="{OnIdiom Phone=small,Tablet=18}"
+                                   TextColor="{StaticResource vbmgray}"
+                                   FontAttributes="Bold"/>
+
+                        </StackLayout>
+                        <border:SfBorder.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ff_discount_tapped"/>
+                        </border:SfBorder.GestureRecognizers>
+                    </border:SfBorder>
+
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Spacing="30"
+                             Grid.Row="1"
+                             Grid.ColumnSpan="2">
+
+                    <Entry Placeholder="Mật khẩu"
+                           FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                           HorizontalTextAlignment="Center"
+                           TextColor="{StaticResource vbmgreen}"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           WidthRequest="170"/>
+
+                    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                     BorderColor="Transparent"
+                                     HasShadow="False"
+                                     CornerRadius="50"
+                                     HeightRequest="60"
+                                     WidthRequest="214"
+                                     x:Name="brhoadon">
+
+                        <Label Text="HOÁ ĐƠN ĐỎ"
+                               x:Name="lblhoadon"
+                               FontSize="{OnIdiom Phone=small,Tablet=20}"
+                               TextColor="{StaticResource vbmgray}"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+
+                        <border:SfBorder.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ff_hoadon_tapped"/>
+                        </border:SfBorder.GestureRecognizers>
+
+                    </border:SfBorder>
+
+                    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                     BorderColor="Transparent"
+                                     HasShadow="False"
+                                     CornerRadius="50"
+                                     HeightRequest="60"
+                                     WidthRequest="214"
+                                     x:Name="brcombo">
+
+                        <Label Text="COMBONV"
+                               x:Name="lblcombo"
+                               FontSize="{OnIdiom Phone=small,Tablet=20}"
+                               TextColor="{StaticResource vbmgray}"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                        <border:SfBorder.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ff_combo_tapped"/>
+                        </border:SfBorder.GestureRecognizers>
+                    </border:SfBorder>
+
+
+                </StackLayout>
+
+                <Grid Grid.Row="2"
+                      Grid.ColumnSpan="2">
+
+                    <StackLayout Orientation="Vertical"
+                                 HorizontalOptions="Start"
+                                 VerticalOptions="Center">
+
+                        <sf:SfListView ItemsSource="{Binding pTTTs}"
+                                       ItemSize="60"
+                                       HeightRequest="200"
+                                       WidthRequest="172"
+                                       ItemSpacing="0,5,0,0"
+                                       Orientation="Vertical"
+                                       VerticalOptions="Center"
+                                       SelectionBackgroundColor="Transparent">
+                            <sf:SfListView.ItemTemplate>
+                                <DataTemplate>
+                                    <border:SfBorder BackgroundColor="{Binding BorderColor}"
+                                                     BorderColor="Transparent"
+                                                     HasShadow="False"
+                                                     WidthRequest="172"
+                                                     HeightRequest="60"
+                                                     HorizontalOptions="Start"
+                                                     VerticalOptions="Center"
+                                                     CornerRadius="50">
+                                        
+                                        <Label Text="{Binding Name}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"
+                                               HorizontalTextAlignment="Center"
+                                               FontSize="20"
+                                               TextColor="{Binding TextColor}"/>
+                                        <border:SfBorder.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                        </border:SfBorder.GestureRecognizers>
+                                    </border:SfBorder>
+
+                                </DataTemplate>
+                            </sf:SfListView.ItemTemplate>
+                        </sf:SfListView>
+
+                    </StackLayout>                  
+
+                    <StackLayout Orientation="Vertical"
+                                 HorizontalOptions="End"
+                                 VerticalOptions="Center"
+                                 WidthRequest="300">
+
+                        <Grid VerticalOptions="Center">
+
+                            <Label Text="Tổng Cộng"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=23}"
+                                       HorizontalOptions="Start"/>
+
+                            <Label Text="98,000"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                       HorizontalOptions="End"/>
+
+                        </Grid>
+
+                        <Grid>
+
+                            <Label Text="VOUCHER"
+                                       TextColor="{StaticResource vbmdeeplightgray}"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                       HorizontalOptions="Start"/>
+
+                            <Label Text="000"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                       HorizontalOptions="End"/>
+
+                        </Grid>
+
+                        <Grid>
+
+                            <Label Text="GIẢM GIÁ"
+                                       TextColor="{StaticResource vbmdeeplightgray}"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                       HorizontalOptions="Start"/>
+
+                            <Label Text="000"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                       HorizontalOptions="End"/>
+
+                        </Grid>
+
+                        <Grid>
+
+                            <Label Text="THÀNH TIỀN"
+                                       TextColor="{StaticResource vbmpinttext}"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                       HorizontalOptions="Start"/>
+
+                            <Label Text="98,000"
+                                       TextColor="{StaticResource vbmpinttext}"
+                                       FontSize="{OnIdiom Phone=medium,Tablet=25}"
+                                       HorizontalOptions="End"/>
+
+                        </Grid>
+
+                    </StackLayout>
+
+                </Grid>
+
+
+            </StackLayout>
+
+        </StackLayout>
+
+
+        <Grid Grid.Row="2">
+
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         Spacing="100">
+
+                <ff:CachedImage Source="khachicon"
+                                Aspect="Fill"
+                                WidthRequest="30"
+                                HeightRequest="30">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ff_backicon_tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+
+                <ff:CachedImage Source="menuiconpress"
+                                x:Name="menuicon"
+                                Aspect="Fill"
+                                WidthRequest="30"
+                                HeightRequest="30">
+                </ff:CachedImage>
+
+                <ff:CachedImage Source="promotionicon"
+                                x:Name="promoicon"
+                                Aspect="Fill"
+                                WidthRequest="30"
+                                HeightRequest="30">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ff_promo_tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+
+            </StackLayout>
+
+            <Grid HorizontalOptions="End"
+                  VerticalOptions="Center">
+
+                <border:SfBorder WidthRequest="193"
+                                 HeightRequest="93"
+                                 CornerRadius="50"
+                                 BackgroundColor="{StaticResource vbmlightyellow}"
+                                 BorderColor="{StaticResource vbmwhite}"
+                                 HasShadow="False"
+                                 HorizontalOptions="End"
+                                 VerticalOptions="Center"
+                                 Margin="0,0,-65,10">
+
+                    <ff:CachedImage Source="promotionicon1"
+                                    WidthRequest="30"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Center"
+                                    Margin="30,0"
+                                    Aspect="Fill"/>
+
+                </border:SfBorder>
+
+                <border:SfBorder WidthRequest="34"
+                                 HeightRequest="34"
+                                 CornerRadius="30"
+                                 BackgroundColor="Red"
+                                 BorderColor="{StaticResource vbmwhite}"
+                                 HasShadow="False"
+                                 HorizontalOptions="Start"
+                                 VerticalOptions="Start">
+
+                    <Label Text="2"
+                           FontSize="{OnIdiom Phone=small,Tablet=20}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="{StaticResource vbmwhite}"/>
+
+                </border:SfBorder>
+
+            </Grid>
+
+
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

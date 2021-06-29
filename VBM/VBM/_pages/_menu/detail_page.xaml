@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:sf="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             x:Class="VBM._pages._menu.detail_page"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource vbmwhite}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="115"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="190"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Margin="0,46,0,0"
+                     Orientation="Vertical"
+                     Spacing="40">
+
+            <Grid>
+
+                <ff:CachedImage Source="Stroke"
+                                WidthRequest="50"
+                                HeightRequest="25"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Margin="42,0,0,0">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ff_backicon_tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+
+                <Label Text="Bánh mì thịt chả"
+                       FontSize="36"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+
+                <ff:CachedImage Source="refreshicon"
+                                HorizontalOptions="End"
+                                VerticalOptions="Center"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                Margin="0,0,28,0"/>
+
+
+            </Grid>
+
+        </StackLayout>
+
+        <ScrollView Grid.Row="1"
+                    Padding="30">
+            
+            <StackLayout Orientation="Vertical">
+
+                <sf:SfListView ItemsSource="{Binding rowSizeRenders}"
+                               Orientation="Vertical"    
+                               HeightRequest="100"
+                               SelectionBackgroundColor="Transparent"
+                               ItemSize="80"
+                               IsScrollBarVisible="False">
+                    <sf:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Spacing="20"
+                                         Orientation="Horizontal"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         BackgroundColor="Transparent"
+                                         BindableLayout.ItemsSource="{Binding Sizes}">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <border:SfBorder WidthRequest="225"
+                                                         HeightRequest="65"
+                                                         CornerRadius="50"
+                                                         BackgroundColor="{Binding BorderColor}"
+                                                         BorderColor="Transparent"
+                                                         HasShadow="False">
+
+                                            <Label Text="{Binding Name}"
+                                                   TextColor="{Binding TextColor}"
+                                                   HorizontalOptions="Center"
+                                                   VerticalOptions="Center"
+                                                   FontSize="30"/>
+                                            <border:SfBorder.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ff_size_tapped"/>
+                                            </border:SfBorder.GestureRecognizers>
+                                        </border:SfBorder>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+
+                            </StackLayout>
+                        </DataTemplate>
+                    </sf:SfListView.ItemTemplate>
+                </sf:SfListView>
+
+
+                <sf:SfListView ItemsSource="{Binding rowsRender}"
+                               Orientation="Vertical"
+                               SelectionBackgroundColor="Transparent"
+                               ItemSize="100"
+                               HeightRequest="200">
+                    
+                    <sf:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout BindableLayout.ItemsSource="{Binding emes}"
+                                         Orientation="Horizontal"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         BackgroundColor="Transparent"
+                                         Spacing="20">
+
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <border:SfBorder BackgroundColor="{Binding BorderColor}"
+                                                         x:Name="sfborders"
+                                                         WidthRequest="234"
+                                                         HeightRequest="69"
+                                                         CornerRadius="50"
+                                                         BorderColor="Transparent"
+                                                         HasShadow="False">
+
+                                            <Label Text="{Binding Name}"
+                                                   x:Name="emesname"
+                                                   TextColor="{Binding TextColor}"
+                                                   FontSize="20"
+                                                   HorizontalOptions="Center"
+                                                   VerticalOptions="Center"/>
+                                            <border:SfBorder.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ff_drink_tapped"/>
+                                            </border:SfBorder.GestureRecognizers>
+                                        </border:SfBorder>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </StackLayout>
+                        </DataTemplate>
+                    </sf:SfListView.ItemTemplate>
+                </sf:SfListView>
+
+                <StackLayout Orientation="Vertical">
+
+                    <Grid>
+
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     Spacing="15">
+
+                            <ff:CachedImage Source="giaviicon"
+                                            Aspect="Fill"
+                                            HeightRequest="30"
+                                            WidthRequest="30"
+                                            HorizontalOptions="Start"
+                                            VerticalOptions="Center"/>
+
+                            <Label Text="Điều chỉnh gia vị"
+                                   FontSize="30"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+
+                            <ff:CachedImage Source="Stroke1"
+                                            Aspect="Fill"
+                                            HorizontalOptions="End"
+                                            VerticalOptions="Center"/>
+                        </StackLayout>
+
+                        <BoxView BackgroundColor="{StaticResource vbmlightyellow}"
+                                 HeightRequest="4"
+                                 WidthRequest="316"
+                                 VerticalOptions="End"
+                                 HorizontalOptions="Center"
+                                 Margin="0,40,0,0"/>
+
+                    </Grid>
+
+                    <sf:SfListView ItemsSource="{Binding rowExtrasRenders}"
+                                   Orientation="Vertical"
+                                   HorizontalOptions="Fill"
+                                   ItemSize="70"
+                                   ItemSpacing="10"
+                                   SelectionBackgroundColor="Transparent"
+                                   HeightRequest="400">
+                        <sf:SfListView.ItemTemplate>
+                            <DataTemplate>
+                                <border:SfBorder CornerRadius="50"
+                                                 WidthRequest="800"
+                                                 VerticalOptions="Center">
+                                    <StackLayout Orientation="Horizontal"
+                                                 VerticalOptions="Center"
+                                                 BindableLayout.ItemsSource="{Binding extras}">
+                                        <BindableLayout.ItemTemplate>
+                                            <DataTemplate>
+                                                <border:SfBorder HorizontalOptions="FillAndExpand"
+                                                                 VerticalOptions="Center"
+                                                                 HeightRequest="60"
+                                                                 CornerRadius="0"
+                                                                 BackgroundColor="{Binding BorderColor}"
+                                                                 BorderColor="Transparent"
+                                                                 HasShadow="False">
+
+                                                    <Label Text="{Binding Name}"
+                                                           FontSize="20"
+                                                           TextColor="{Binding TextColor}"
+                                                           HorizontalOptions="Center"
+                                                           VerticalOptions="Center"
+                                                           HorizontalTextAlignment="Center"/>
+                                                    <border:SfBorder.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="ff_extras_tapped"/>
+                                                    </border:SfBorder.GestureRecognizers>
+                                                </border:SfBorder>
+                                            </DataTemplate>
+                                        </BindableLayout.ItemTemplate>
+                                    </StackLayout>
+                                </border:SfBorder>
+                            </DataTemplate>
+                        </sf:SfListView.ItemTemplate>
+
+                    </sf:SfListView>
+
+                    <Grid>
+
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     Spacing="15">
+
+                            <ff:CachedImage Source="nhanbahicon"
+                                            Aspect="Fill"
+                                            HeightRequest="30"
+                                            WidthRequest="30"
+                                            HorizontalOptions="Start"
+                                            VerticalOptions="Center"/>
+
+                            <Label Text="Thêm nhân bánh"
+                                   FontSize="30"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+
+                            <ff:CachedImage Source="Stroke1"
+                                            Aspect="Fill"
+                                            HorizontalOptions="End"
+                                            VerticalOptions="Center"/>
+                        </StackLayout>
+                        
+                    </Grid>
+
+                    <Grid>
+
+                        <sf:SfListView ItemsSource="{Binding toppings}"
+                                       Orientation="Vertical"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       IsScrollBarVisible="False"
+                                       HeightRequest="600"
+                                       ItemSize="75"
+                                       ItemSpacing="10"
+                                       SelectionBackgroundColor="Transparent">
+                            <sf:SfListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+
+                                        <Label Text="{Binding Name}"
+                                               FontSize="25"
+                                               HorizontalOptions="Start"
+                                               VerticalOptions="Center"
+                                               TextColor="{StaticResource vbmgray}"/>
+
+                                        <Label Text="5,000"
+                                               FontSize="25"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"
+                                               TextColor="{StaticResource vbmgray}"/>
+
+                                        <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                                         BorderColor="Transparent"
+                                                         HasShadow="False"
+                                                         CornerRadius="50"
+                                                         WidthRequest="172"
+                                                         HeightRequest="60"
+                                                         HorizontalOptions="End"
+                                                         VerticalOptions="Center">
+
+                                            <StackLayout Orientation="Horizontal"
+                                                         VerticalOptions="Center"
+                                                         HorizontalOptions="Center"
+                                                         Spacing="15">
+
+                                                <Label Text="-"
+                                                       FontSize="30"
+                                                       TextColor="{StaticResource vbmgray}"/>
+
+                                                <Label Text="0"
+                                                       FontSize="30"
+                                                       TextColor="{StaticResource vbmgray}"/>
+
+                                                <Label Text="+"
+                                                       FontSize="30"
+                                                       TextColor="{StaticResource vbmgray}"/>
+
+                                            </StackLayout>
+
+                                        </border:SfBorder>
+
+                                    </Grid>
+
+                                </DataTemplate>
+                            </sf:SfListView.ItemTemplate>
+                        </sf:SfListView>
+
+
+                    </Grid>
+
+                </StackLayout>
+
+            </StackLayout>
+
+        </ScrollView>
+
+
+        <Grid Grid.Row="2">
+
+            <border:SfBorder BackgroundColor="{StaticResource vbmlightyellow}"
+                             BorderColor="Transparent"
+                             CornerRadius="50"
+                             HeightRequest="70"
+                             WidthRequest="430"
+                             VerticalOptions="Start"
+                             HorizontalOptions="End"
+                             HasShadow="False"
+                             Margin="0,0,25,0">
+
+                <Grid Margin="42,0">
+
+                    <StackLayout HorizontalOptions="Start"
+                                 VerticalOptions="Center"
+                                 Orientation="Horizontal"
+                                 WidthRequest="131"
+                                 HeightRequest="35"
+                                 Spacing="30">
+
+                        <Label Text="-"
+                               FontSize="30"/>
+
+                        <Label Text="1"
+                               FontSize="30"/>
+
+                        <Label Text="+"
+                               FontSize="30"/>
+
+                    </StackLayout>
+
+                    <Label Text="40,000"
+                           FontSize="30"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource vbmpinttext}"/>
+
+                </Grid>
+                
+            </border:SfBorder>
+
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         VerticalOptions="End"
+                         Spacing="100"
+                         Margin="0,0,0,40">
+
+                <ff:CachedImage Source="khachicon"
+                                Aspect="Fill"
+                                WidthRequest="30"
+                                HeightRequest="30">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ff_backicon_tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+
+                <ff:CachedImage Source="menuiconpress"
+                                x:Name="menuicon"
+                                Aspect="Fill"
+                                WidthRequest="30"
+                                HeightRequest="30">
+                </ff:CachedImage>
+
+                <ff:CachedImage Source="promotionicon"
+                                x:Name="promoicon"
+                                Aspect="Fill"
+                                WidthRequest="30"
+                                HeightRequest="30">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ff_promo_tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+
+            </StackLayout>
+
+            <Grid HorizontalOptions="End"
+                  VerticalOptions="End">
+
+                <border:SfBorder WidthRequest="193"
+                                 HeightRequest="93"
+                                 CornerRadius="50"
+                                 BackgroundColor="{StaticResource vbmlightyellow}"
+                                 BorderColor="{StaticResource vbmwhite}"
+                                 HasShadow="False"
+                                 HorizontalOptions="End"
+                                 VerticalOptions="Center"
+                                 Margin="0,0,-65,10">
+
+                    <ff:CachedImage Source="promotionicon1"
+                                    WidthRequest="30"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Center"
+                                    Margin="30,0"
+                                    Aspect="Fill"/>
+
+                </border:SfBorder>
+
+                <border:SfBorder WidthRequest="34"
+                                 HeightRequest="34"
+                                 CornerRadius="30"
+                                 BackgroundColor="Red"
+                                 BorderColor="{StaticResource vbmwhite}"
+                                 HasShadow="False"
+                                 HorizontalOptions="Start"
+                                 VerticalOptions="Start">
+
+                    <Label Text="2"
+                           FontSize="20"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="{StaticResource vbmwhite}"/>
+
+                </border:SfBorder>
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</ContentPage>

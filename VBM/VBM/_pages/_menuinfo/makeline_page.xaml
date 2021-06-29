@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VBM._pages._menuinfo.makeline_page"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             BackgroundColor="{StaticResource vbmwhite}">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="10,10,10,0">
+
+            <ff:CachedImage Source="infoicon"
+                            Aspect="Fill"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            HeightRequest="20"
+                            WidthRequest="30">
+                <ff:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ffimg_left_tapped" />
+                </ff:CachedImage.GestureRecognizers>
+            </ff:CachedImage>
+
+            <Label Text="Vua Bánh Mì Ung Văn Khiêm Cash" 
+                   TextColor="{StaticResource vbmgreen}"
+                   FontSize="30"
+                   WidthRequest="387"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <ff:CachedImage Source="onbttn_"
+                            x:Name="offbtn"
+                            Aspect="Fill"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            HeightRequest="80"
+                            WidthRequest="80">
+                <ff:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ffimg_right_tapped"/>
+                </ff:CachedImage.GestureRecognizers>
+            </ff:CachedImage>
+
+        </Grid>
+
+        <ScrollView Grid.Row="1">
+
+            <StackLayout Orientation="Vertical">
+
+                <border:SfBorder BackgroundColor="{StaticResource vbmdeeplightgray}"
+                                 BorderColor="{StaticResource vbmlightgray}"
+                                 CornerRadius="100"
+                                 WidthRequest="250"
+                                 Margin="260,43,260,0"
+                                 HasShadow="False"
+                                 HeightRequest="80">
+
+                    <Label Text="30:59"
+                       TextColor="{StaticResource vbmwhite}"
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="30"/>
+
+                </border:SfBorder>
+
+                <ScrollView>
+
+                    <border:SfBorder HeightRequest="482"
+                                 WidthRequest="750"
+                                 CornerRadius="60"
+                                 BorderColor="White"
+                                 BackgroundColor="{StaticResource vbmlightgray}"
+                                 HasShadow="False"
+                                 Margin="10">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="111"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Padding="10"
+                              BackgroundColor="{StaticResource vbmdeepgreen}">
+
+                                <Label Text="Nguyễn Văn Khải 0912345678"
+                                   HorizontalTextAlignment="Start"
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="Center"
+                                   TextColor="{StaticResource vbmwhite}"
+                                   FontSize="30"
+                                   WidthRequest="230"
+                                   Margin="20,0"/>
+
+                                <Label Text="So HD: 89232"
+                               HorizontalTextAlignment="Start"
+                               HorizontalOptions="End"
+                               VerticalOptions="Center"
+                               TextColor="{StaticResource vbmwhite}"
+                               FontSize="25"
+                               Margin="0,0,20,0"/>
+
+                            </Grid>
+
+                            <StackLayout Orientation="Vertical"
+                                     Padding="20"
+                                     Spacing="20"
+                                     Grid.Row="1"
+                                     Margin="43,0,0,0">
+
+                                <Grid>
+
+                                    <StackLayout Orientation="Vertical"
+                                             Spacing="20">
+
+                                        <Grid>
+
+                                            <StackLayout Orientation="Vertical"
+                                                     HorizontalOptions="Start"
+                                                     VerticalOptions="Center">
+
+                                                <Label Text="Bánh mì thịt chả (L) X1"
+                                                       TextColor="{StaticResource vbmgray}"
+                                                       FontSize="30"/>
+
+                                                <StackLayout Orientation="Horizontal"
+                                                             Spacing="20">
+
+                                                    <Label Text="Không ớt"
+                                                           TextColor="{StaticResource vbmpinttext}"
+                                                           FontSize="25"
+                                                           VerticalOptions="Center"/>
+
+                                                    <Label Text="Không ớt"
+                                                           TextColor="{StaticResource vbmpinttext}"
+                                                           FontSize="25"
+                                                           VerticalOptions="Center"/>
+
+                                                </StackLayout>
+
+                                                <StackLayout Orientation="Horizontal"
+                                                             Spacing="20">
+
+                                                    <Label Text="Không ớt"
+                                                           TextColor="{StaticResource vbmpinttext}"
+                                                           FontSize="25"
+                                                           VerticalOptions="Center"/>
+
+                                                    <Label Text="Không ớt"
+                                                           TextColor="{StaticResource vbmpinttext}"
+                                                           FontSize="25"
+                                                           VerticalOptions="Center"/>
+
+                                                </StackLayout>
+
+                                                <StackLayout Orientation="Horizontal"
+                                                             Spacing="20">
+
+                                                    <border:SfBorder BackgroundColor="{StaticResource vbmdeeplightgray}"
+                                                                     BorderColor="{StaticResource vbmwhite}"
+                                                                     WidthRequest="180"
+                                                                     HeightRequest="60"
+                                                                     CornerRadius="50"
+                                                                     HasShadow="False">
+
+                                                        <Label Text="Thêm chả x1"
+                                                               TextColor="{StaticResource vbmwhite}"
+                                                               FontSize="20"
+                                                               HorizontalOptions="Center"
+                                                               VerticalOptions="Center"/>
+
+                                                    </border:SfBorder>
+
+                                                    <border:SfBorder BackgroundColor="{StaticResource vbmdeeplightgray}"
+                                                                     BorderColor="{StaticResource vbmwhite}"
+                                                                     WidthRequest="180"
+                                                                     HeightRequest="60"
+                                                                     CornerRadius="50"
+                                                                     HasShadow="False">
+
+                                                        <Label Text="Thêm gà xé x2"
+                                                               TextColor="{StaticResource vbmwhite}"
+                                                               FontSize="20"
+                                                               HorizontalOptions="Center"
+                                                               VerticalOptions="Center"/>
+
+                                                    </border:SfBorder>
+
+                                                </StackLayout>
+
+                                            </StackLayout>
+
+                                            <border:SfBorder BackgroundColor="{StaticResource vbmlightyellow}"
+                                                             BorderColor="{StaticResource vbmwhite}"
+                                                             HorizontalOptions="End"
+                                                             VerticalOptions="Center"
+                                                             CornerRadius="30"
+                                                             HeightRequest="67"
+                                                             WidthRequest="160"
+                                                             HasShadow="False">
+
+                                                <Label Text="Hoàn thành"
+                                                       FontSize="20"
+                                                       TextColor="{StaticResource vbmgreen}"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"/>
+
+                                            </border:SfBorder>
+
+                                        </Grid>
+
+                                        <Grid>
+
+                                            <StackLayout Orientation="Horizontal"
+                                                         Spacing="20">
+
+                                                <Label Text="Bánh mì thịt chả (L) X1"
+                                                       HorizontalOptions="Start"
+                                                       VerticalOptions="Center"
+                                                       TextColor="{StaticResource vbmgray}"
+                                                       FontSize="30"/>
+
+                                            </StackLayout>
+
+                                            <border:SfBorder BackgroundColor="{StaticResource vbmlightyellow}"
+                                                             BorderColor="{StaticResource vbmwhite}"
+                                                             HorizontalOptions="End"
+                                                             VerticalOptions="Center"
+                                                             CornerRadius="30"
+                                                             HeightRequest="67"
+                                                             WidthRequest="160"
+                                                             HasShadow="False">
+
+                                                <Label Text="Hoàn thành"
+                                                       FontSize="20"
+                                                       TextColor="{StaticResource vbmgreen}"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"/>
+
+                                            </border:SfBorder>
+
+                                        </Grid>                                       
+
+                                    </StackLayout>
+
+                                </Grid>
+
+                            </StackLayout>
+
+                        </Grid>
+
+                    </border:SfBorder>
+
+                </ScrollView>
+
+            </StackLayout>
+
+        </ScrollView>
+
+        <Grid Grid.Row="2">
+
+            <ff:CachedImage Source="refreshicon"
+                            Aspect="Fill"
+                            WidthRequest="70"
+                            HeightRequest="70"
+                            Margin="0,0,30,21"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"/>
+
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

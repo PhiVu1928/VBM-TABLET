@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="VBM._pages._home.gift_page"
+             BackgroundColor="{StaticResource vbmwhite}">
+    
+    <StackLayout Padding="30">
+
+        <border:SfBorder WidthRequest="624"
+                         HeightRequest="171"
+                         BackgroundColor="{StaticResource vbmlightgray}"
+                         BorderColor="{StaticResource vbmwhite}"
+                         HasShadow="False"
+                         CornerRadius="30"
+                         Padding="20">
+            <Grid>
+
+                <StackLayout Orientation="Vertical"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Center"
+                             Spacing="20">
+
+                    <Label Text="Hạn sử dụng: 24/03/2021"
+                           TextColor="{StaticResource vbmgray}"
+                           FontSize="25"/>
+
+                    <Label Text="Số lượng: 2"
+                           FontSize="25"/>
+
+                    <Label Text="Tặng bánh mì"
+                           FontSize="25"
+                           FontAttributes="Bold"/>
+
+                </StackLayout>
+
+                <ff:CachedImage Source="quabinhthuonng"
+                                WidthRequest="70"
+                                HeightRequest="70"
+                                HorizontalOptions="End"
+                                VerticalOptions="Center"
+                                Margin="0,0,66,0"/>
+
+            </Grid>
+
+        </border:SfBorder>
+
+        <border:SfBorder WidthRequest="624"
+                         HeightRequest="171"
+                         BackgroundColor="{StaticResource vbmlightgray}"
+                         BorderColor="{StaticResource vbmwhite}"
+                         HasShadow="False"
+                         CornerRadius="30"
+                         Padding="20">
+            <Grid>
+
+                <StackLayout Orientation="Vertical"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Center"
+                             Spacing="20">
+
+                    <Label Text="Hạn sử dụng: 24/03/2021"
+                           TextColor="{StaticResource vbmgray}"
+                           FontSize="25"/>
+
+                    <Label Text="Số lượng: 2"
+                           FontSize="25"/>
+
+                    <Label Text="Tặng bánh mì"
+                           FontSize="25"
+                           FontAttributes="Bold"/>
+
+                </StackLayout>
+
+                <ff:CachedImage Source="quazenomeat"
+                                WidthRequest="70"
+                                HeightRequest="70"
+                                HorizontalOptions="End"
+                                VerticalOptions="Center"
+                                Margin="0,0,66,0"/>
+
+            </Grid>
+
+        </border:SfBorder>
+
+
+    </StackLayout>
+
+</ContentView>
