@@ -33,3 +33,40 @@ C:\Users\Phi Vu\Desktop\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_
 C:\Users\Phi Vu\Desktop\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_thanhtoan\hinh_thuc_thanh_toan_page.xaml.g.cs
 C:\Users\Phi Vu\Desktop\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_thanhtoan\discount_page.xaml.g.cs
 C:\Users\Phi Vu\Desktop\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_thanhtoan\hoa_don_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\bin\Debug\netstandard2.0\VBM.deps.json
+D:\VBM-tablet\VBM\VBM\VBM\bin\Debug\netstandard2.0\VBM.dll
+D:\VBM-tablet\VBM\VBM\VBM\bin\Debug\netstandard2.0\ref\VBM.dll
+D:\VBM-tablet\VBM\VBM\VBM\bin\Debug\netstandard2.0\VBM.pdb
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\VBM.csproj.AssemblyReference.cache
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_home\gift_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_home\historypage.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_home\home_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_info\info_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_info\menu_info_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_info\outline_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_info\popup_xacnhan.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_main\cover_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_main\login_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_menuinfo\chuan_bi_nguyen_lieu_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_menuinfo\makeline_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_menuinfo\outline_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_menuinfo\tinh_trang_don_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_menu\detail_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_menu\emenu.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_menu\menu_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_promo\khuyen_mai_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_thanhtoan\discount_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_thanhtoan\hinh_thuc_thanh_toan_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_thanhtoan\hoa_don_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_thanhtoan\thanh_toan_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\VBM.AssemblyInfoInputs.cache
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\VBM.AssemblyInfo.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\VBM.csproj.CoreCompileInputs.cache
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\XamlC.stamp
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\VBM.dll
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\ref\VBM.dll
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\VBM.pdb
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_home\customer_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_home\script_page.xaml.g.cs

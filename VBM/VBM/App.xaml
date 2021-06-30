@@ -57,6 +57,7 @@
             <Color x:Key="vbmgreen">#477B72</Color>
             <Color x:Key="vbmdeepgreen">#266248</Color>
             <Color x:Key="vbmlightgreen">#18794D</Color>
+            <Color x:Key="vbmlightsky">#FFFEE7</Color>
             <Color x:Key="vbmlightyellow">#FBE200</Color>
             <Color x:Key="vbmyellow">#F7BA34</Color>
             <Color x:Key="vbmwhite">#FFFFFF</Color>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BM8GsAxob6HG64tZgFMxcqOXEI8QzSJEHAAwvRRk3JgL7wrIYgtvA8UxF4aVgUSq6ceBVYdN0WJy0ftzU5fepA==",
+  "dgSpecHash": "IJyJM/JNlJFaGnNhsguQkI3rwsnDVEx8f7sJcq+8L0YYq7SdyHu+vk7JkCZo+MctNPK9tm70uDXeziyOw7Saxg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Phi Vu\\Desktop\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj",
+  "projectFilePath": "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Phi Vu\\.nuget\\packages\\acr.userdialogs\\7.1.0.514\\acr.userdialogs.7.1.0.514.nupkg.sha512",
     "C:\\Users\\Phi Vu\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.0.0-beta2.20059.3\\microsoft.codeanalysis.analyzers.3.0.0-beta2.20059.3.nupkg.sha512",

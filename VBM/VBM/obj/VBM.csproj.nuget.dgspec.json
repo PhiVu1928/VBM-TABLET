@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Phi Vu\\Desktop\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj": {}
+    "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Phi Vu\\Desktop\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj": {
+    "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Phi Vu\\Desktop\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj",
+        "projectUniqueName": "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj",
         "projectName": "VBM",
-        "projectPath": "C:\\Users\\Phi Vu\\Desktop\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj",
+        "projectPath": "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj",
         "packagesPath": "C:\\Users\\Phi Vu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Phi Vu\\Desktop\\VBM-tablet\\VBM\\VBM\\VBM\\obj\\",
+        "outputPath": "D:\\VBM-tablet\\VBM\\VBM\\VBM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Phi Vu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -123,7 +121,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3640,26 +3640,23 @@
   },
   "packageFolders": {
     "C:\\Users\\Phi Vu\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Phi Vu\\Desktop\\VBM-tablet\\VBM\\VBM\\VBM.Android\\VBM.Android.csproj",
+      "projectUniqueName": "D:\\VBM-tablet\\VBM\\VBM\\VBM.Android\\VBM.Android.csproj",
       "projectName": "VBM.Android",
-      "projectPath": "C:\\Users\\Phi Vu\\Desktop\\VBM-tablet\\VBM\\VBM\\VBM.Android\\VBM.Android.csproj",
+      "projectPath": "D:\\VBM-tablet\\VBM\\VBM\\VBM.Android\\VBM.Android.csproj",
       "packagesPath": "C:\\Users\\Phi Vu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Phi Vu\\Desktop\\VBM-tablet\\VBM\\VBM\\VBM.Android\\obj\\",
+      "outputPath": "D:\\VBM-tablet\\VBM\\VBM\\VBM.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\Phi Vu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -3673,8 +3670,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "C:\\Users\\Phi Vu\\Desktop\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj": {
-              "projectPath": "C:\\Users\\Phi Vu\\Desktop\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj"
+            "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj": {
+              "projectPath": "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj"
             }
           }
         }

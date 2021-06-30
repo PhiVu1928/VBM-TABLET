@@ -29,45 +29,7 @@ namespace VBM._pages._home
             Navigation.RemovePage(this);
         }      
 
-        async void ff_hisicon_tapped(object sender, EventArgs e)
-        {
-            this.IsEnabled = false;
-           
-            try
-            {
-                his.Source = "historyiconpress";
-                var historypage = new _home.historypage();
-                this.IsEnabled = true;
-                stlhome.Children.Clear();
-                stlhome.Children.Add(new historypage());
-                gift.Source = "gifticon";             
 
-            }
-            catch
-            {
-                //error show here
-                
-            }
-        }
-
-        async void ff_gifticon_tapped(object sender, EventArgs e)
-        {
-            this.IsEnabled = false;            
-            try
-            {
-                his.Source = "historyicon";
-                gift.Source = "gifticonpress";
-                var giftpage = new _home.gift_page();
-                this.IsEnabled = true;
-                stlhome.Children.Clear();
-                stlhome.Children.Add(new gift_page());          
-            }
-            catch
-            {
-                //error show here
-               
-            }
-        }
         async void ff_menuicon_tapped(object sender, EventArgs e)
         {
             this.IsEnabled = false;
@@ -143,6 +105,50 @@ namespace VBM._pages._home
                 await menuicon.ScaleTo(1, 100);
                 await this.FadeTo(1, 100);
             }
+        }
+
+        async void stl_title_tapped(object sender, EventArgs e)
+        {
+            this.IsEnabled = false;
+            var title = sender as StackLayout;
+            await title.ScaleTo(0.8, 1);
+            var selected = (MenuTab)title.BindingContext;
+            foreach(var items in vm.menuTabs)
+            {
+                if (items.Index == selected.Index)
+                {
+                    if (selected.Index == 0)
+                    {
+                        stlHomeMenu.Children.Clear();
+                        items.Selected = true;
+                        stlHomeMenu.Children.Add(new _pages._home.customer_page());
+                    }
+                    if (selected.Index == 1)
+                    {
+                        stlHomeMenu.Children.Clear();
+                        items.Selected = true;
+                        stlHomeMenu.Children.Add(new _pages._home.script_page());
+                    }
+                    if (selected.Index == 2)
+                    {
+                        stlHomeMenu.Children.Clear();
+                        items.Selected = true;
+                        stlHomeMenu.Children.Add(new _pages._home.gift_page());
+                    }                    
+                    if (selected.Index == 3)
+                    {
+                        stlHomeMenu.Children.Clear();
+                        items.Selected = true;
+                        stlHomeMenu.Children.Add(new _pages._home.historypage());
+                    }                   
+                }
+                else
+                {
+                    items.Selected = false;
+                }
+            }
+            await title.ScaleTo(1, 250);
+            this.IsEnabled = true;
         }
     }
 }

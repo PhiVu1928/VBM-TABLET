@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             x:Class="VBM._pages._home.customer_page">
+    
+    <StackLayout Orientation="Vertical"
+                             Spacing="20">
+
+        <border:SfBorder BackgroundColor="{StaticResource vbmlightsky}"
+                                     BorderColor="Transparent"
+                                     HasShadow="False"
+                                     CornerRadius="30">
+
+            <StackLayout Orientation="Vertical"
+                                     Padding="30"
+                                     Spacing="20">
+
+                <Label Text="Những chương trình khuyến mãi khách tham gia:"
+                                   FontSize="30"/>
+
+                <Label Text="Năng lượng xanh:  04 "
+                       FontSize="40"
+                       TextColor="{StaticResource vbmyellow}"
+                       FontAttributes="Bold"/>
+
+                <Label Text="Spaghetti Day:  04 "
+                       FontSize="40"
+                       TextColor="{StaticResource vbmyellow}"
+                       FontAttributes="Bold"/>
+
+                <Label Text="Ơn Giời, cuối tuần đây rồi:  04 "
+                       FontSize="40"
+                       TextColor="{StaticResource vbmyellow}"
+                       FontAttributes="Bold"/>
+
+                <StackLayout Orientation="Horizontal">
+                    
+                    <StackLayout Orientation="Vertical">
+                        
+                        <Label Text="Món khách dùng nhiều nhất"
+                                   FontSize="24"/>
+
+                        <Label Text="BM Nấm Chay: 12"
+                                   FontSize="24"/>
+
+                        <Label Text="BM Đậu hũ phá lấu: 05"
+                                   FontSize="24"/>
+                        
+                    </StackLayout>
+                    
+                    <StackLayout Orientation="Vertical">
+                        
+                        <Label Text="Zeromeat khách dùng nhiều nhất"
+                                   FontSize="24"/>
+
+                        <Label Text="BM Nấm Chay: 12"
+                                   FontSize="24"/>
+
+                        <Label Text="BM Đậu hũ phá lấu: 05"
+                                   FontSize="24"/>
+                        
+                    </StackLayout>
+                    
+                </StackLayout>
+                
+            </StackLayout>
+
+        </border:SfBorder>
+
+        <border:SfBorder BackgroundColor="{StaticResource vbmlightmiddlegray}"
+                                     BorderColor="{StaticResource vbmwhite}"
+                                     HeightRequest="144"
+                                     CornerRadius="30"
+                                     HasShadow="False"
+                                     Padding="30">
+
+            <StackLayout Orientation="Vertical"
+                                     Spacing="20">
+
+                <Grid>
+
+                    <Label Text="NGUYỄN VĂN KHẢI"
+                                       FontSize="30"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"/>
+
+                    <Label Text="Khách Mua Tại Tiệm"
+                                       FontSize="25"
+                                       TextColor="{StaticResource vbmgray}"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"/>
+
+                </Grid>
+
+                <Label Text="22/02/1994"
+                                   TextColor="{StaticResource vbmgray}"
+                                   FontSize="25"/>
+
+            </StackLayout>
+
+        </border:SfBorder>
+
+        <border:SfBorder BackgroundColor="{StaticResource vbmlightmiddlegray}"
+                                     BorderColor="{StaticResource vbmwhite}"
+                                     HeightRequest="144"
+                                     CornerRadius="30"
+                                     HasShadow="False"
+                                     Padding="30">
+
+            <StackLayout Orientation="Vertical"
+                                     Spacing="20">
+
+                <Grid>
+
+                    <Label Text="Khách Mua Tại Tiệm"
+                                       FontSize="20"
+                                       TextColor="{StaticResource vbmgray}"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"/>
+
+                    <Label Text="Điểm: 905"
+                                       FontSize="20"
+                                       TextColor="{StaticResource vbmgray}"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"/>
+
+                </Grid>
+
+                <Grid>
+
+                    <Label Text="Điểm: 905"
+                                       FontSize="20"
+                                       TextColor="{StaticResource vbmgray}"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"/>
+
+                    <Label Text="Khách Mua Tại Tiệm"
+                                       FontSize="20"
+                                       TextColor="{StaticResource vbmgray}"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"/>
+
+                </Grid>
+
+            </StackLayout>
+
+        </border:SfBorder>
+
+
+       
+
+    </StackLayout>
+
+</ContentView>

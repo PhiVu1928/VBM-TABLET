@@ -96,15 +96,14 @@
                            x:Name="lstemes"
                            LoadMoreCommand="{Binding LoadMoreItemsCommand}"
                            LoadMoreOption="AutoOnScroll"
-                           ItemSize="250"
+                           ItemSize="300"
                            SelectionBackgroundColor="Transparent"
-                           ItemSpacing="0,0,0,20"
                            Grid.Row="1">
                 <sf:SfListView.ItemTemplate>
                     <DataTemplate>
 
                         <StackLayout Orientation="Horizontal"
-                                     Spacing="100"
+                                     Spacing="50"
                                      VerticalOptions="Center"
                                      HorizontalOptions="Center"
                                      BindableLayout.ItemsSource="{Binding emes}">

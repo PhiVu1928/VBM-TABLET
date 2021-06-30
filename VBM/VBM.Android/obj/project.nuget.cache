@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8IcLateMobQO37UalMluz0XQg0AmFrGX4HPdK5acx/nQbcPlSuSGAkbboGNCDSXCI3RFP0q62s3fZ+5BsKi+DA==",
+  "dgSpecHash": "2u95IEZcOaza7QNRimRQVGko2DndUtNVMmQb2avE/L/sxwhqPzTltq7t7gcODYz6WvW0Hqea6C1dxKnFtV1F3g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Phi Vu\\Desktop\\VBM-tablet\\VBM\\VBM\\VBM.Android\\VBM.Android.csproj",
+  "projectFilePath": "D:\\VBM-tablet\\VBM\\VBM\\VBM.Android\\VBM.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Phi Vu\\.nuget\\packages\\acr.userdialogs\\7.1.0.514\\acr.userdialogs.7.1.0.514.nupkg.sha512",
     "C:\\Users\\Phi Vu\\.nuget\\packages\\andhud\\1.4.2\\andhud.1.4.2.nupkg.sha512",
