@@ -70,3 +70,4 @@ D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\ref\VBM.dll
 D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\VBM.pdb
 D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_home\customer_page.xaml.g.cs
 D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_home\script_page.xaml.g.cs
+D:\VBM-tablet\VBM\VBM\VBM\obj\Debug\netstandard2.0\_pages\_menuinfo\danh_sach_don_hang_page.xaml.g.cs

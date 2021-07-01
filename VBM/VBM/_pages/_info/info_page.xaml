@@ -5,7 +5,7 @@
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              NavigationPage.HasNavigationBar="False">
-    <Grid>
+    <Grid BackgroundColor="{StaticResource vbmwhite}">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="150"/>
@@ -50,13 +50,14 @@
 
         <ScrollView Grid.Row="1">
 
-            <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Vertical"
+                         Padding="10"
+                         Spacing="30">
 
-                <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
-                                 BorderColor="{StaticResource vbmlightgray}"
+                <border:SfBorder BackgroundColor="{StaticResource vbmlightmiddlegray}"
+                                 BorderColor="{StaticResource vbmlightmiddlegray}"
                                  CornerRadius="100"
-                                 WidthRequest="751"
-                                 Margin="10,43,10,0"
+                                 Margin="10,0,10,0"
                                  HasShadow="False"
                                  HeightRequest="107">
 
@@ -68,29 +69,25 @@
 
                 </border:SfBorder>
 
-                <Grid Padding="10"
-                      Margin="0,20,0,0">
+                <StackLayout Padding="10"
+                             Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center">
 
-                    <ff:CachedImage Source="refreshicon"
-                                    HorizontalOptions="Start"
-                                    VerticalOptions="Center"
-                                    HeightRequest="54"
+                    <ff:CachedImage Source="refreshicon"                                    
+                                    HeightRequest="30"
                                     WidthRequest="50"
                                     Aspect="Fill"/>
 
                     <Label Text="Refresh các đơn đã hoàn thành và giao cho khách nhé bạn."
                            FontSize="25"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
                            Margin="20,0,0,0"/>
 
-                </Grid>
+                </StackLayout>
 
-                <border:SfBorder HeightRequest="370"
-                                 WidthRequest="750"
-                                 CornerRadius="30"
+                <border:SfBorder CornerRadius="30"
                                  BorderColor="White"
-                                 BackgroundColor="{StaticResource vbmlightgray}"
+                                 BackgroundColor="{StaticResource vbmlightmiddlegray}"
                                  HasShadow="False"
                                  Margin="10">
 
@@ -132,8 +129,7 @@
                         <StackLayout Orientation="Vertical"
                                      Padding="20"
                                      Spacing="20"
-                                     Grid.Row="1"
-                                     Margin="43,0,0,0">
+                                     Grid.Row="1">
 
                             <Label Text="Bánh mì thịt chả (L) X1"
                                        FontSize="30"
@@ -141,15 +137,13 @@
 
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="400"/>
+                                    <ColumnDefinition Width="1*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <StackLayout Orientation="Vertical"
-                                             Margin="0,0,40,0">
+                                <StackLayout Orientation="Vertical">
 
-                                    <border:SfBorder WidthRequest="341"
-                                                     HeightRequest="67"
+                                    <border:SfBorder HeightRequest="67"
                                                      BackgroundColor="{StaticResource vbmdeeplightgray}"
                                                      CornerRadius="50">
 
@@ -160,7 +154,11 @@
 
                                     </border:SfBorder>
 
-                                    <Grid Margin="0,20,0,0">
+                                    <StackLayout Orientation="Horizontal" 
+                                                 HorizontalOptions="Center"
+                                                 VerticalOptions="Center"
+                                                 Margin="0,20,0,0"
+                                                 Spacing="20">
 
                                         <border:SfBorder WidthRequest="160"
                                                          HeightRequest="67"
@@ -188,7 +186,7 @@
 
                                         </border:SfBorder>
 
-                                    </Grid>
+                                    </StackLayout>
 
                                 </StackLayout>
 

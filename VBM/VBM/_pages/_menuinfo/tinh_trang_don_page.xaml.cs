@@ -21,5 +21,50 @@ namespace VBM._pages._menuinfo
         {
             Navigation.RemovePage(this);
         }
+
+        async void sf_bill_tapped(object sender, EventArgs e)
+        {
+            this.IsEnabled = false;
+            await btnBill.ScaleTo(0.9, 1);
+            await this.FadeTo(0.9, 1);
+            try
+            {
+                var page = new _pages._menuinfo.danh_sach_don_hang_page();
+                await Navigation.PushAsync(page);
+                this.IsEnabled = true;
+                await btnBill.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+            catch
+            {
+                //error show here
+                this.IsEnabled = true;
+                await btnBill.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+        }
+
+        async void sf_billdeli_tapped(object sender, EventArgs e)
+        {
+            this.IsEnabled = false;
+            await btnbilldeli.ScaleTo(0.9, 1);
+            await this.FadeTo(0.9, 1);
+            try
+            {
+                var page = new _pages._menuinfo.danh_sach_don_hang_page();
+                await Navigation.PushAsync(page);
+                this.IsEnabled = true;
+                await btnbilldeli.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+            catch
+            {
+                //error show here
+                this.IsEnabled = true;
+                await btnbilldeli.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+        }
+
     }
 }

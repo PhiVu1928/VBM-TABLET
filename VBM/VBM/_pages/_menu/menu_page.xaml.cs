@@ -79,6 +79,7 @@ namespace VBM._pages._menu
 
                 var khachpage = new _pages._home.home_page();
                 await Navigation.PushAsync(khachpage);
+                khachpage.render();
                 this.IsEnabled = true;
 
                 await khachicon.ScaleTo(1, 100);

@@ -1,90 +1,230 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="VBM._pages._home.gift_page"
              BackgroundColor="{StaticResource vbmwhite}">
-    
-    <StackLayout Padding="30">
 
-        <border:SfBorder WidthRequest="624"
-                         HeightRequest="171"
-                         BackgroundColor="{StaticResource vbmlightgray}"
-                         BorderColor="{StaticResource vbmwhite}"
-                         HasShadow="False"
-                         CornerRadius="30"
-                         Padding="20">
-            <Grid>
+  <StackLayout Margin="20,0"
+               Spacing="20">
 
-                <StackLayout Orientation="Vertical"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Center"
-                             Spacing="20">
+    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                     BorderColor="{StaticResource vbmwhite}"
+                     HasShadow="False"
+                     CornerRadius="30"
+                     Padding="20">
 
-                    <Label Text="Hạn sử dụng: 24/03/2021"
-                           TextColor="{StaticResource vbmgray}"
-                           FontSize="25"/>
+      <Grid>
 
-                    <Label Text="Số lượng: 2"
-                           FontSize="25"/>
+        <StackLayout Orientation="Vertical"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Center"
+                     Spacing="20">
 
-                    <Label Text="Tặng bánh mì"
-                           FontSize="25"
-                           FontAttributes="Bold"/>
+          <Label Text="Hạn sử dụng: 24/03/2021"
+                 TextColor="{StaticResource vbmgray}"
+                 FontSize="25" />
 
-                </StackLayout>
+          <Label Text="Số lượng: 2"
+                 FontSize="25" />
 
-                <ff:CachedImage Source="quabinhthuonng"
-                                WidthRequest="70"
-                                HeightRequest="70"
-                                HorizontalOptions="End"
-                                VerticalOptions="Center"
-                                Margin="0,0,66,0"/>
+          <Label Text="Tặng bánh mì"
+                 FontSize="25"
+                 FontAttributes="Bold" />
 
-            </Grid>
+        </StackLayout>
 
-        </border:SfBorder>
+        <ff:CachedImage Source="quabinhthuonng"
+                        WidthRequest="70"
+                        HeightRequest="70"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center" />
 
-        <border:SfBorder WidthRequest="624"
-                         HeightRequest="171"
-                         BackgroundColor="{StaticResource vbmlightgray}"
-                         BorderColor="{StaticResource vbmwhite}"
-                         HasShadow="False"
-                         CornerRadius="30"
-                         Padding="20">
-            <Grid>
+      </Grid>
 
-                <StackLayout Orientation="Vertical"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Center"
-                             Spacing="20">
+    </border:SfBorder>
 
-                    <Label Text="Hạn sử dụng: 24/03/2021"
-                           TextColor="{StaticResource vbmgray}"
-                           FontSize="25"/>
+    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                     BorderColor="{StaticResource vbmwhite}"
+                     HasShadow="False"
+                     CornerRadius="30"
+                     Padding="20">
 
-                    <Label Text="Số lượng: 2"
-                           FontSize="25"/>
+      <Grid>
 
-                    <Label Text="Tặng bánh mì"
-                           FontSize="25"
-                           FontAttributes="Bold"/>
+        <StackLayout Orientation="Vertical"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Center"
+                     Spacing="20">
 
-                </StackLayout>
+          <Label Text="Hạn sử dụng: 24/03/2021"
+                 TextColor="{StaticResource vbmgray}"
+                 FontSize="25" />
 
-                <ff:CachedImage Source="quazenomeat"
-                                WidthRequest="70"
-                                HeightRequest="70"
-                                HorizontalOptions="End"
-                                VerticalOptions="Center"
-                                Margin="0,0,66,0"/>
+          <Label Text="Số lượng: 2"
+                 FontSize="25" />
 
-            </Grid>
+          <Label Text="Tặng bánh mì"
+                 FontSize="25"
+                 FontAttributes="Bold" />
 
-        </border:SfBorder>
+        </StackLayout>
 
+        <ff:CachedImage Source="quazenomeat"
+                        WidthRequest="70"
+                        HeightRequest="70"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center" />
 
-    </StackLayout>
+      </Grid>
 
+    </border:SfBorder>
+
+    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                     BorderColor="{StaticResource vbmwhite}"
+                     HasShadow="False"
+                     CornerRadius="30"
+                     Padding="20">
+
+      <Grid>
+
+        <StackLayout Orientation="Vertical"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Center"
+                     Spacing="20">
+
+          <Label Text="Hạn sử dụng: 24/03/2021"
+                 TextColor="{StaticResource vbmgray}"
+                 FontSize="25" />
+
+          <Label Text="Số lượng: 2"
+                 FontSize="25" />
+
+          <Label Text="Tặng bánh mì"
+                 FontSize="25"
+                 FontAttributes="Bold" />
+                 
+        </StackLayout>
+
+        <ff:CachedImage Source="quazenomeat"
+                        WidthRequest="70"
+                        HeightRequest="70"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center" />
+
+      </Grid>
+
+    </border:SfBorder>
+
+    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                     BorderColor="{StaticResource vbmwhite}"
+                     HasShadow="False"
+                     CornerRadius="30"
+                     Padding="20">
+
+      <Grid>
+
+        <StackLayout Orientation="Vertical"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Center"
+                     Spacing="20">
+
+          <Label Text="Hạn sử dụng: 24/03/2021"
+                 TextColor="{StaticResource vbmgray}"
+                 FontSize="25" />
+
+          <Label Text="Số lượng: 2"
+                 FontSize="25" />
+
+          <Label Text="Tặng bánh mì"
+                 FontSize="25"
+                 FontAttributes="Bold" />
+
+        </StackLayout>
+
+        <ff:CachedImage Source="quazenomeat"
+                        WidthRequest="70"
+                        HeightRequest="70"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center" />
+
+      </Grid>
+
+    </border:SfBorder>
+
+    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                     BorderColor="{StaticResource vbmwhite}"
+                     HasShadow="False"
+                     CornerRadius="30"
+                     Padding="20">
+
+      <Grid>
+
+        <StackLayout Orientation="Vertical"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Center"
+                     Spacing="20">
+
+          <Label Text="Hạn sử dụng: 24/03/2021"
+                 TextColor="{StaticResource vbmgray}"
+                 FontSize="25" />
+
+          <Label Text="Số lượng: 2"
+                 FontSize="25" />
+
+          <Label Text="Tặng bánh mì"
+                 FontSize="25"
+                 FontAttributes="Bold" />
+
+        </StackLayout>
+
+        <ff:CachedImage Source="quazenomeat"
+                        WidthRequest="70"
+                        HeightRequest="70"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center" />
+
+      </Grid>
+
+    </border:SfBorder>
+
+    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                     BorderColor="{StaticResource vbmwhite}"
+                     HasShadow="False"
+                     CornerRadius="30"
+                     Padding="20">
+
+      <Grid>
+
+        <StackLayout Orientation="Vertical"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Center"
+                     Spacing="20">
+
+          <Label Text="Hạn sử dụng: 24/03/2021"
+                 TextColor="{StaticResource vbmgray}"
+                 FontSize="25" />
+
+          <Label Text="Số lượng: 2"
+                 FontSize="25" />
+
+          <Label Text="Tặng bánh mì"
+                 FontSize="25"
+                 FontAttributes="Bold" />
+
+        </StackLayout>
+
+        <ff:CachedImage Source="quazenomeat"
+                        WidthRequest="70"
+                        HeightRequest="70"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center" />
+
+      </Grid>
+
+    </border:SfBorder>
+
+  </StackLayout>
+  
 </ContentView>

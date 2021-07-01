@@ -39,6 +39,7 @@ namespace VBM._pages._promo
                
                 var homepage = new _pages._home.home_page();
                 await Navigation.PushAsync(homepage);
+                homepage.render();
                 this.IsEnabled = true;
 
                 await menuicon.ScaleTo(1, 100);

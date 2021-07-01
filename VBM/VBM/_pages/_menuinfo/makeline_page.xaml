@@ -50,33 +50,40 @@
 
         <ScrollView Grid.Row="1">
 
-            <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Vertical"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         Spacing="20">
+                
+                <Grid>
 
-                <border:SfBorder BackgroundColor="{StaticResource vbmdeeplightgray}"
-                                 BorderColor="{StaticResource vbmlightgray}"
-                                 CornerRadius="100"
-                                 WidthRequest="250"
-                                 Margin="260,43,260,0"
-                                 HasShadow="False"
-                                 HeightRequest="80">
+                    <border:SfBorder BackgroundColor="{StaticResource vbmdeeplightgray}"
+                                     BorderColor="{StaticResource vbmlightgray}"
+                                     CornerRadius="100"
+                                     HeightRequest="80"
+                                     WidthRequest="250"
+                                     HasShadow="False"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center">
 
-                    <Label Text="30:59"
-                       TextColor="{StaticResource vbmwhite}"
-                       HorizontalOptions="Center"
-                       FontAttributes="Bold"
-                       FontSize="30"/>
+                        <Label Text="30:59"
+                               TextColor="{StaticResource vbmwhite}"
+                               HorizontalOptions="Center"
+                               FontAttributes="Bold"
+                               FontSize="30"/>
 
-                </border:SfBorder>
+                    </border:SfBorder>
+
+
+                </Grid>
 
                 <ScrollView>
 
-                    <border:SfBorder HeightRequest="482"
-                                 WidthRequest="750"
-                                 CornerRadius="60"
-                                 BorderColor="White"
-                                 BackgroundColor="{StaticResource vbmlightgray}"
-                                 HasShadow="False"
-                                 Margin="10">
+                    <border:SfBorder CornerRadius="60"
+                                     BorderColor="White"
+                                     BackgroundColor="{StaticResource vbmlightgray}"
+                                     HasShadow="False"
+                                     Margin="10">
 
                         <Grid>
                             <Grid.RowDefinitions>
@@ -85,32 +92,31 @@
                             </Grid.RowDefinitions>
 
                             <Grid Padding="10"
-                              BackgroundColor="{StaticResource vbmdeepgreen}">
+                                  BackgroundColor="{StaticResource vbmdeepgreen}">
 
                                 <Label Text="Nguyễn Văn Khải 0912345678"
-                                   HorizontalTextAlignment="Start"
-                                   HorizontalOptions="Start"
-                                   VerticalOptions="Center"
-                                   TextColor="{StaticResource vbmwhite}"
-                                   FontSize="30"
-                                   WidthRequest="230"
-                                   Margin="20,0"/>
+                                       HorizontalTextAlignment="Start"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="30"
+                                       WidthRequest="230"
+                                       Margin="20,0"/>
 
                                 <Label Text="So HD: 89232"
-                               HorizontalTextAlignment="Start"
-                               HorizontalOptions="End"
-                               VerticalOptions="Center"
-                               TextColor="{StaticResource vbmwhite}"
-                               FontSize="25"
-                               Margin="0,0,20,0"/>
+                                       HorizontalTextAlignment="Start"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="25"
+                                       Margin="0,0,20,0"/>
 
                             </Grid>
 
                             <StackLayout Orientation="Vertical"
-                                     Padding="20"
-                                     Spacing="20"
-                                     Grid.Row="1"
-                                     Margin="43,0,0,0">
+                                         Padding="20"
+                                         Spacing="20"
+                                         Grid.Row="1">
 
                                 <Grid>
 
@@ -265,8 +271,8 @@
 
             <ff:CachedImage Source="refreshicon"
                             Aspect="Fill"
-                            WidthRequest="70"
-                            HeightRequest="70"
+                            WidthRequest="50"
+                            HeightRequest="50"
                             Margin="0,0,30,21"
                             HorizontalOptions="End"
                             VerticalOptions="Center"/>

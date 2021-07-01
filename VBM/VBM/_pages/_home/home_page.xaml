@@ -127,16 +127,15 @@
             </StackLayout>
 
             <sf:SfListView ItemsSource="{Binding menuTabs}"
-                               Orientation="Horizontal"
-                               SelectionBackgroundColor="Transparent"
+                           Orientation="Horizontal"
+                           SelectionBackgroundColor="Transparent"
                            IsScrollBarVisible="False"
-                               HeightRequest="70"
-                               ItemSize="200"
-                               ItemSpacing="0,0,10,0">
+                           HeightRequest="70"
+                           ItemSize="168"
+                           ItemSpacing="10,0,10,0">
                 <sf:SfListView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Orientation="Vertical"
-                                         WidthRequest="200">
+                        <StackLayout Orientation="Vertical">
                             <Label Text="{Binding Name}"
                                        FontSize="25"
                                        FontAttributes="Bold"
@@ -157,7 +156,8 @@
 
         </StackLayout>
 
-        <ScrollView Grid.Row="1">
+        <ScrollView Grid.Row="1"
+                    Padding="26">
                     
                     <StackLayout HorizontalOptions="Center"
                                  VerticalOptions="Center"

@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:sfinput="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
-             x:Class="VBM._pages._menuinfo.tinh_trang_don_page"
+             x:Class="VBM._pages._menuinfo.danh_sach_don_hang_page"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource vbmwhite}">
+             BackgroundColor="White">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="350"/>
@@ -30,13 +30,13 @@
                     </ff:CachedImage.GestureRecognizers>
                 </ff:CachedImage>
 
-                <Label Text="Đơn Hàng Đã Hoàn Thành"
+                <Label Text="Danh sách đơn hàng"
                        FontSize="36"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"/>
 
-                
+
             </Grid>
 
             <StackLayout Orientation="Vertical"
@@ -44,6 +44,54 @@
                          Margin="88,0"
                          HorizontalOptions="Center"
                          VerticalOptions="Center">
+                
+                <StackLayout Orientation="Horizontal">
+
+                    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                     BorderColor="White"
+                                     HasShadow="False"
+                                     HorizontalOptions="Start"
+                                     VerticalOptions="Center"
+                                     HeightRequest="67"
+                                     WidthRequest="270"
+                                     CornerRadius="30"
+                                     x:Name="btnBill">
+
+                        <Label Text="ĐƠN HÀNG HOÀN THÀNH"
+                               HorizontalTextAlignment="Center"
+                               x:Name="lblbilltiem"
+                               FontSize="14"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+
+                        
+
+                    </border:SfBorder>
+
+                    <border:SfBorder BackgroundColor="{StaticResource vbmgray}"
+                                     BorderColor="White"
+                                     HasShadow="False"
+                                     HorizontalOptions="End"
+                                     VerticalOptions="Center"
+                                     HeightRequest="67"
+                                     WidthRequest="270"
+                                     CornerRadius="30"
+                                     x:Name="btnbilldeli">
+
+                        <Label Text="ĐƠN HÀNG ĐANG XỬ LÝ"
+                               x:Name="lblbilldeli"
+                               FontSize="14"
+                               TextColor="{StaticResource vbmwhite}"
+                               HorizontalTextAlignment="Center"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+
+                        
+
+                    </border:SfBorder>
+
+                </StackLayout>
+
                 <Grid>
 
                     <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
@@ -74,64 +122,15 @@
                                 <Entry Placeholder="Số điện thoại"
                                        FontSize="22"
                                        VerticalOptions="Start"/>
-                                
+
                             </sfinput:SfTextInputLayout>
-                            
+
                         </StackLayout>
 
                     </border:SfBorder>
 
 
                 </Grid>
-
-                <StackLayout Orientation="Horizontal">
-
-                    <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
-                                     BorderColor="White"
-                                     HasShadow="False"
-                                     HorizontalOptions="Start"
-                                     VerticalOptions="Center"
-                                     HeightRequest="67"
-                                     WidthRequest="260"
-                                     CornerRadius="30"
-                                     x:Name="btnBill">
-
-                        <Label Text="HIỆN BILL TẠI TIỆM"
-                               x:Name="lblbilltiem"
-                               FontSize="20"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"/>
-
-                        <border:SfBorder.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="sf_bill_tapped"/>
-                        </border:SfBorder.GestureRecognizers>
-
-                    </border:SfBorder>
-
-                    <border:SfBorder BackgroundColor="{StaticResource vbmgray}"
-                                     BorderColor="White"
-                                     HasShadow="False"
-                                     HorizontalOptions="End"
-                                     VerticalOptions="Center"
-                                     HeightRequest="67"
-                                     WidthRequest="260"
-                                     CornerRadius="30"
-                                     x:Name="btnbilldeli">
-
-                        <Label Text="HIỆN BILL DELIVERY"
-                               x:Name="lblbilldeli"
-                               FontSize="20"
-                               TextColor="{StaticResource vbmwhite}"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"/>
-
-                        <border:SfBorder.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="sf_billdeli_tapped"/>
-                        </border:SfBorder.GestureRecognizers>
-                        
-                    </border:SfBorder>
-
-                </StackLayout>
 
 
             </StackLayout>
@@ -279,5 +278,5 @@
         </ScrollView>
 
     </Grid>
-    
+
 </ContentPage>

@@ -68,6 +68,9 @@
     <EmbeddedResource Update="_pages\_menuinfo\chuan_bi_nguyen_lieu_page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="_pages\_menuinfo\danh_sach_don_hang_page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="_pages\_menuinfo\makeline_page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -8,13 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("VBM._pages._menuinfo.tinh_trang_don_page.xaml", "_pages/_menuinfo/tinh_trang_don_page.xaml", typeof(global::VBM._pages._menuinfo.tinh_trang_don_page))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("VBM._pages._menuinfo.danh_sach_don_hang_page.xaml", "_pages/_menuinfo/danh_sach_don_hang_page.xaml", typeof(global::VBM._pages._menuinfo.danh_sach_don_hang_page))]
 
 namespace VBM._pages._menuinfo {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("_pages\\_menuinfo\\tinh_trang_don_page.xaml")]
-    public partial class tinh_trang_don_page : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("_pages\\_menuinfo\\danh_sach_don_hang_page.xaml")]
+    public partial class danh_sach_don_hang_page : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Syncfusion.XForms.Border.SfBorder btnBill;
@@ -30,7 +30,7 @@ namespace VBM._pages._menuinfo {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(tinh_trang_don_page));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(danh_sach_don_hang_page));
             btnBill = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.Border.SfBorder>(this, "btnBill");
             lblbilltiem = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblbilltiem");
             btnbilldeli = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.Border.SfBorder>(this, "btnbilldeli");

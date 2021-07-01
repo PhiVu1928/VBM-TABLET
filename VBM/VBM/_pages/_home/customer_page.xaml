@@ -1,156 +1,156 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              x:Class="VBM._pages._home.customer_page">
-    
-    <StackLayout Orientation="Vertical"
-                             Spacing="20">
+  <StackLayout Orientation="Vertical"
+               Spacing="20">
 
-        <border:SfBorder BackgroundColor="{StaticResource vbmlightsky}"
-                                     BorderColor="Transparent"
-                                     HasShadow="False"
-                                     CornerRadius="30">
+    <border:SfBorder BackgroundColor="{StaticResource vbmlightsky}"
+                     BorderColor="Transparent"
+                     HasShadow="False"
+                     CornerRadius="30">
 
-            <StackLayout Orientation="Vertical"
-                                     Padding="30"
-                                     Spacing="20">
+      <StackLayout Orientation="Vertical"
+                   Padding="30"
+                   Spacing="20">
 
-                <Label Text="Những chương trình khuyến mãi khách tham gia:"
-                                   FontSize="30"/>
+        <Label Text="Những chương trình khuyến mãi khách tham gia:"
+               FontSize="30" />
 
-                <Label Text="Năng lượng xanh:  04 "
-                       FontSize="40"
-                       TextColor="{StaticResource vbmyellow}"
-                       FontAttributes="Bold"/>
+        <Label Text="Năng lượng xanh:  04 "
+               FontSize="40"
+               TextColor="{StaticResource vbmyellow}"
+               FontAttributes="Bold" />
 
-                <Label Text="Spaghetti Day:  04 "
-                       FontSize="40"
-                       TextColor="{StaticResource vbmyellow}"
-                       FontAttributes="Bold"/>
+        <Label Text="Spaghetti Day:  04 "
+               FontSize="40"
+               TextColor="{StaticResource vbmyellow}"
+               FontAttributes="Bold" />
 
-                <Label Text="Ơn Giời, cuối tuần đây rồi:  04 "
-                       FontSize="40"
-                       TextColor="{StaticResource vbmyellow}"
-                       FontAttributes="Bold"/>
+        <Label Text="Ơn Giời, cuối tuần đây rồi:  04 "
+               FontSize="40"
+               TextColor="{StaticResource vbmyellow}"
+               FontAttributes="Bold" />
 
-                <StackLayout Orientation="Horizontal">
-                    
-                    <StackLayout Orientation="Vertical">
-                        
-                        <Label Text="Món khách dùng nhiều nhất"
-                                   FontSize="24"/>
+        <StackLayout Orientation="Horizontal">
 
-                        <Label Text="BM Nấm Chay: 12"
-                                   FontSize="24"/>
+          <StackLayout Orientation="Vertical"
+                       WidthRequest="345">
 
-                        <Label Text="BM Đậu hũ phá lấu: 05"
-                                   FontSize="24"/>
-                        
-                    </StackLayout>
-                    
-                    <StackLayout Orientation="Vertical">
-                        
-                        <Label Text="Zeromeat khách dùng nhiều nhất"
-                                   FontSize="24"/>
+            <Label Text="Món khách dùng nhiều nhất"
+                   FontSize="22"
+                   TextColor="{StaticResource vbmgreen}" />
 
-                        <Label Text="BM Nấm Chay: 12"
-                                   FontSize="24"/>
+            <Label Text="BM Nấm Chay: 12"
+                   FontSize="22"
+                   TextColor="{StaticResource vbmdeeplightgray}" />
 
-                        <Label Text="BM Đậu hũ phá lấu: 05"
-                                   FontSize="24"/>
-                        
-                    </StackLayout>
-                    
-                </StackLayout>
-                
-            </StackLayout>
+            <Label Text="BM Đậu hũ phá lấu: 05"
+                   FontSize="22"
+                   TextColor="{StaticResource vbmdeeplightgray}" />
 
-        </border:SfBorder>
+          </StackLayout>
 
-        <border:SfBorder BackgroundColor="{StaticResource vbmlightmiddlegray}"
-                                     BorderColor="{StaticResource vbmwhite}"
-                                     HeightRequest="144"
-                                     CornerRadius="30"
-                                     HasShadow="False"
-                                     Padding="30">
+          <StackLayout Orientation="Vertical">
 
-            <StackLayout Orientation="Vertical"
-                                     Spacing="20">
+            <Label Text="Zeromeat khách dùng nhiều nhất"
+                   FontSize="22"
+                   TextColor="{StaticResource vbmgreen}" />
 
-                <Grid>
+            <Label Text="BM Nấm Chay: 12"
+                   FontSize="22"
+                   TextColor="{StaticResource vbmdeeplightgray}" />
 
-                    <Label Text="NGUYỄN VĂN KHẢI"
-                                       FontSize="30"
-                                       FontAttributes="Bold"
-                                       HorizontalOptions="Start"
-                                       VerticalOptions="Center"/>
+            <Label Text="BM Đậu hũ phá lấu: 05"
+                   FontSize="22"
+                   TextColor="{StaticResource vbmdeeplightgray}" />
 
-                    <Label Text="Khách Mua Tại Tiệm"
-                                       FontSize="25"
-                                       TextColor="{StaticResource vbmgray}"
-                                       HorizontalOptions="End"
-                                       VerticalOptions="Center"/>
+          </StackLayout>
 
-                </Grid>
+        </StackLayout>
 
-                <Label Text="22/02/1994"
-                                   TextColor="{StaticResource vbmgray}"
-                                   FontSize="25"/>
+      </StackLayout>
 
-            </StackLayout>
+    </border:SfBorder>
 
-        </border:SfBorder>
+    <border:SfBorder BackgroundColor="{StaticResource vbmlightmiddlegray}"
+                     BorderColor="{StaticResource vbmwhite}"
+                     CornerRadius="30"
+                     HasShadow="False"
+                     Padding="20">
 
-        <border:SfBorder BackgroundColor="{StaticResource vbmlightmiddlegray}"
-                                     BorderColor="{StaticResource vbmwhite}"
-                                     HeightRequest="144"
-                                     CornerRadius="30"
-                                     HasShadow="False"
-                                     Padding="30">
+      <StackLayout Orientation="Vertical"
+                   Spacing="20">
 
-            <StackLayout Orientation="Vertical"
-                                     Spacing="20">
+        <Grid>
 
-                <Grid>
+          <Label Text="NGUYỄN VĂN KHẢI"
+                 FontSize="30"
+                 FontAttributes="Bold"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center" />
 
-                    <Label Text="Khách Mua Tại Tiệm"
-                                       FontSize="20"
-                                       TextColor="{StaticResource vbmgray}"
-                                       HorizontalOptions="Start"
-                                       VerticalOptions="Center"/>
+          <Label Text="Khách Mua Tại Tiệm"
+                 FontSize="25"
+                 TextColor="{StaticResource vbmgray}"
+                 HorizontalOptions="End"
+                 VerticalOptions="Center" />
 
-                    <Label Text="Điểm: 905"
-                                       FontSize="20"
-                                       TextColor="{StaticResource vbmgray}"
-                                       HorizontalOptions="End"
-                                       VerticalOptions="Center"/>
+        </Grid>
 
-                </Grid>
+        <Label Text="22/02/1994"
+               TextColor="{StaticResource vbmgray}"
+               FontSize="25" />
 
-                <Grid>
+      </StackLayout>
 
-                    <Label Text="Điểm: 905"
-                                       FontSize="20"
-                                       TextColor="{StaticResource vbmgray}"
-                                       HorizontalOptions="Start"
-                                       VerticalOptions="Center"/>
+    </border:SfBorder>
 
-                    <Label Text="Khách Mua Tại Tiệm"
-                                       FontSize="20"
-                                       TextColor="{StaticResource vbmgray}"
-                                       HorizontalOptions="End"
-                                       VerticalOptions="Center"/>
+    <border:SfBorder BackgroundColor="{StaticResource vbmlightmiddlegray}"
+                     BorderColor="{StaticResource vbmwhite}"
+                     CornerRadius="30"
+                     HasShadow="False"
+                     Padding="30">
 
-                </Grid>
+      <StackLayout Orientation="Vertical"
+                   Spacing="20">
+                   
+        <Grid>
 
-            </StackLayout>
+          <Label Text="Điểm: 905"
+                 FontSize="20"
+                 TextColor="{StaticResource vbmgray}"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center" />
 
-        </border:SfBorder>
+          <Label Text="Bánh Mì Tích Lũy: 5"
+                 FontSize="20"
+                 TextColor="{StaticResource vbmgray}"
+                 HorizontalOptions="End"
+                 VerticalOptions="Center" />
+        </Grid>
 
+        <Grid>
 
-       
+          <Label Text="Member"
+                 FontSize="20"
+                 TextColor="{StaticResource vbmgray}"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center" />
 
-    </StackLayout>
+          <Label Text="Số quà khả dụng"
+                 FontSize="20"
+                 TextColor="{StaticResource vbmgray}"
+                 HorizontalOptions="End"
+                 VerticalOptions="Center" /> 
 
+        </Grid>
+
+      </StackLayout>
+
+    </border:SfBorder>
+
+  </StackLayout>
+  
 </ContentView>
