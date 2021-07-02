@@ -27,7 +27,7 @@
                                 HeightRequest="25"
                                 HorizontalOptions="Start"
                                 VerticalOptions="Center"
-                                Margin="42,0,0,0">
+                                BackgroundColor="White">
                     <ff:CachedImage.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ff_backicon_tapped"/>
                     </ff:CachedImage.GestureRecognizers>
@@ -44,7 +44,8 @@
                                 VerticalOptions="Center"
                                 WidthRequest="40"
                                 HeightRequest="40"
-                                Margin="0,0,28,0"/>
+                                Margin="0,0,28,0"
+                                BackgroundColor="White"/>
 
 
             </Grid>

@@ -24,7 +24,7 @@
                                 HeightRequest="25"
                                 HorizontalOptions="Start"
                                 VerticalOptions="Center"
-                                Margin="42,0,0,0">
+                                BackgroundColor="White">
                     <ff:CachedImage.GestureRecognizers>
                         <TapGestureRecognizer Tapped="FF_left_Tapped"/>
                     </ff:CachedImage.GestureRecognizers>

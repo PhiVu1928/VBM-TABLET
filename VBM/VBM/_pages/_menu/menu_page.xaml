@@ -28,7 +28,7 @@
                                 HeightRequest="25"
                                 HorizontalOptions="Start"
                                 VerticalOptions="Center"
-                                Margin="42,0,0,0">
+                                BackgroundColor="White">
                     <ff:CachedImage.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ff_backicon_tapped"/>
                     </ff:CachedImage.GestureRecognizers>
@@ -41,6 +41,7 @@
                        HorizontalTextAlignment="Center"/>
 
                 <ff:CachedImage Source="refreshicon"
+                                BackgroundColor="White"
                                 HorizontalOptions="End"
                                 VerticalOptions="Center"
                                 WidthRequest="40"

@@ -23734,61 +23734,64 @@ namespace VBM.Droid
 			public const int sfcheckbox_unchecked_indeterminate = 2131165407;
 			
 			// aapt resource value: 0x7F0700E0
-			public const int shopicon = 2131165408;
+			public const int Shape = 2131165408;
 			
 			// aapt resource value: 0x7F0700E1
-			public const int Stroke = 2131165409;
+			public const int shopicon = 2131165409;
 			
 			// aapt resource value: 0x7F0700E2
-			public const int Stroke1 = 2131165410;
+			public const int Stroke = 2131165410;
 			
 			// aapt resource value: 0x7F0700E3
-			public const int Stroke2 = 2131165411;
+			public const int Stroke1 = 2131165411;
 			
 			// aapt resource value: 0x7F0700E4
-			public const int sudungicon = 2131165412;
+			public const int Stroke2 = 2131165412;
 			
 			// aapt resource value: 0x7F0700E5
-			public const int test_custom_background = 2131165413;
+			public const int sudungicon = 2131165413;
 			
 			// aapt resource value: 0x7F0700E6
-			public const int tienmaticon = 2131165414;
+			public const int test_custom_background = 2131165414;
 			
 			// aapt resource value: 0x7F0700E7
-			public const int timeicon = 2131165415;
+			public const int tienmaticon = 2131165415;
 			
 			// aapt resource value: 0x7F0700E8
-			public const int tooltip_frame_dark = 2131165416;
+			public const int timeicon = 2131165416;
 			
 			// aapt resource value: 0x7F0700E9
-			public const int tooltip_frame_light = 2131165417;
+			public const int tooltip_frame_dark = 2131165417;
 			
 			// aapt resource value: 0x7F0700EA
-			public const int usericon = 2131165418;
+			public const int tooltip_frame_light = 2131165418;
 			
 			// aapt resource value: 0x7F0700EB
-			public const int viewicon = 2131165419;
+			public const int usericon = 2131165419;
 			
 			// aapt resource value: 0x7F0700EC
-			public const int vinidlogo = 2131165420;
+			public const int viewicon = 2131165420;
 			
 			// aapt resource value: 0x7F0700ED
-			public const int visaicon = 2131165421;
+			public const int vinidlogo = 2131165421;
 			
 			// aapt resource value: 0x7F0700EE
-			public const int vouchericon = 2131165422;
+			public const int visaicon = 2131165422;
 			
 			// aapt resource value: 0x7F0700EF
-			public const int vouchericonvang = 2131165423;
+			public const int vouchericon = 2131165423;
 			
 			// aapt resource value: 0x7F0700F0
-			public const int walleticon = 2131165424;
+			public const int vouchericonvang = 2131165424;
 			
 			// aapt resource value: 0x7F0700F1
-			public const int walleticonvang = 2131165425;
+			public const int walleticon = 2131165425;
 			
 			// aapt resource value: 0x7F0700F2
-			public const int zalopay = 2131165426;
+			public const int walleticonvang = 2131165426;
+			
+			// aapt resource value: 0x7F0700F3
+			public const int zalopay = 2131165427;
 			
 			static Drawable()
 			{

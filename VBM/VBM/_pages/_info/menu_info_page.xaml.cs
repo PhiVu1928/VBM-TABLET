@@ -42,7 +42,7 @@ namespace VBM._pages._info
             }
         }
 
-        async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        async void Chuanbi_Tapped(object sender, EventArgs e)
         {
             this.IsEnabled = false;
             await ready.ScaleTo(0.9, 1);
@@ -67,5 +67,32 @@ namespace VBM._pages._info
                 await this.FadeTo(1, 100);
             }
         }
+
+        async void tokenpage_tapped(object sender, EventArgs e)
+        {
+            this.IsEnabled = false;
+            await tokenicon.ScaleTo(0.9, 1);
+            await this.FadeTo(0.9, 1);
+            try
+            {
+                using (var progress = UserDialogs.Instance.Loading("Loading...", null, null, true, MaskType.Black))
+                {
+                    var token = new _pages._menuinfo.token_page();
+                    await Navigation.PushAsync(token);
+                    this.IsEnabled = true;
+                    await tokenicon.ScaleTo(1, 100);
+                    await this.FadeTo(1, 100);
+                }
+            }
+            catch
+            {
+                //alert
+                //log error
+                this.IsEnabled = true;
+                await tokenicon.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+        }
+
     }
 }

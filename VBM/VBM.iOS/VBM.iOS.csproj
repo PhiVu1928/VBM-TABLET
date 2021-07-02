@@ -299,4 +299,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\Stroke2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\onbttn.png" />
+  </ItemGroup>
 </Project>

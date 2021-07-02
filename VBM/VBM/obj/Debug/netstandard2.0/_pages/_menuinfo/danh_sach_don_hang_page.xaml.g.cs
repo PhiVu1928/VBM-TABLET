@@ -23,18 +23,22 @@ namespace VBM._pages._menuinfo {
         private global::Xamarin.Forms.Label lblbilltiem;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Syncfusion.XForms.Border.SfBorder btnbilldeli;
+        private global::Syncfusion.XForms.Border.SfBorder btnbillwaiting;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label lblbilldeli;
+        private global::Xamarin.Forms.Label lblbillwaiting;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Syncfusion.ListView.XForms.SfListView sfbill;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(danh_sach_don_hang_page));
             btnBill = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.Border.SfBorder>(this, "btnBill");
             lblbilltiem = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblbilltiem");
-            btnbilldeli = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.Border.SfBorder>(this, "btnbilldeli");
-            lblbilldeli = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblbilldeli");
+            btnbillwaiting = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.Border.SfBorder>(this, "btnbillwaiting");
+            lblbillwaiting = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblbillwaiting");
+            sfbill = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.ListView.XForms.SfListView>(this, "sfbill");
         }
     }
 }

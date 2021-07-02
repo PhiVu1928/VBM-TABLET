@@ -31,6 +31,7 @@ namespace VBM._pages._menuinfo
             {
                 var page = new _pages._menuinfo.danh_sach_don_hang_page();
                 await Navigation.PushAsync(page);
+                page.Render();
                 this.IsEnabled = true;
                 await btnBill.ScaleTo(1, 100);
                 await this.FadeTo(1, 100);
@@ -53,6 +54,7 @@ namespace VBM._pages._menuinfo
             {
                 var page = new _pages._menuinfo.danh_sach_don_hang_page();
                 await Navigation.PushAsync(page);
+                page.Render();
                 this.IsEnabled = true;
                 await btnbilldeli.ScaleTo(1, 100);
                 await this.FadeTo(1, 100);

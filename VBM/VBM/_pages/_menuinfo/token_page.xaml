@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="VBM._pages._menuinfo.token_page"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="115"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Margin="0,46,0,0" >
+
+            <Grid>
+
+                <ff:CachedImage Source="Stroke"
+                                WidthRequest="50"
+                                HeightRequest="25"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                BackgroundColor="White">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ff_backicon_tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+
+                <Label Text="Token Page"
+                       FontSize="36"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+
+
+            </Grid>
+
+        </StackLayout>
+
+        <StackLayout Grid.Row="1"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     Margin="20,0">
+
+            <Grid>
+
+                <StackLayout Orientation="Vertical"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center">
+
+                    <Label Text="Token dùng để bắt đầu ca và kết thúc ca"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="{StaticResource vbmgray}"
+                           FontSize="40"/>
+
+                    <border:SfBorder BackgroundColor="{StaticResource vbmlightmiddlegray}"
+                                     BorderColor="Transparent"
+                                     CornerRadius="50"
+                                     HeightRequest="350"
+                                     WidthRequest="662"
+                                     HasShadow="False">
+
+                        <Label Text="123456"
+                               TextColor="{StaticResource vbmpinttext}"
+                               FontSize="100"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+
+                    </border:SfBorder>
+
+
+                </StackLayout>
+
+
+            </Grid>
+            
+        </StackLayout>
+
+        <Grid Grid.Row="2"
+              BackgroundColor="{StaticResource vbmgreen}">
+
+            <Label Text="Etoken Cửa Hàng Vua Bánh Mì Ung Văn Khiêm"
+                   FontSize="28"
+                   TextColor="{StaticResource vbmlightyellow}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

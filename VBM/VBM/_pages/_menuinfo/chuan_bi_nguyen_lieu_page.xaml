@@ -25,7 +25,7 @@
                                 HeightRequest="25"
                                 HorizontalOptions="Start"
                                 VerticalOptions="Center"
-                                Margin="42,0,0,0">
+                                BackgroundColor="White">
                     <ff:CachedImage.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ff_backicon_tapped"/>
                     </ff:CachedImage.GestureRecognizers>
@@ -44,10 +44,12 @@
 
         <ScrollView Grid.Row="1">
 
-            <Grid Margin="86,0,0,0">
 
                 <StackLayout Orientation="Vertical"
-                             Spacing="71">
+                             Spacing="71"
+                             Padding="50"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center">
 
                     <StackLayout Orientation="Horizontal"
                                  Spacing="47">
@@ -135,7 +137,6 @@
 
                 </StackLayout>
 
-            </Grid>
 
         </ScrollView>
 

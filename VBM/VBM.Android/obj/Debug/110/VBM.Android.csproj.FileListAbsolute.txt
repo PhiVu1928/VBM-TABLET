@@ -1674,3 +1674,4 @@ D:\VBM-tablet\VBM\VBM\VBM.Android\obj\Debug\110\stamp\_ConvertResourcesCases.sta
 D:\VBM-tablet\VBM\VBM\VBM.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 D:\VBM-tablet\VBM\VBM\VBM.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 D:\VBM-tablet\VBM\VBM\VBM.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+D:\VBM-tablet\VBM\VBM\VBM.Android\obj\Debug\110\res\drawable\shape.png

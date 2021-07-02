@@ -61,7 +61,7 @@
                    HorizontalTextAlignment="Start"/>
 
             <Grid.GestureRecognizers>
-                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                <TapGestureRecognizer Tapped="Chuanbi_Tapped"/>
             </Grid.GestureRecognizers>
             
         </Grid>
@@ -85,6 +85,7 @@
         <Grid>
 
             <ff:CachedImage Source="extokenicon"
+                            x:Name="tokenicon"
                             Aspect="Fill"
                             HeightRequest="40"
                             WidthRequest="40"
@@ -96,6 +97,10 @@
                    Margin="64,0,0,0"
                    HorizontalTextAlignment="Start"/>
 
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="tokenpage_tapped"/>
+            </Grid.GestureRecognizers>
+            
         </Grid>
 
 
