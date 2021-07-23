@@ -30,7 +30,7 @@
                          ShadowColor="WhiteSmoke"
                          BackgroundColor="White">
             
-            <Grid Padding="50">
+            <Grid Padding="{OnIdiom Phone=20,Tablet=50}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -50,7 +50,7 @@
                 </ff:CachedImage>
 
                 <Label Text="MÃ GIẢM GIÁ"
-                       FontSize="36"
+                       FontSize="{OnIdiom Phone= 16,Tablet=36}"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Grid.Row="1"/>
@@ -59,7 +59,7 @@
                 <Grid Grid.Row="2">
                     <sf:SfListView ItemsSource="{Binding discounts}"
                                    IsScrollingEnabled="False"
-                                   ItemSize="100"
+                                   ItemSize="{OnIdiom Phone=60,Tablet=100}"
                                    ItemSpacing="0,20,0,0"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center"
@@ -70,7 +70,7 @@
                                 <StackLayout Orientation="Horizontal"
                                              HorizontalOptions="Center"
                                              VerticalOptions="Center"
-                                             Spacing="-20">
+                                             Spacing="{OnIdiom Phone=-10,Tablet=-20}">
                                     
                                     <border:SfBorder WidthRequest="433"
                                                      HeightRequest="100"
@@ -79,11 +79,12 @@
                                                      BorderColor="#C2C2C2"
                                                      BackgroundColor="{Binding BorderColor}"
                                                      HorizontalOptions="Start"
-                                                     VerticalOptions="Center">
+                                                     VerticalOptions="Center"
+                                                     Padding="{OnIdiom Phone=10,Tablet=0}">
                                         <Label Text="{Binding Name}"
                                                TextColor="{Binding TextColor}"
                                                HorizontalTextAlignment="Center"
-                                               FontSize="22"
+                                               FontSize="{OnIdiom Phone=10,Tablet=22}"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center"/>
                                     </border:SfBorder>
@@ -98,7 +99,7 @@
                                                      VerticalOptions="Center">
                                         <Label Text="Dùng"
                                                TextColor="{Binding TextColor}"
-                                               FontSize="22"
+                                               FontSize="{OnIdiom Phone=10,Tablet=22}"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center"/>
                                     </border:SfBorder>

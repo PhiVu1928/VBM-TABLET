@@ -12,14 +12,14 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="{OnIdiom Phone=200,Tablet=Auto}"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="115"/>
+            <RowDefinition Height="{OnIdiom Phone=80,Tablet=115}"/>
         </Grid.RowDefinitions>
 
-        <StackLayout Margin="0,46,0,0"
+        <StackLayout Margin="{OnIdiom Phone='0,20,0,0',Tablet='0,46,0,0'}"
                      Orientation="Vertical"
-                     Spacing="40">
+                     Spacing="{OnIdiom Phone=20,Tablet=40}">
 
             <Grid>
 
@@ -35,7 +35,7 @@
                 </ff:CachedImage>
 
                 <Label Text="Nguyễn Văn Khải"
-                       FontSize="36"
+                       FontSize="{OnIdiom Phone=16,Tablet=36}"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"/>
@@ -52,10 +52,10 @@
             </Grid>
 
             <StackLayout Orientation="Horizontal"
-                         Spacing="20"
-                         Margin="22,0,0,0">
+                         Spacing="10"
+                         Margin="{OnIdiom Phone='10,0',Tablet='22,0'}">
 
-                <border:SfBorder WidthRequest="368"
+                <border:SfBorder WidthRequest="{OnIdiom Phone=300,Tablet=368}"
                                  HeightRequest="83"
                                  CornerRadius="30"
                                  BorderColor="Transparent"
@@ -63,14 +63,14 @@
                                  HasShadow="False">
                     
                     <Grid VerticalOptions="Center"
-                          Margin="20,0">
+                          Margin="0,0">
                         
                         <ff:CachedImage Source="mobileicon"
                                         Aspect="Fill"
                                         HorizontalOptions="Start"
                                         VerticalOptions="Center"/>
                         
-                        <sfinput:SfTextInputLayout Margin="5"    
+                        <sfinput:SfTextInputLayout Margin="{OnIdiom Phone='10,0',Tablet=5}"    
                                                    ContainerType="Outlined"
                                                    BackgroundColor="Transparent"
                                                    FocusedColor="Transparent"
@@ -80,13 +80,13 @@
                                                    UnfocusedColor="Transparent">
                             
                             <Entry Placeholder="Số điện thoại"
-                                   FontSize="22"
+                                   FontSize="{OnIdiom Phone=12,Tablet=22}"
                                    VerticalOptions="Center"/>
 
                         </sfinput:SfTextInputLayout>
 
                         <Label Text=" X "
-                               FontSize="20"
+                               FontSize="{OnIdiom Phone=10,Tablet=20}"
                                HorizontalOptions="End"
                                TextColor="{StaticResource vbmgreen}"/>
 
@@ -101,7 +101,7 @@
                                  CornerRadius="30">
 
                     <Label Text="Tìm kiếm"
-                           FontSize="20"
+                           FontSize="{OnIdiom Phone=10,Tablet=20}"
                            TextColor="{StaticResource vbmwhite}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"/>
@@ -117,7 +117,7 @@
 
                     <Label Text="Voucher"
                            TextColor="{StaticResource vbmwhite}"
-                           FontSize="20"
+                           FontSize="{OnIdiom Phone=10,Tablet=20}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"/>
 
@@ -131,14 +131,14 @@
                            Orientation="Horizontal"
                            SelectionBackgroundColor="Transparent"
                            IsScrollBarVisible="False"
-                           HeightRequest="70"
-                           ItemSize="168"
+                           HeightRequest="{OnIdiom Phone=40,Tablet=70}"
+                           ItemSize="{OnIdiom Phone=128,Tablet=168}"
                            ItemSpacing="10,0,10,0">
                 <sf:SfListView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Orientation="Vertical">
                             <Label Text="{Binding Name}"
-                                       FontSize="25"
+                                       FontSize="{OnIdiom Phone=15,Tablet=25}"
                                        FontAttributes="Bold"
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"
@@ -171,7 +171,7 @@
             <StackLayout Orientation="Horizontal"
                          HorizontalOptions="Center"
                          VerticalOptions="Center"
-                         Spacing="100">
+                         Spacing="{OnIdiom Phone=40,Tablet=100}">
 
                 <ff:CachedImage Source="khachiconpress"
                                 Aspect="Fill"
@@ -211,7 +211,7 @@
                                  HasShadow="False"
                                  HorizontalOptions="End"
                                  VerticalOptions="Center"
-                                 Margin="0,0,-65,10"
+                                 Margin="{OnIdiom Phone='0,0,-125,10',Tablet='0,0,-65,10'}"
                                  x:Name="carticon">
 
                     <ff:CachedImage Source="promotionicon1"
@@ -238,7 +238,7 @@
                                  VerticalOptions="Start">
 
                     <Label Text="2"
-                           FontSize="20"
+                           FontSize="{OnIdiom Phone=10,Tablet=20}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
                            TextColor="{StaticResource vbmwhite}"/>

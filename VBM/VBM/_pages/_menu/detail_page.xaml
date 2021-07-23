@@ -32,7 +32,7 @@
                 </ff:CachedImage>
 
                 <Label Text="Bánh mì thịt chả"
-                       FontSize="36"
+                       FontSize="{OnIdiom Phone=16,Tablet=36}"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"/>
@@ -57,9 +57,9 @@
 
                 <sf:SfListView ItemsSource="{Binding rowSizeRenders}"
                                Orientation="Vertical"    
-                               HeightRequest="100"
+                               HeightRequest="{OnIdiom Phone=50,Tablet=100}"
                                SelectionBackgroundColor="Transparent"
-                               ItemSize="80"
+                               ItemSize="{OnIdiom Phone=40,Tablet=80}"
                                IsScrollBarVisible="False">
                     <sf:SfListView.ItemTemplate>
                         <DataTemplate>
@@ -82,7 +82,7 @@
                                                    TextColor="{Binding TextColor}"
                                                    HorizontalOptions="Center"
                                                    VerticalOptions="Center"
-                                                   FontSize="30"/>
+                                                   FontSize="{OnIdiom Phone=15,Tablet=30}"/>
                                             <border:SfBorder.GestureRecognizers>
                                                 <TapGestureRecognizer Tapped="ff_size_tapped"/>
                                             </border:SfBorder.GestureRecognizers>
@@ -99,8 +99,8 @@
                 <sf:SfListView ItemsSource="{Binding rowsRender}"
                                Orientation="Vertical"
                                SelectionBackgroundColor="Transparent"
-                               ItemSize="100"
-                               HeightRequest="200">
+                               ItemSize="{OnIdiom Phone=80,Tablet=100}"
+                               HeightRequest="{OnIdiom Phone=180,Tablet=200}">
                     
                     <sf:SfListView.ItemTemplate>
                         <DataTemplate>
@@ -109,7 +109,7 @@
                                          HorizontalOptions="Center"
                                          VerticalOptions="Center"
                                          BackgroundColor="Transparent"
-                                         Spacing="20">
+                                         Spacing="{OnIdiom Phone=5,Tablet=20}">
 
                                 <BindableLayout.ItemTemplate>
                                     <DataTemplate>
@@ -124,7 +124,7 @@
                                             <Label Text="{Binding Name}"
                                                    x:Name="emesname"
                                                    TextColor="{Binding TextColor}"
-                                                   FontSize="20"
+                                                   FontSize="{OnIdiom Phone=10,Tablet=20}"
                                                    HorizontalOptions="Center"
                                                    VerticalOptions="Center"/>
                                             <border:SfBorder.GestureRecognizers>
@@ -155,7 +155,7 @@
                                             VerticalOptions="Center"/>
 
                             <Label Text="Điều chỉnh gia vị"
-                                   FontSize="30"
+                                   FontSize="{OnIdiom Phone=15,Tablet=30}"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center"/>
 
@@ -177,10 +177,10 @@
                     <sf:SfListView ItemsSource="{Binding rowExtrasRenders}"
                                    Orientation="Vertical"
                                    HorizontalOptions="Fill"
-                                   ItemSize="70"
+                                   ItemSize="{OnIdiom Phone=50,Tablet=70}"
                                    ItemSpacing="10"
                                    SelectionBackgroundColor="Transparent"
-                                   HeightRequest="400">
+                                   HeightRequest="{OnIdiom Phone=300,Tablet=400}">
                         <sf:SfListView.ItemTemplate>
                             <DataTemplate>
                                 <border:SfBorder CornerRadius="50"
@@ -200,7 +200,7 @@
                                                                  HasShadow="False">
 
                                                     <Label Text="{Binding Name}"
-                                                           FontSize="20"
+                                                           FontSize="{OnIdiom Phone=10,Tablet=20}"
                                                            TextColor="{Binding TextColor}"
                                                            HorizontalOptions="Center"
                                                            VerticalOptions="Center"
@@ -233,7 +233,7 @@
                                             VerticalOptions="Center"/>
 
                             <Label Text="Thêm nhân bánh"
-                                   FontSize="30"
+                                   FontSize="{OnIdiom Phone=15,Tablet=30}"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center"/>
 
@@ -252,8 +252,8 @@
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"
                                        IsScrollBarVisible="False"
-                                       HeightRequest="600"
-                                       ItemSize="75"
+                                       HeightRequest="{OnIdiom Phone=400,Tablet=600}"
+                                       ItemSize="{OnIdiom Phone=50,Tablet=75}"
                                        ItemSpacing="10"
                                        SelectionBackgroundColor="Transparent">
                             <sf:SfListView.ItemTemplate>
@@ -261,13 +261,13 @@
                                     <Grid>
 
                                         <Label Text="{Binding Name}"
-                                               FontSize="25"
+                                               FontSize="{OnIdiom Phone=10,Tablet=25}"
                                                HorizontalOptions="Start"
                                                VerticalOptions="Center"
                                                TextColor="{StaticResource vbmgray}"/>
 
                                         <Label Text="5,000"
-                                               FontSize="25"
+                                               FontSize="{OnIdiom Phone=10,Tablet=25}"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center"
                                                TextColor="{StaticResource vbmgray}"/>
@@ -276,7 +276,7 @@
                                                          BorderColor="Transparent"
                                                          HasShadow="False"
                                                          CornerRadius="50"
-                                                         WidthRequest="172"
+                                                         WidthRequest="{OnIdiom Phone=82,Tablet=172}"
                                                          HeightRequest="60"
                                                          HorizontalOptions="End"
                                                          VerticalOptions="Center">
@@ -287,15 +287,15 @@
                                                          Spacing="15">
 
                                                 <Label Text="-"
-                                                       FontSize="30"
+                                                       FontSize="{OnIdiom Phone=15,Tablet=30}"
                                                        TextColor="{StaticResource vbmgray}"/>
 
                                                 <Label Text="0"
-                                                       FontSize="30"
+                                                       FontSize="{OnIdiom Phone=15,Tablet=30}"
                                                        TextColor="{StaticResource vbmgray}"/>
 
                                                 <Label Text="+"
-                                                       FontSize="30"
+                                                       FontSize="{OnIdiom Phone=15,Tablet=30}"
                                                        TextColor="{StaticResource vbmgray}"/>
 
                                             </StackLayout>
@@ -324,7 +324,7 @@
                              BorderColor="Transparent"
                              CornerRadius="50"
                              HeightRequest="70"
-                             WidthRequest="430"
+                             WidthRequest="{OnIdiom Phone=215,Tablet=430}"
                              VerticalOptions="Start"
                              HorizontalOptions="End"
                              HasShadow="False"
@@ -337,21 +337,21 @@
                                  Orientation="Horizontal"
                                  WidthRequest="131"
                                  HeightRequest="35"
-                                 Spacing="30">
+                                 Spacing="{OnIdiom Phone=10,Tablet=30}">
 
                         <Label Text="-"
-                               FontSize="30"/>
+                               FontSize="{OnIdiom Phone=15,Tablet=30}"/>
 
                         <Label Text="1"
-                               FontSize="30"/>
+                               FontSize="{OnIdiom Phone=15,Tablet=30}"/>
 
                         <Label Text="+"
-                               FontSize="30"/>
+                               FontSize="{OnIdiom Phone=15,Tablet=30}"/>
 
                     </StackLayout>
 
                     <Label Text="40,000"
-                           FontSize="30"
+                           FontSize="{OnIdiom Phone=15,Tablet=30}"
                            HorizontalOptions="End"
                            VerticalOptions="Center"
                            FontAttributes="Bold"
@@ -364,7 +364,7 @@
             <StackLayout Orientation="Horizontal"
                          HorizontalOptions="Center"
                          VerticalOptions="End"
-                         Spacing="100"
+                         Spacing="{OnIdiom Phone=40,Tablet=100}"
                          Margin="0,0,0,40">
 
                 <ff:CachedImage Source="khachicon"
@@ -406,7 +406,7 @@
                                  HasShadow="False"
                                  HorizontalOptions="End"
                                  VerticalOptions="Center"
-                                 Margin="0,0,-65,10">
+                                 Margin="{OnIdiom Phone='0,0,-125,10',Tablet='0,0,-65,10'}">
 
                     <ff:CachedImage Source="promotionicon1"
                                     WidthRequest="30"

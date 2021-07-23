@@ -88,9 +88,8 @@ namespace VBM._pages._home
             await this.FadeTo(0.9, 1);
             try
             {
-
                 var cartpage = new _pages._thanhtoan.thanh_toan_page();
-                await Navigation.PushAsync(cartpage,true);
+                await Navigation.PushAsync(cartpage);
                 cartpage.Render();
                 this.IsEnabled = true;
 
@@ -98,10 +97,10 @@ namespace VBM._pages._home
                 await this.FadeTo(1, 100);
 
             }
-            catch
+            catch(Exception ex)
             {
-                this.IsEnabled = false;
                 //error show here
+                App.Current.MainPage.DisplayAlert("error", ex.ToString(), "ok");
                 await menuicon.ScaleTo(1, 100);
                 await this.FadeTo(1, 100);
             }

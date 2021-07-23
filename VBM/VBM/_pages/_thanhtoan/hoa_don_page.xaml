@@ -31,7 +31,7 @@
                          HorizontalOptions="Center"
                          VerticalOptions="Center"
                          BackgroundColor="White">
-            <Grid Padding="50">
+            <Grid Padding="{OnIdiom Phone=20,Tablet=50}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -52,7 +52,7 @@
                 </ff:CachedImage>
 
                 <Label Text="XUẤT HOÁ ĐƠN"
-                       FontSize="36"
+                       FontSize="{OnIdiom Phone=16,Tablet=36}"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Grid.Row="1"/>
@@ -72,8 +72,8 @@
                                               UnfocusedColor="{StaticResource vbmlightgray}"
                                               FocusedColor="Transparent"
                                               OutlineCornerRadius="30">
-                            <Entry FontSize="22"
-                                   HeightRequest="83"
+                            <Entry FontSize="{OnIdiom Phone=10,Tablet=22}"
+                                   HeightRequest="{OnIdiom Phone=53,Tablet=83}"
                                    Placeholder="Tên công ty"
                                    PlaceholderColor="{StaticResource vbmgray}"
                                    HorizontalTextAlignment="Start"
@@ -88,8 +88,8 @@
                                               UnfocusedColor="{StaticResource vbmlightgray}"
                                               FocusedColor="Transparent"
                                               OutlineCornerRadius="30">
-                        <Entry FontSize="22"
-                               HeightRequest="83"
+                        <Entry FontSize="{OnIdiom Phone=10,Tablet=22}"
+                               HeightRequest="{OnIdiom Phone=53,Tablet=83}"
                                Placeholder="Mã số thuê"
                                PlaceholderColor="{StaticResource vbmgray}"
                                HorizontalTextAlignment="Start"
@@ -104,8 +104,8 @@
                                           UnfocusedColor="{StaticResource vbmlightgray}"
                                           FocusedColor="Transparent"
                                           OutlineCornerRadius="30">
-                        <Entry FontSize="22"
-                               HeightRequest="83"
+                        <Entry FontSize="{OnIdiom Phone=10,Tablet=22}"
+                               HeightRequest="{OnIdiom Phone=53,Tablet=83}"
                                Placeholder="Địa chỉ"
                                PlaceholderColor="{StaticResource vbmgray}"
                                HorizontalTextAlignment="Start"
@@ -115,7 +115,7 @@
                     </sf:SfTextInputLayout>
 
 
-                    <border:SfBorder HeightRequest="67"
+                    <border:SfBorder HeightRequest="{OnIdiom Phone=47,Tablet=67}"
                                      WidthRequest="160"
                                      CornerRadius="30"
                                      BackgroundColor="{StaticResource vbmlightyellow}"
@@ -123,7 +123,7 @@
                                      HorizontalOptions="Center"
                                      BorderColor="Transparent">
                         <Label Text="OK"
-                               FontSize="25"
+                               FontSize="{OnIdiom Phone=15,Tablet=25}"
                                TextColor="{StaticResource vbmgreen}"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"/>

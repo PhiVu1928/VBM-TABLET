@@ -28,7 +28,7 @@
                          ShadowColor="WhiteSmoke"
                          BackgroundColor="White"
                          Margin="20,50">
-            <Grid Padding="50">
+            <Grid Padding="{OnIdiom Phone=20,Tablet=50}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20"/>
                     <RowDefinition Height="Auto"/>
@@ -49,7 +49,7 @@
 
                 <Label Text="HÌNH THỨC THANH TOÁN"
                        HorizontalTextAlignment="Center"
-                       FontSize="36"
+                       FontSize="{OnIdiom Phone=16,Tablet=36}"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Grid.Row="1"/>
@@ -58,7 +58,7 @@
                 <Grid Grid.Row="2">
                     <sf:SfListView ItemsSource="{Binding payments}"
                                    IsScrollingEnabled="False"
-                                   ItemSize="64"
+                                   ItemSize="{OnIdiom Tablet=64,Phone=34}"
                                    ItemSpacing="0,20,0,0"
                                    HorizontalOptions="Center"
                                    SelectionBackgroundColor="Transparent"
@@ -73,9 +73,9 @@
                                                     HorizontalOptions="Start"/>
 
                                     <Label Text="{Binding Name}"
-                                               FontSize="25"
+                                               FontSize="{OnIdiom Tablet=25,Phone=10}"
                                                HorizontalOptions="Start"
-                                               Margin="100,0,0,0"/>
+                                               Margin="50,0,0,0"/>
 
 
                                     <ff:CachedImage Source="{Binding SelectImage}"

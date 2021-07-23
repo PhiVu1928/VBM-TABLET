@@ -6,7 +6,7 @@
              x:Class="VBM._pages._home.gift_page"
              BackgroundColor="{StaticResource vbmwhite}">
 
-  <StackLayout Margin="20,0"
+  <StackLayout Margin="{OnIdiom Phone=0,Tablet='20,0'}"
                Spacing="20">
 
     <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
@@ -24,19 +24,19 @@
 
           <Label Text="Hạn sử dụng: 24/03/2021"
                  TextColor="{StaticResource vbmgray}"
-                 FontSize="25" />
+                 FontSize="{OnIdiom Phone=10,Tablet=25}" />
 
           <Label Text="Số lượng: 2"
-                 FontSize="25" />
+                 FontSize="{OnIdiom Phone=10,Tablet=25}" />
 
           <Label Text="Tặng bánh mì"
-                 FontSize="25"
+                 FontSize="{OnIdiom Phone=10,Tablet=25}"
                  FontAttributes="Bold" />
 
         </StackLayout>
 
         <ff:CachedImage Source="quabinhthuonng"
-                        WidthRequest="70"
+                        WidthRequest="{OnIdiom Phone=50,Tablet=70}"
                         HeightRequest="70"
                         HorizontalOptions="End"
                         VerticalOptions="Center" />
@@ -60,19 +60,19 @@
 
           <Label Text="Hạn sử dụng: 24/03/2021"
                  TextColor="{StaticResource vbmgray}"
-                 FontSize="25" />
+                 FontSize="{OnIdiom Phone=10,Tablet=25}" />
 
           <Label Text="Số lượng: 2"
-                 FontSize="25" />
+                 FontSize="{OnIdiom Phone=10,Tablet=25}" />
 
           <Label Text="Tặng bánh mì"
-                 FontSize="25"
+                 FontSize="{OnIdiom Phone=10,Tablet=25}"
                  FontAttributes="Bold" />
 
         </StackLayout>
 
         <ff:CachedImage Source="quazenomeat"
-                        WidthRequest="70"
+                        WidthRequest="{OnIdiom Phone=50,Tablet=70}"
                         HeightRequest="70"
                         HorizontalOptions="End"
                         VerticalOptions="Center" />
@@ -96,19 +96,19 @@
 
           <Label Text="Hạn sử dụng: 24/03/2021"
                  TextColor="{StaticResource vbmgray}"
-                 FontSize="25" />
+                 FontSize="{OnIdiom Phone=10,Tablet=25}" />
 
           <Label Text="Số lượng: 2"
-                 FontSize="25" />
+                 FontSize="{OnIdiom Phone=10,Tablet=25}" />
 
           <Label Text="Tặng bánh mì"
-                 FontSize="25"
+                 FontSize="{OnIdiom Phone=10,Tablet=25}"
                  FontAttributes="Bold" />
                  
         </StackLayout>
 
         <ff:CachedImage Source="quazenomeat"
-                        WidthRequest="70"
+                        WidthRequest="{OnIdiom Phone=50,Tablet=70}"
                         HeightRequest="70"
                         HorizontalOptions="End"
                         VerticalOptions="Center" />
@@ -132,19 +132,19 @@
 
           <Label Text="Hạn sử dụng: 24/03/2021"
                  TextColor="{StaticResource vbmgray}"
-                 FontSize="25" />
+                 FontSize="{OnIdiom Phone=10,Tablet=25}" />
 
           <Label Text="Số lượng: 2"
-                 FontSize="25" />
+                 FontSize="{OnIdiom Phone=10,Tablet=25}" />
 
           <Label Text="Tặng bánh mì"
-                 FontSize="25"
+                 FontSize="{OnIdiom Phone=10,Tablet=25}"
                  FontAttributes="Bold" />
 
         </StackLayout>
 
         <ff:CachedImage Source="quazenomeat"
-                        WidthRequest="70"
+                        WidthRequest="{OnIdiom Phone=50,Tablet=70}"
                         HeightRequest="70"
                         HorizontalOptions="End"
                         VerticalOptions="Center" />
@@ -168,19 +168,19 @@
 
           <Label Text="Hạn sử dụng: 24/03/2021"
                  TextColor="{StaticResource vbmgray}"
-                 FontSize="25" />
+                 FontSize="{OnIdiom Phone=10,Tablet=25}" />
 
           <Label Text="Số lượng: 2"
-                 FontSize="25" />
+                 FontSize="{OnIdiom Phone=10,Tablet=25}" />
 
           <Label Text="Tặng bánh mì"
-                 FontSize="25"
+                 FontSize="{OnIdiom Phone=10,Tablet=25}"
                  FontAttributes="Bold" />
 
         </StackLayout>
 
         <ff:CachedImage Source="quazenomeat"
-                        WidthRequest="70"
+                        WidthRequest="{OnIdiom Phone=50,Tablet=70}"
                         HeightRequest="70"
                         HorizontalOptions="End"
                         VerticalOptions="Center" />
@@ -204,19 +204,19 @@
 
           <Label Text="Hạn sử dụng: 24/03/2021"
                  TextColor="{StaticResource vbmgray}"
-                 FontSize="25" />
+                 FontSize="{OnIdiom Phone=10,Tablet=25}" />
 
           <Label Text="Số lượng: 2"
-                 FontSize="25" />
+                 FontSize="{OnIdiom Phone=10,Tablet=25}" />
 
           <Label Text="Tặng bánh mì"
-                 FontSize="25"
+                 FontSize="{OnIdiom Phone=10,Tablet=25}"
                  FontAttributes="Bold" />
 
         </StackLayout>
 
         <ff:CachedImage Source="quazenomeat"
-                        WidthRequest="70"
+                        WidthRequest="{OnIdiom Phone=50,Tablet=70}"
                         HeightRequest="70"
                         HorizontalOptions="End"
                         VerticalOptions="Center" />

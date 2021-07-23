@@ -16,7 +16,7 @@
 
         <StackLayout Orientation="Vertical"
                      Margin="0,46,0,0"
-                     Spacing="40">
+                     Spacing="{OnIdiom Phone=20,Tablet=40}">
 
             <Grid>
 
@@ -32,7 +32,7 @@
                 </ff:CachedImage>
 
                 <Label Text="Chuẩn Bị Nguyên Liệu"
-                       FontSize="36"
+                       FontSize="{OnIdiom Phone=16,Tablet=36}"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"/>
@@ -62,7 +62,7 @@
 
                         <Label Text="SCAN BARCODE"
                                TextColor="{StaticResource vbmgreen}"
-                               FontSize="30"
+                               FontSize="{OnIdiom Phone=10,Tablet=30}"
                                VerticalOptions="Center"/>
 
                     </StackLayout>
@@ -70,7 +70,7 @@
                     <Grid>
 
                         <Label Text="Nguyên liệu:"
-                               FontSize="30"
+                               FontSize="{OnIdiom Phone=10,Tablet=30}"
                                TextColor="{StaticResource vbmgreen}"
                                VerticalOptions="Center"/>
 
@@ -79,7 +79,7 @@
                     <Grid>
 
                         <Label Text="Số lượng còn lại:"
-                               FontSize="30"
+                               FontSize="{OnIdiom Phone=10,Tablet=30}"
                                TextColor="{StaticResource vbmgreen}"
                                VerticalOptions="Center"/>
 
@@ -88,7 +88,7 @@
                     <Grid>
 
                         <Label Text="Barcode:"
-                               FontSize="30"
+                               FontSize="{OnIdiom Phone=10,Tablet=30}"
                                TextColor="{StaticResource vbmgreen}"
                                VerticalOptions="Center"/>
 
@@ -97,7 +97,7 @@
                     <Grid>
 
                         <Label Text="Ngày hết hạn:"
-                               FontSize="30"
+                               FontSize="{OnIdiom Phone=10,Tablet=30}"
                                TextColor="{StaticResource vbmgreen}"
                                VerticalOptions="Center"/>
 
@@ -106,16 +106,16 @@
                     <StackLayout Orientation="Vertical">
 
                         <Label Text="Lượng sử dụng:"
-                               FontSize="30"
+                               FontSize="{OnIdiom Phone=10,Tablet=30}"
                                TextColor="{StaticResource vbmgreen}"
                                VerticalOptions="Center"/>
 
                         <Entry FontSize="22"
                                VerticalOptions="Center"                           
-                               Margin="0,50,90,0"/>
+                               Margin="{OnIdiom Phone=0,Tablet='0,50,90,0'}"/>
 
                         <Label Text="*Phần số lẻ ngăn cách bằng dấu chấm (.)"
-                               FontSize="30"
+                               FontSize="{OnIdiom Phone=10,Tablet=30}"
                                FontAttributes="Italic"
                                TextColor="{StaticResource vbmgreen}"
                                VerticalOptions="Center"/>
@@ -125,13 +125,13 @@
                     <StackLayout Orientation="Vertical">
 
                         <Label Text="Ghi chú:"
-                               FontSize="30"
+                               FontSize="{OnIdiom Phone=10,Tablet=30}"
                                TextColor="{StaticResource vbmgreen}"
                                VerticalOptions="Center"/>
 
                         <Entry FontSize="22"
                                VerticalOptions="Center"                           
-                               Margin="0,50,90,0"/>
+                               Margin="{OnIdiom Phone=0,Tablet='0,50,90,0'}"/>
 
                     </StackLayout>
 
@@ -154,7 +154,7 @@
             <Label Text="Lưu"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
-                   FontSize="20"/>
+                   FontSize="15"/>
 
         </border:SfBorder>
 

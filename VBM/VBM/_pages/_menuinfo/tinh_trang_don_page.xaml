@@ -31,7 +31,7 @@
                 </ff:CachedImage>
 
                 <Label Text="Đơn Hàng Đã Hoàn Thành"
-                       FontSize="36"
+                       FontSize="{OnIdiom Phone=16,Tablet=36}"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"/>
@@ -41,7 +41,7 @@
 
             <StackLayout Orientation="Vertical"
                          Spacing="20"
-                         Margin="88,0"
+                         Margin="{OnIdiom Phone='50,0',Tablet='88,0'}"
                          HorizontalOptions="Center"
                          VerticalOptions="Center">
                 <Grid>
@@ -72,7 +72,7 @@
                                                        UnfocusedColor="Transparent">
 
                                 <Entry Placeholder="Số điện thoại"
-                                       FontSize="22"
+                                       FontSize="{OnIdiom Phone=13,Tablet=22}"
                                        VerticalOptions="Start"/>
                                 
                             </sfinput:SfTextInputLayout>
@@ -98,9 +98,10 @@
 
                         <Label Text="HIỆN BILL TẠI TIỆM"
                                x:Name="lblbilltiem"
-                               FontSize="20"
+                               FontSize="{OnIdiom Phone=10,Tablet=20}"
                                HorizontalOptions="Center"
-                               VerticalOptions="Center"/>
+                               VerticalOptions="Center"
+                               HorizontalTextAlignment="Center"/>
 
                         <border:SfBorder.GestureRecognizers>
                             <TapGestureRecognizer Tapped="sf_bill_tapped"/>
@@ -120,10 +121,11 @@
 
                         <Label Text="HIỆN BILL DELIVERY"
                                x:Name="lblbilldeli"
-                               FontSize="20"
+                               FontSize="{OnIdiom Phone=10,Tablet=20}"
                                TextColor="{StaticResource vbmwhite}"
                                HorizontalOptions="Center"
-                               VerticalOptions="Center"/>
+                               VerticalOptions="Center"
+                               HorizontalTextAlignment="Center"/>
 
                         <border:SfBorder.GestureRecognizers>
                             <TapGestureRecognizer Tapped="sf_billdeli_tapped"/>
@@ -156,7 +158,7 @@
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
 
-                            <Grid Padding="10"
+                            <Grid Padding="{OnIdiom Phone=0,Tablet=10}"
                                   BackgroundColor="{StaticResource vbmgray}">
 
                                 <Label Text="Nguyễn Văn Khải"
@@ -164,7 +166,7 @@
                                        HorizontalOptions="Start"
                                        VerticalOptions="Center"
                                        TextColor="{StaticResource vbmwhite}"
-                                       FontSize="25"
+                                       FontSize="{OnIdiom Phone=10,Tablet=25}"
                                        Margin="20,0"/>
 
                                 <Label Text="89232"
@@ -172,14 +174,14 @@
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"
                                        TextColor="{StaticResource vbmwhite}"
-                                       FontSize="25"/>
+                                       FontSize="{OnIdiom Phone=10,Tablet=25}"/>
 
                                 <Label Text="11:31:00 02/06/2021"
                                        HorizontalTextAlignment="End"
                                        HorizontalOptions="End"
                                        VerticalOptions="Center"
                                        TextColor="{StaticResource vbmwhite}"
-                                       FontSize="25"
+                                       FontSize="{OnIdiom Phone=13,Tablet=25}"
                                        WidthRequest="152"
                                        Margin="0,0,20,0"/>
 
@@ -193,19 +195,19 @@
                                 <Grid>
 
                                     <Label Text="Đặt tại chỗ"
-                                           FontSize="30"
+                                           FontSize="{OnIdiom Phone=10,Tablet=30}"
                                            TextColor="{StaticResource vbmgray}"
                                            HorizontalOptions="Start"
                                            VerticalOptions="Center"/>
 
                                     <Label Text="Đơn đã xong"
-                                           FontSize="30"
+                                           FontSize="{OnIdiom Phone=10,Tablet=30}"
                                            TextColor="{StaticResource vbmgreen}"
                                            HorizontalOptions="Center"
                                            VerticalOptions="Center"/>
 
                                     <Label Text="40.000"
-                                           FontSize="30"
+                                           FontSize="{OnIdiom Phone=15,Tablet=30}"
                                            TextColor="{StaticResource vbmpinttext}"
                                            HorizontalOptions="End"
                                            VerticalOptions="Center"/>
@@ -225,7 +227,7 @@
 
                                         <Label Text="IN BILL"
                                                TextColor="{StaticResource vbmlightyellow}"
-                                               FontSize="20"
+                                               FontSize="{OnIdiom Phone=10,Tablet=20}"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center"/>
 
@@ -240,7 +242,7 @@
 
                                         <Label Text="IN LABEL"
                                                TextColor="{StaticResource vbmgreen}"
-                                               FontSize="20"
+                                               FontSize="{OnIdiom Phone=10,Tablet=20}"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center"/>
 
@@ -257,7 +259,8 @@
 
                                         <Label Text="XEM CHI TIẾT"
                                                TextColor="{StaticResource vbmwhite}"
-                                               FontSize="20"
+                                               FontSize="{OnIdiom Phone=10,Tablet=20}"
+                                               HorizontalTextAlignment="Center"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center"/>
 

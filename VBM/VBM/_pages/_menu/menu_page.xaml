@@ -12,12 +12,12 @@
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="115"/>
+            <RowDefinition Height="{OnIdiom Phone=65,Tablet=115}"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="115"/>
+            <RowDefinition Height="{OnIdiom Phone=80,Tablet=115}"/>
         </Grid.RowDefinitions>
 
-        <StackLayout Margin="0,46,0,0"
+        <StackLayout Margin="{OnIdiom Phone='0,20,0,0',Tablet='0,46,0,0'}"
                      Orientation="Vertical"
                      Spacing="40">
 
@@ -35,7 +35,7 @@
                 </ff:CachedImage>
 
                 <Label Text="Nguyễn Văn Khải"
-                       FontSize="36"
+                       FontSize="{OnIdiom Phone=16,Tablet=36}"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"/>
@@ -56,15 +56,15 @@
         <Grid Grid.Row="1"
               Margin="10,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="90"/>
+                <RowDefinition Height="{OnIdiom Phone=50,Tablet=90}"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <sf:SfListView ItemsSource="{Binding titleGroups}"
                            Orientation="Horizontal"
                            SelectionBackgroundColor="Transparent"
-                           ItemSize="170"
-                           ItemSpacing="0,0,70,0"
+                           ItemSize="{OnIdiom Phone=120,Tablet=170}"
+                           ItemSpacing="{OnIdiom Phone='0,0,20,0',Tablet='0,0,70,0'}"
                            IsScrollBarVisible="False"
                            x:Name="lstTitle">
 
@@ -77,7 +77,7 @@
 
                                 <Label Text="{Binding name}"
                                        TextColor="{Binding Color}"
-                                       FontSize="23"
+                                       FontSize="{OnIdiom Phone=13,Tablet=23}"
                                        HorizontalTextAlignment="Center"/>
 
                                 <BoxView BackgroundColor="{Binding BoxColor}"
@@ -97,14 +97,15 @@
                            x:Name="lstemes"
                            LoadMoreCommand="{Binding LoadMoreItemsCommand}"
                            LoadMoreOption="AutoOnScroll"
-                           ItemSize="300"
+                           ItemSize="{OnIdiom Phone=180,Tablet=230}"
+                           ItemSpacing="{OnIdiom Phone='0,0,0,20',Tablet=0}"
                            SelectionBackgroundColor="Transparent"
                            Grid.Row="1">
                 <sf:SfListView.ItemTemplate>
                     <DataTemplate>
 
                         <StackLayout Orientation="Horizontal"
-                                     Spacing="50"
+                                     Spacing="{OnIdiom Phone=10,Tablet=70}"
                                      VerticalOptions="Center"
                                      HorizontalOptions="Center"
                                      BindableLayout.ItemsSource="{Binding emes}">
@@ -153,7 +154,7 @@
             <StackLayout Orientation="Horizontal"
                          HorizontalOptions="Center"
                          VerticalOptions="Center"
-                         Spacing="100">
+                         Spacing="{OnIdiom Phone=40,Tablet=100}">
 
                 <ff:CachedImage Source="khachicon"
                                 x:Name="khachicon"
@@ -169,7 +170,8 @@
                                 x:Name="menuicon"
                                 Aspect="Fill"
                                 WidthRequest="30"
-                                HeightRequest="30">                    
+                                HeightRequest="30">
+                    
                 </ff:CachedImage>
 
                 <ff:CachedImage Source="promotionicon"
@@ -195,7 +197,7 @@
                                  HasShadow="False"
                                  HorizontalOptions="End"
                                  VerticalOptions="Center"
-                                 Margin="0,0,-65,10"
+                                 Margin="{OnIdiom Phone='0,0,-125,10',Tablet='0,0,-65,10'}"
                                  x:Name="carticon">
 
                     <ff:CachedImage Source="promotionicon1"
@@ -205,9 +207,11 @@
                                     VerticalOptions="Center"
                                     Margin="30,0"
                                     Aspect="Fill"/>
+
                     <border:SfBorder.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ff_cart_tapped"/>
                     </border:SfBorder.GestureRecognizers>
+
                 </border:SfBorder>
 
                 <border:SfBorder WidthRequest="34"
@@ -220,7 +224,7 @@
                                  VerticalOptions="Start">
 
                     <Label Text="2"
-                           FontSize="20"
+                           FontSize="{OnIdiom Phone=10,Tablet=20}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
                            TextColor="{StaticResource vbmwhite}"/>

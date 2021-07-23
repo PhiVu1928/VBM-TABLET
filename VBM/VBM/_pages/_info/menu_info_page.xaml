@@ -7,8 +7,8 @@
              BackgroundColor="{StaticResource vbmwhite}">
 
     <StackLayout Orientation="Vertical"
-                 Margin="10,74,0,0"
-                 Spacing="40">
+                 Margin="10"
+                 Spacing="{OnIdiom Phone=20,Tablet=40}">
 
         <Grid>
 
@@ -20,7 +20,7 @@
                             VerticalOptions="Center"/>
 
             <Label Text="Nguyễn Văn Hải "
-                   FontSize="25"
+                   FontSize="{OnIdiom Phone=10,Tablet=25}"
                    Margin="64,0,0,0"
                    HorizontalTextAlignment="Start"/>
             
@@ -36,7 +36,7 @@
                             VerticalOptions="Center"/>
 
             <Label Text="Xem tình trạng đơn"
-                   FontSize="25"
+                   FontSize="{OnIdiom Phone=10,Tablet=25}"
                    Margin="64,0,0,0"
                    HorizontalTextAlignment="Start"/>
 
@@ -56,7 +56,7 @@
                             VerticalOptions="Center"/>
 
             <Label Text="Chuẩn bị nguyên liệu"
-                   FontSize="25"
+                   FontSize="{OnIdiom Phone=10,Tablet=25}"
                    Margin="64,0,0,0"
                    HorizontalTextAlignment="Start"/>
 
@@ -76,7 +76,7 @@
                             VerticalOptions="Center"/>
 
             <Label Text="Sử dụng nguyên liệu"
-                   FontSize="25"
+                   FontSize="{OnIdiom Phone=10,Tablet=25}"
                    Margin="64,0,0,0"
                    HorizontalTextAlignment="Start"/>
 
@@ -93,7 +93,7 @@
                             VerticalOptions="Center"/>
 
             <Label Text="Lấy Extoken của tiệm"
-                   FontSize="25"
+                   FontSize="{OnIdiom Phone=10,Tablet=25}"
                    Margin="64,0,0,0"
                    HorizontalTextAlignment="Start"/>
 
@@ -114,7 +114,7 @@
                             VerticalOptions="Center"/>
 
             <Label Text="Đăng xuất"
-                   FontSize="25"
+                   FontSize="{OnIdiom Phone=10,Tablet=25}"
                    Margin="64,0,0,0"
                    HorizontalTextAlignment="Start"/>
 

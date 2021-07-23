@@ -28,19 +28,20 @@
 
             <Label Text="Vua Bánh Mì Ung Văn Khiêm Cash" 
                    TextColor="{StaticResource vbmgreen}"
-                   FontSize="30"
-                   WidthRequest="387"
+                   FontSize="{OnIdiom Phone=15,Tablet=30}"
+                   WidthRequest="{OnIdiom Phone=150,Tablet=387}"
                    HorizontalTextAlignment="Center"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
 
-            <ff:CachedImage Source="onbttn_"
+            <ff:CachedImage Source="offbttn_"
+                            BackgroundColor="White"
                             x:Name="offbtn"
                             Aspect="Fill"
                             HorizontalOptions="End"
                             VerticalOptions="Center"
-                            HeightRequest="80"
-                            WidthRequest="80">
+                            HeightRequest="{OnIdiom Phone=60,Tablet=80}"
+                            WidthRequest="{OnIdiom Phone=60,Tablet=80}">
                 <ff:CachedImage.GestureRecognizers>
                     <TapGestureRecognizer Tapped="ffimg_right_tapped"/>
                 </ff:CachedImage.GestureRecognizers>
@@ -70,7 +71,7 @@
                                TextColor="{StaticResource vbmwhite}"
                                HorizontalOptions="Center"
                                FontAttributes="Bold"
-                               FontSize="30"/>
+                               FontSize="{OnIdiom Phone=15,Tablet=30}"/>
 
                     </border:SfBorder>
 
@@ -99,8 +100,8 @@
                                        HorizontalOptions="Start"
                                        VerticalOptions="Center"
                                        TextColor="{StaticResource vbmwhite}"
-                                       FontSize="30"
-                                       WidthRequest="230"
+                                       FontSize="{OnIdiom Phone=10,Tablet=30}"
+                                       WidthRequest="{OnIdiom Phone=100,Tablet=230}"
                                        Margin="20,0"/>
 
                                 <Label Text="So HD: 89232"
@@ -108,7 +109,7 @@
                                        HorizontalOptions="End"
                                        VerticalOptions="Center"
                                        TextColor="{StaticResource vbmwhite}"
-                                       FontSize="25"
+                                       FontSize="{OnIdiom Phone=10,Tablet=25}"
                                        Margin="0,0,20,0"/>
 
                             </Grid>
@@ -131,19 +132,19 @@
 
                                                 <Label Text="Bánh mì thịt chả (L) X1"
                                                        TextColor="{StaticResource vbmgray}"
-                                                       FontSize="30"/>
+                                                       FontSize="{OnIdiom Phone=15,Tablet=30}"/>
 
                                                 <StackLayout Orientation="Horizontal"
                                                              Spacing="20">
 
                                                     <Label Text="Không ớt"
                                                            TextColor="{StaticResource vbmpinttext}"
-                                                           FontSize="25"
+                                                           FontSize="{OnIdiom Phone=13,Tablet=25}"
                                                            VerticalOptions="Center"/>
 
                                                     <Label Text="Không ớt"
                                                            TextColor="{StaticResource vbmpinttext}"
-                                                           FontSize="25"
+                                                           FontSize="{OnIdiom Phone=13,Tablet=25}"
                                                            VerticalOptions="Center"/>
 
                                                 </StackLayout>
@@ -153,12 +154,12 @@
 
                                                     <Label Text="Không ớt"
                                                            TextColor="{StaticResource vbmpinttext}"
-                                                           FontSize="25"
+                                                           FontSize="{OnIdiom Phone=13,Tablet=25}"
                                                            VerticalOptions="Center"/>
 
                                                     <Label Text="Không ớt"
                                                            TextColor="{StaticResource vbmpinttext}"
-                                                           FontSize="25"
+                                                           FontSize="{OnIdiom Phone=13,Tablet=25}"
                                                            VerticalOptions="Center"/>
 
                                                 </StackLayout>
@@ -175,7 +176,7 @@
 
                                                         <Label Text="Thêm chả x1"
                                                                TextColor="{StaticResource vbmwhite}"
-                                                               FontSize="20"
+                                                               FontSize="{OnIdiom Phone=13,Tablet=20}"
                                                                HorizontalOptions="Center"
                                                                VerticalOptions="Center"/>
 
@@ -190,7 +191,7 @@
 
                                                         <Label Text="Thêm gà xé x2"
                                                                TextColor="{StaticResource vbmwhite}"
-                                                               FontSize="20"
+                                                               FontSize="{OnIdiom Phone=13,Tablet=20}"
                                                                HorizontalOptions="Center"
                                                                VerticalOptions="Center"/>
 
@@ -210,7 +211,7 @@
                                                              HasShadow="False">
 
                                                 <Label Text="Hoàn thành"
-                                                       FontSize="20"
+                                                       FontSize="{OnIdiom Phone=13,Tablet=20}"
                                                        TextColor="{StaticResource vbmgreen}"
                                                        HorizontalOptions="Center"
                                                        VerticalOptions="Center"/>
@@ -228,7 +229,7 @@
                                                        HorizontalOptions="Start"
                                                        VerticalOptions="Center"
                                                        TextColor="{StaticResource vbmgray}"
-                                                       FontSize="30"/>
+                                                       FontSize="{OnIdiom Phone=13,Tablet=30}"/>
 
                                             </StackLayout>
 
@@ -242,7 +243,7 @@
                                                              HasShadow="False">
 
                                                 <Label Text="Hoàn thành"
-                                                       FontSize="20"
+                                                       FontSize="{OnIdiom Phone=13,Tablet=20}"
                                                        TextColor="{StaticResource vbmgreen}"
                                                        HorizontalOptions="Center"
                                                        VerticalOptions="Center"/>

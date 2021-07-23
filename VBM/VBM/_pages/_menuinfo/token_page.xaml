@@ -29,7 +29,7 @@
                 </ff:CachedImage>
 
                 <Label Text="Token Page"
-                       FontSize="36"
+                       FontSize="{OnIdiom Phone=16,Tablet=36}"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"/>
@@ -54,7 +54,7 @@
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
                            TextColor="{StaticResource vbmgray}"
-                           FontSize="40"/>
+                           FontSize="{OnIdiom Phone=20,Tablet=40}"/>
 
                     <border:SfBorder BackgroundColor="{StaticResource vbmlightmiddlegray}"
                                      BorderColor="Transparent"
@@ -65,7 +65,7 @@
 
                         <Label Text="123456"
                                TextColor="{StaticResource vbmpinttext}"
-                               FontSize="100"
+                               FontSize="{OnIdiom Phone=50,Tablet=100}"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"/>
 
@@ -83,7 +83,7 @@
               BackgroundColor="{StaticResource vbmgreen}">
 
             <Label Text="Etoken Cửa Hàng Vua Bánh Mì Ung Văn Khiêm"
-                   FontSize="28"
+                   FontSize="{OnIdiom Phone=10,Tablet=26}"
                    TextColor="{StaticResource vbmlightyellow}"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>

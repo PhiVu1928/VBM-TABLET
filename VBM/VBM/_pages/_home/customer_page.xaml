@@ -12,42 +12,42 @@
                      CornerRadius="30">
 
       <StackLayout Orientation="Vertical"
-                   Padding="30"
+                   Padding="{OnIdiom Phone=10,Tablet=30}"
                    Spacing="20">
 
         <Label Text="Những chương trình khuyến mãi khách tham gia:"
-               FontSize="30" />
+               FontSize="{OnIdiom Phone=15,Tablet=30}" />
 
         <Label Text="Năng lượng xanh:  04 "
-               FontSize="40"
+               FontSize="{OnIdiom Phone=20,Tablet=40}"
                TextColor="{StaticResource vbmyellow}"
                FontAttributes="Bold" />
 
         <Label Text="Spaghetti Day:  04 "
-               FontSize="40"
+               FontSize="{OnIdiom Phone=20,Tablet=40}"
                TextColor="{StaticResource vbmyellow}"
                FontAttributes="Bold" />
 
         <Label Text="Ơn Giời, cuối tuần đây rồi:  04 "
-               FontSize="40"
+               FontSize="{OnIdiom Phone=20,Tablet=40}"
                TextColor="{StaticResource vbmyellow}"
                FontAttributes="Bold" />
 
         <StackLayout Orientation="Horizontal">
 
           <StackLayout Orientation="Vertical"
-                       WidthRequest="345">
+                       WidthRequest="{OnIdiom Phone=220,Tablet=345}">
 
             <Label Text="Món khách dùng nhiều nhất"
-                   FontSize="22"
+                   FontSize="{OnIdiom Phone=12,Tablet=22}"
                    TextColor="{StaticResource vbmgreen}" />
 
             <Label Text="BM Nấm Chay: 12"
-                   FontSize="22"
+                   FontSize="{OnIdiom Phone=10,Tablet=22}"
                    TextColor="{StaticResource vbmdeeplightgray}" />
 
             <Label Text="BM Đậu hũ phá lấu: 05"
-                   FontSize="22"
+                   FontSize="{OnIdiom Phone=10,Tablet=22}"
                    TextColor="{StaticResource vbmdeeplightgray}" />
 
           </StackLayout>
@@ -55,15 +55,15 @@
           <StackLayout Orientation="Vertical">
 
             <Label Text="Zeromeat khách dùng nhiều nhất"
-                   FontSize="22"
+                   FontSize="{OnIdiom Phone=12,Tablet=22}"
                    TextColor="{StaticResource vbmgreen}" />
 
             <Label Text="BM Nấm Chay: 12"
-                   FontSize="22"
+                   FontSize="{OnIdiom Phone=10,Tablet=22}"
                    TextColor="{StaticResource vbmdeeplightgray}" />
 
             <Label Text="BM Đậu hũ phá lấu: 05"
-                   FontSize="22"
+                   FontSize="{OnIdiom Phone=10,Tablet=22}"
                    TextColor="{StaticResource vbmdeeplightgray}" />
 
           </StackLayout>
@@ -78,7 +78,7 @@
                      BorderColor="{StaticResource vbmwhite}"
                      CornerRadius="30"
                      HasShadow="False"
-                     Padding="20">
+                     Padding="{OnIdiom Phone=15,Tablet=20}">
 
       <StackLayout Orientation="Vertical"
                    Spacing="20">
@@ -86,13 +86,13 @@
         <Grid>
 
           <Label Text="NGUYỄN VĂN KHẢI"
-                 FontSize="30"
+                 FontSize="{OnIdiom Phone=10,Tablet=30}"
                  FontAttributes="Bold"
                  HorizontalOptions="Start"
                  VerticalOptions="Center" />
 
           <Label Text="Khách Mua Tại Tiệm"
-                 FontSize="25"
+                 FontSize="{OnIdiom Phone=10,Tablet=25}"
                  TextColor="{StaticResource vbmgray}"
                  HorizontalOptions="End"
                  VerticalOptions="Center" />
@@ -101,7 +101,7 @@
 
         <Label Text="22/02/1994"
                TextColor="{StaticResource vbmgray}"
-               FontSize="25" />
+               FontSize="{OnIdiom Phone=10,Tablet=25}" />
 
       </StackLayout>
 
@@ -111,7 +111,7 @@
                      BorderColor="{StaticResource vbmwhite}"
                      CornerRadius="30"
                      HasShadow="False"
-                     Padding="30">
+                     Padding="{OnIdiom Phone=15,Tablet=20}">
 
       <StackLayout Orientation="Vertical"
                    Spacing="20">
@@ -119,13 +119,13 @@
         <Grid>
 
           <Label Text="Điểm: 905"
-                 FontSize="20"
+                 FontSize="{OnIdiom Phone=10,Tablet=20}"
                  TextColor="{StaticResource vbmgray}"
                  HorizontalOptions="Start"
                  VerticalOptions="Center" />
 
           <Label Text="Bánh Mì Tích Lũy: 5"
-                 FontSize="20"
+                 FontSize="{OnIdiom Phone=10,Tablet=20}"
                  TextColor="{StaticResource vbmgray}"
                  HorizontalOptions="End"
                  VerticalOptions="Center" />
@@ -134,13 +134,13 @@
         <Grid>
 
           <Label Text="Member"
-                 FontSize="20"
+                 FontSize="{OnIdiom Phone=10,Tablet=20}"
                  TextColor="{StaticResource vbmgray}"
                  HorizontalOptions="Start"
                  VerticalOptions="Center" />
 
           <Label Text="Số quà khả dụng"
-                 FontSize="20"
+                 FontSize="{OnIdiom Phone=10,Tablet=20}"
                  TextColor="{StaticResource vbmgray}"
                  HorizontalOptions="End"
                  VerticalOptions="Center" /> 

@@ -17,13 +17,8 @@ namespace VBM._pages._thanhtoan
         public thanh_toan_page()
         {
             InitializeComponent();
-            SizeChanged += MainPageSizeChanged;
         }
-        void MainPageSizeChanged(object sender, EventArgs e)
-        {
-            scroll.WidthRequest = this.Width;
-            scroll.HeightRequest = this.Height / 3;
-        }
+        
         protected async override void OnAppearing()
         {
             base.OnAppearing();

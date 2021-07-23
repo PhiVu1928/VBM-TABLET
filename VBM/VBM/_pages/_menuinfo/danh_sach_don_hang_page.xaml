@@ -32,7 +32,7 @@
                 </ff:CachedImage>
 
                 <Label Text="Danh sách đơn hàng"
-                       FontSize="36"
+                       FontSize="{OnIdiom Phone=16,Tablet=36}"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"/>
@@ -42,7 +42,7 @@
 
             <StackLayout Orientation="Vertical"
                          Spacing="20"
-                         Margin="88,0"
+                         Margin="{OnIdiom Phone='50,0',Tablet='88,0'}"
                          HorizontalOptions="Center"
                          VerticalOptions="Center">
                 
@@ -62,7 +62,7 @@
                                TextColor="{StaticResource vbmwhite}"
                                HorizontalTextAlignment="Center"
                                x:Name="lblbilltiem"
-                               FontSize="14"
+                               FontSize="{OnIdiom Phone=10,Tablet=14}"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"/>
 
@@ -84,7 +84,7 @@
 
                         <Label Text="ĐƠN HÀNG ĐANG XỬ LÝ"
                                x:Name="lblbillwaiting"
-                               FontSize="14"
+                               FontSize="{OnIdiom Phone=10,Tablet=14}"
                                TextColor="{StaticResource vbmwhite}"
                                HorizontalTextAlignment="Center"
                                HorizontalOptions="Center"
@@ -128,7 +128,7 @@
 
                                 <Entry Placeholder="Số điện thoại"
                                        TextColor="{StaticResource vbmgray}"
-                                       FontSize="22"
+                                       FontSize="{OnIdiom Phone=15,Tablet=22}"
                                        VerticalOptions="Start"/>
 
                             </sfinput:SfTextInputLayout>
@@ -157,10 +157,10 @@
                     <sf:SfListView.ItemTemplate>
                         <DataTemplate>
                             <border:SfBorder CornerRadius="30"
-                                             BorderColor="White"
-                                             BackgroundColor="{StaticResource vbmlightgray}"
-                                             HasShadow="False"
-                                             Margin="10">
+                                     BorderColor="White"
+                                     BackgroundColor="{StaticResource vbmlightgray}"
+                                     HasShadow="False"
+                                     Margin="10">
 
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -168,110 +168,111 @@
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
 
-                                    <Grid Padding="10"
-                                          BackgroundColor="{StaticResource vbmgray}">
+                                    <Grid Padding="{OnIdiom Phone=0,Tablet=10}"
+                                  BackgroundColor="{StaticResource vbmgray}">
 
                                         <Label Text="Nguyễn Văn Khải"
-                                               HorizontalTextAlignment="Start"
-                                               HorizontalOptions="Start"
-                                               VerticalOptions="Center"
-                                               TextColor="{StaticResource vbmwhite}"
-                                               FontSize="25"
-                                               Margin="20,0"/>
+                                       HorizontalTextAlignment="Start"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="{OnIdiom Phone=10,Tablet=25}"
+                                       Margin="20,0"/>
 
                                         <Label Text="89232"
-                                               HorizontalTextAlignment="Start"
-                                               HorizontalOptions="Center"
-                                               VerticalOptions="Center"
-                                               TextColor="{StaticResource vbmwhite}"
-                                               FontSize="25"/>
+                                       HorizontalTextAlignment="Start"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="{OnIdiom Phone=10,Tablet=25}"/>
 
                                         <Label Text="11:31:00 02/06/2021"
-                                               HorizontalTextAlignment="End"
-                                               HorizontalOptions="End"
-                                               VerticalOptions="Center"
-                                               TextColor="{StaticResource vbmwhite}"
-                                               FontSize="25"
-                                               WidthRequest="152"
-                                               Margin="0,0,20,0"/>
+                                       HorizontalTextAlignment="End"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       FontSize="{OnIdiom Phone=13,Tablet=25}"
+                                       WidthRequest="152"
+                                       Margin="0,0,20,0"/>
 
                                     </Grid>
 
                                     <StackLayout Orientation="Vertical"
-                                                 Padding="20"
-                                                 Spacing="20"
-                                                 Grid.Row="1">
+                                         Padding="20"
+                                         Spacing="20"
+                                         Grid.Row="1">
 
                                         <Grid>
 
                                             <Label Text="Đặt tại chỗ"
-                                                   FontSize="30"
-                                                   TextColor="{StaticResource vbmgray}"
-                                                   HorizontalOptions="Start"
-                                                   VerticalOptions="Center"/>
+                                           FontSize="{OnIdiom Phone=10,Tablet=30}"
+                                           TextColor="{StaticResource vbmgray}"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"/>
 
                                             <Label Text="{Binding Status}"
-                                                   FontSize="30"
+                                                   FontSize="{OnIdiom Phone=10,Tablet=30}"
                                                    TextColor="{Binding TextColor}"
                                                    HorizontalOptions="Center"
-                                                   VerticalOptions="Center"/>
+                                                   VerticalOptions="Center"/>   
 
                                             <Label Text="40.000"
-                                                   FontSize="30"
-                                                   TextColor="{StaticResource vbmpinttext}"
-                                                   HorizontalOptions="End"
-                                                   VerticalOptions="Center"/>
+                                           FontSize="{OnIdiom Phone=10,Tablet=30}"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"/>
 
 
                                         </Grid>
 
                                         <StackLayout Orientation="Horizontal"
-                                                     Spacing="20">
+                                             Spacing="20">
 
                                             <border:SfBorder BackgroundColor="{StaticResource vbmgreen}"
-                                                             BorderColor="{StaticResource vbmwhite}"
-                                                             HasShadow="False"
-                                                             WidthRequest="160"
-                                                             HeightRequest="67"
-                                                             CornerRadius="30">
+                                                     BorderColor="{StaticResource vbmwhite}"
+                                                     HasShadow="False"
+                                                     WidthRequest="160"
+                                                     HeightRequest="67"
+                                                     CornerRadius="30">
 
                                                 <Label Text="IN BILL"
-                                                       TextColor="{StaticResource vbmlightyellow}"
-                                                       FontSize="20"
-                                                       HorizontalOptions="Center"
-                                                       VerticalOptions="Center"/>
+                                               TextColor="{StaticResource vbmlightyellow}"
+                                               FontSize="{OnIdiom Phone=10,Tablet=20}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
 
                                             </border:SfBorder>
 
                                             <border:SfBorder BackgroundColor="{StaticResource vbmlightyellow}"
-                                                             BorderColor="{StaticResource vbmwhite}"
-                                                             HasShadow="False"
-                                                             WidthRequest="160"
-                                                             HeightRequest="67"
-                                                             CornerRadius="30">
+                                                     BorderColor="{StaticResource vbmwhite}"
+                                                     HasShadow="False"
+                                                     WidthRequest="160"
+                                                     HeightRequest="67"
+                                                     CornerRadius="30">
 
                                                 <Label Text="IN LABEL"
-                                                       TextColor="{StaticResource vbmgreen}"
-                                                       FontSize="20"
-                                                       HorizontalOptions="Center"
-                                                       VerticalOptions="Center"/>
+                                               TextColor="{StaticResource vbmgreen}"
+                                               FontSize="{OnIdiom Phone=10,Tablet=20}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
 
 
                                             </border:SfBorder>
 
                                             <border:SfBorder BackgroundColor="{StaticResource vbmgray}"
-                                                             BorderColor="{StaticResource vbmwhite}"
-                                                             HasShadow="False"
-                                                             WidthRequest="190"
-                                                             HeightRequest="67"
-                                                             CornerRadius="30"
-                                                             Margin="20,0,0,0">
+                                                     BorderColor="{StaticResource vbmwhite}"
+                                                     HasShadow="False"
+                                                     WidthRequest="190"
+                                                     HeightRequest="67"
+                                                     CornerRadius="30"
+                                                     Margin="20,0,0,0">
 
                                                 <Label Text="XEM CHI TIẾT"
                                                        TextColor="{StaticResource vbmwhite}"
-                                                       FontSize="20"
+                                                       FontSize="{OnIdiom Phone=10,Tablet=20}"
                                                        HorizontalOptions="Center"
-                                                       VerticalOptions="Center"/>
+                                                       VerticalOptions="Center"
+                                                       HorizontalTextAlignment="Center"/>
 
 
                                             </border:SfBorder>

@@ -21,9 +21,9 @@
             <Grid>                
 
                 <Label Text="{Binding Name}"
-                       FontSize="18"
+                       FontSize="{OnIdiom Phone=10,Tablet=18}"
                        FontAttributes="Bold"
-                       Margin="35,30"
+                       Margin="{OnIdiom Phone='15,20',Tablet='35,30'}"
                        HorizontalOptions="Center"
                        VerticalOptions="End"
                        HorizontalTextAlignment="Center"/>
@@ -34,8 +34,8 @@
 
         </border:SfBorder>
 
-        <border:SfBorder WidthRequest="123"
-                         HeightRequest="138"
+        <border:SfBorder WidthRequest="{OnIdiom Phone=83,Tablet=123}"
+                         HeightRequest="{OnIdiom Phone=110,Tablet=138}"
                          CornerRadius="20"
                          HasShadow="False"
                          HorizontalOptions="Center"

@@ -5,7 +5,7 @@
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="VBM._pages._home.historypage"
              BackgroundColor="{StaticResource vbmwhite}">
-    <StackLayout Margin="20,0"
+    <StackLayout Margin="{OnIdiom Phone=0,Tablet='20,0'}"
                  Spacing="20">
 
         <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
@@ -21,20 +21,20 @@
                     <Label Text="24/03/2021"
                        FontAttributes="Bold"
                        TextColor="{StaticResource vbmgray}"
-                       FontSize="25"/>
+                       FontSize="{OnIdiom Phone=10,Tablet=25}"/>
 
 
                     <Grid VerticalOptions="Center">
 
 
                         <Label Text="Bánh mì thịt nướng + Trà chanh"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            TextColor="{StaticResource vbmgray}"
                            HorizontalOptions="Start"
                            VerticalOptions="Center"/>
 
                         <Label Text="x2"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            TextColor="{StaticResource vbmgray}"
                            HorizontalOptions="End"
                            VerticalOptions="Center"/>
@@ -52,7 +52,7 @@
                                     HeightRequest="30"/>
 
                         <Label Text="Đặt lại theo đơn hàng này"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            FontAttributes="Bold"/>
 
                     </StackLayout>
@@ -78,20 +78,20 @@
                     <Label Text="24/03/2021"
                        FontAttributes="Bold"
                        TextColor="{StaticResource vbmgray}"
-                       FontSize="25"/>
+                       FontSize="{OnIdiom Phone=10,Tablet=25}"/>
 
 
                     <Grid VerticalOptions="Center">
 
 
                         <Label Text="Bánh mì thịt nướng + Trà chanh"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            TextColor="{StaticResource vbmgray}"
                            HorizontalOptions="Start"
                            VerticalOptions="Center"/>
 
                         <Label Text="x2"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            TextColor="{StaticResource vbmgray}"
                            HorizontalOptions="End"
                            VerticalOptions="Center"/>
@@ -109,7 +109,7 @@
                                     HeightRequest="30"/>
 
                         <Label Text="Đặt lại theo đơn hàng này"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            FontAttributes="Bold"/>
 
                     </StackLayout>
@@ -135,20 +135,20 @@
                     <Label Text="24/03/2021"
                        FontAttributes="Bold"
                        TextColor="{StaticResource vbmgray}"
-                       FontSize="25"/>
+                       FontSize="{OnIdiom Phone=10,Tablet=25}"/>
 
 
                     <Grid VerticalOptions="Center">
 
 
                         <Label Text="Bánh mì thịt nướng + Trà chanh"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            TextColor="{StaticResource vbmgray}"
                            HorizontalOptions="Start"
                            VerticalOptions="Center"/>
 
                         <Label Text="x2"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            TextColor="{StaticResource vbmgray}"
                            HorizontalOptions="End"
                            VerticalOptions="Center"/>
@@ -166,7 +166,7 @@
                                     HeightRequest="30"/>
 
                         <Label Text="Đặt lại theo đơn hàng này"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            FontAttributes="Bold"/>
 
                     </StackLayout>
@@ -192,20 +192,20 @@
                     <Label Text="24/03/2021"
                        FontAttributes="Bold"
                        TextColor="{StaticResource vbmgray}"
-                       FontSize="25"/>
+                       FontSize="{OnIdiom Phone=10,Tablet=25}"/>
 
 
                     <Grid VerticalOptions="Center">
 
 
                         <Label Text="Bánh mì thịt nướng + Trà chanh"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            TextColor="{StaticResource vbmgray}"
                            HorizontalOptions="Start"
                            VerticalOptions="Center"/>
 
                         <Label Text="x2"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            TextColor="{StaticResource vbmgray}"
                            HorizontalOptions="End"
                            VerticalOptions="Center"/>
@@ -223,7 +223,7 @@
                                     HeightRequest="30"/>
 
                         <Label Text="Đặt lại theo đơn hàng này"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            FontAttributes="Bold"/>
 
                     </StackLayout>
@@ -249,20 +249,20 @@
                     <Label Text="24/03/2021"
                        FontAttributes="Bold"
                        TextColor="{StaticResource vbmgray}"
-                       FontSize="25"/>
+                       FontSize="{OnIdiom Phone=10,Tablet=25}"/>
 
 
                     <Grid VerticalOptions="Center">
 
 
                         <Label Text="Bánh mì thịt nướng + Trà chanh"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            TextColor="{StaticResource vbmgray}"
                            HorizontalOptions="Start"
                            VerticalOptions="Center"/>
 
                         <Label Text="x2"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            TextColor="{StaticResource vbmgray}"
                            HorizontalOptions="End"
                            VerticalOptions="Center"/>
@@ -280,7 +280,7 @@
                                     HeightRequest="30"/>
 
                         <Label Text="Đặt lại theo đơn hàng này"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            FontAttributes="Bold"/>
 
                     </StackLayout>
@@ -306,20 +306,20 @@
                     <Label Text="24/03/2021"
                        FontAttributes="Bold"
                        TextColor="{StaticResource vbmgray}"
-                       FontSize="25"/>
+                       FontSize="{OnIdiom Phone=10,Tablet=25}"/>
 
 
                     <Grid VerticalOptions="Center">
 
 
                         <Label Text="Bánh mì thịt nướng + Trà chanh"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            TextColor="{StaticResource vbmgray}"
                            HorizontalOptions="Start"
                            VerticalOptions="Center"/>
 
                         <Label Text="x2"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            TextColor="{StaticResource vbmgray}"
                            HorizontalOptions="End"
                            VerticalOptions="Center"/>
@@ -337,7 +337,7 @@
                                     HeightRequest="30"/>
 
                         <Label Text="Đặt lại theo đơn hàng này"
-                           FontSize="25"
+                           FontSize="{OnIdiom Phone=10,Tablet=25}"
                            FontAttributes="Bold"/>
 
                     </StackLayout>

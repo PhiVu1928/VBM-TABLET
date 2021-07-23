@@ -23662,136 +23662,139 @@ namespace VBM.Droid
 			public const int offbttn_ = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int onbttn_ = 2131165384;
+			public const int onbttn = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int ordericon = 2131165385;
+			public const int onbttn_ = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int passicon = 2131165386;
+			public const int ordericon = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int Polygon = 2131165387;
+			public const int passicon = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int promotionicon = 2131165388;
+			public const int Polygon = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int promotionicon1 = 2131165389;
+			public const int promotionicon = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int promotioniconpress = 2131165390;
+			public const int promotionicon1 = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int qricon = 2131165391;
+			public const int promotioniconpress = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int quabinhthuonng = 2131165392;
+			public const int qricon = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int quazenomeat = 2131165393;
+			public const int quabinhthuonng = 2131165393;
 			
 			// aapt resource value: 0x7F0700D2
-			public const int refreshicon = 2131165394;
+			public const int quazenomeat = 2131165394;
 			
 			// aapt resource value: 0x7F0700D3
-			public const int roundedbg = 2131165395;
+			public const int refreshicon = 2131165395;
 			
 			// aapt resource value: 0x7F0700D4
-			public const int roundedbgdark = 2131165396;
+			public const int roundedbg = 2131165396;
 			
 			// aapt resource value: 0x7F0700D5
-			public const int searchicon = 2131165397;
+			public const int roundedbgdark = 2131165397;
 			
 			// aapt resource value: 0x7F0700D6
-			public const int sfcheckbox_animation = 2131165398;
+			public const int searchicon = 2131165398;
 			
 			// aapt resource value: 0x7F0700D7
-			public const int sfcheckbox_checked = 2131165399;
+			public const int sfcheckbox_animation = 2131165399;
 			
 			// aapt resource value: 0x7F0700D8
-			public const int sfcheckbox_checked_indeterminate = 2131165400;
+			public const int sfcheckbox_checked = 2131165400;
 			
 			// aapt resource value: 0x7F0700D9
-			public const int sfcheckbox_checked_unchecked = 2131165401;
+			public const int sfcheckbox_checked_indeterminate = 2131165401;
 			
 			// aapt resource value: 0x7F0700DA
-			public const int sfcheckbox_indeterminate = 2131165402;
+			public const int sfcheckbox_checked_unchecked = 2131165402;
 			
 			// aapt resource value: 0x7F0700DB
-			public const int sfcheckbox_indeterminate_checked = 2131165403;
+			public const int sfcheckbox_indeterminate = 2131165403;
 			
 			// aapt resource value: 0x7F0700DC
-			public const int sfcheckbox_indeterminate_unchecked = 2131165404;
+			public const int sfcheckbox_indeterminate_checked = 2131165404;
 			
 			// aapt resource value: 0x7F0700DD
-			public const int sfcheckbox_unchecked = 2131165405;
+			public const int sfcheckbox_indeterminate_unchecked = 2131165405;
 			
 			// aapt resource value: 0x7F0700DE
-			public const int sfcheckbox_unchecked_checked = 2131165406;
+			public const int sfcheckbox_unchecked = 2131165406;
 			
 			// aapt resource value: 0x7F0700DF
-			public const int sfcheckbox_unchecked_indeterminate = 2131165407;
+			public const int sfcheckbox_unchecked_checked = 2131165407;
 			
 			// aapt resource value: 0x7F0700E0
-			public const int Shape = 2131165408;
+			public const int sfcheckbox_unchecked_indeterminate = 2131165408;
 			
 			// aapt resource value: 0x7F0700E1
-			public const int shopicon = 2131165409;
+			public const int Shape = 2131165409;
 			
 			// aapt resource value: 0x7F0700E2
-			public const int Stroke = 2131165410;
+			public const int shopicon = 2131165410;
 			
 			// aapt resource value: 0x7F0700E3
-			public const int Stroke1 = 2131165411;
+			public const int Stroke = 2131165411;
 			
 			// aapt resource value: 0x7F0700E4
-			public const int Stroke2 = 2131165412;
+			public const int Stroke1 = 2131165412;
 			
 			// aapt resource value: 0x7F0700E5
-			public const int sudungicon = 2131165413;
+			public const int Stroke2 = 2131165413;
 			
 			// aapt resource value: 0x7F0700E6
-			public const int test_custom_background = 2131165414;
+			public const int sudungicon = 2131165414;
 			
 			// aapt resource value: 0x7F0700E7
-			public const int tienmaticon = 2131165415;
+			public const int test_custom_background = 2131165415;
 			
 			// aapt resource value: 0x7F0700E8
-			public const int timeicon = 2131165416;
+			public const int tienmaticon = 2131165416;
 			
 			// aapt resource value: 0x7F0700E9
-			public const int tooltip_frame_dark = 2131165417;
+			public const int timeicon = 2131165417;
 			
 			// aapt resource value: 0x7F0700EA
-			public const int tooltip_frame_light = 2131165418;
+			public const int tooltip_frame_dark = 2131165418;
 			
 			// aapt resource value: 0x7F0700EB
-			public const int usericon = 2131165419;
+			public const int tooltip_frame_light = 2131165419;
 			
 			// aapt resource value: 0x7F0700EC
-			public const int viewicon = 2131165420;
+			public const int usericon = 2131165420;
 			
 			// aapt resource value: 0x7F0700ED
-			public const int vinidlogo = 2131165421;
+			public const int viewicon = 2131165421;
 			
 			// aapt resource value: 0x7F0700EE
-			public const int visaicon = 2131165422;
+			public const int vinidlogo = 2131165422;
 			
 			// aapt resource value: 0x7F0700EF
-			public const int vouchericon = 2131165423;
+			public const int visaicon = 2131165423;
 			
 			// aapt resource value: 0x7F0700F0
-			public const int vouchericonvang = 2131165424;
+			public const int vouchericon = 2131165424;
 			
 			// aapt resource value: 0x7F0700F1
-			public const int walleticon = 2131165425;
+			public const int vouchericonvang = 2131165425;
 			
 			// aapt resource value: 0x7F0700F2
-			public const int walleticonvang = 2131165426;
+			public const int walleticon = 2131165426;
 			
 			// aapt resource value: 0x7F0700F3
-			public const int zalopay = 2131165427;
+			public const int walleticonvang = 2131165427;
+			
+			// aapt resource value: 0x7F0700F4
+			public const int zalopay = 2131165428;
 			
 			static Drawable()
 			{
