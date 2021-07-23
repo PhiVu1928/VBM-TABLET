@@ -8,7 +8,7 @@
     <Grid BackgroundColor="{StaticResource vbmwhite}">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="{OnIdiom Phone=115,Tablet=150}"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
@@ -53,7 +53,7 @@
 
             <StackLayout Orientation="Vertical"
                          Padding="10"
-                         Spacing="30">
+                         Spacing="{OnIdiom Tablet=30,Phone=10}">
 
                 <border:SfBorder BackgroundColor="{StaticResource vbmlightmiddlegray}"
                                  BorderColor="{StaticResource vbmlightmiddlegray}"
@@ -94,7 +94,7 @@
 
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="102"/>
+                            <RowDefinition Height="{OnIdiom Tablet=102,Phone=62}"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
 
@@ -144,13 +144,13 @@
 
                                 <StackLayout Orientation="Vertical">
 
-                                    <border:SfBorder HeightRequest="67"
+                                    <border:SfBorder HeightRequest="{OnIdiom Phone=47,Tablet=67}"
                                                      BackgroundColor="{StaticResource vbmdeeplightgray}"
                                                      CornerRadius="50">
 
                                         <Label Text="GIAO CHO KHÁCH" 
                                                TextColor="White"
-                                               FontSize="{OnIdiom Phone=13,Tablet=25}"
+                                               FontSize="{OnIdiom Phone=10,Tablet=25}"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center"
                                                HorizontalTextAlignment="Center"/>
@@ -159,9 +159,10 @@
 
                                     <StackLayout Orientation="Horizontal" 
                                                  HorizontalOptions="Center"
+                                                 HeightRequest="47"
                                                  VerticalOptions="Center"
-                                                 Margin="0,20,0,0"
-                                                 Spacing="{OnIdiom Phone=10,Tablet=20}">
+                                                 Margin="{OnIdiom Phone='0',Tablet='0,20,0,0'}"
+                                                 Spacing="{OnIdiom Phone=5,Tablet=20}">
 
                                         <border:SfBorder WidthRequest="160"
                                                          HeightRequest="67"
@@ -199,22 +200,22 @@
 
                                 <StackLayout Grid.Column="1" 
                                              Orientation="Vertical"
-                                             Margin="40,0,0,0">
+                                             Margin="{OnIdiom Phone='20,0,0,0',Tablet='40,0,0,0'}">
 
                                     <Entry Placeholder="Mã nhân viên"
                                            TextColor="{StaticResource vbmgreen}"
                                            FontSize="{OnIdiom Phone=10,Tablet=25}"
                                            HorizontalTextAlignment="Center"/>
 
-                                    <Grid Margin="0,40,0,0">
+                                    <Grid Margin="{OnIdiom Phone='0,20,0,0',Tablet='0,40,0,0'}">
 
                                         <Label Text="Tiền Thu:"
-                                               FontSize="{OnIdiom Phone=8,Tablet=25}"
+                                               FontSize="{OnIdiom Phone=10,Tablet=25}"
                                                HorizontalOptions="Start"
                                                VerticalOptions="Center"/>
 
                                         <Label Text="40.000"
-                                               FontSize="{OnIdiom Phone=8,Tablet=25}"
+                                               FontSize="{OnIdiom Phone=10,Tablet=25}"
                                                HorizontalOptions="End"
                                                VerticalOptions="Center"
                                                TextColor="{StaticResource vbmpinttext}"/>

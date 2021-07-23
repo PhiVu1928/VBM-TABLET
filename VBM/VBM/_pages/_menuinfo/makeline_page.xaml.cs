@@ -19,11 +19,11 @@ namespace VBM._pages._menuinfo
 
         private void ffimg_right_tapped(object sender, EventArgs e)
         {
-
+            Navigation.RemovePage(this);
         }
         private void ffimg_left_tapped(object sender, EventArgs e)
         {
-            Navigation.RemovePage(this);
+            localdb._manager._contents._outline_page.open_flyout();
         }
     }
 }

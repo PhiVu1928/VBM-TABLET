@@ -14,8 +14,8 @@
 
             <ff:CachedImage Source="usericon"
                             Aspect="Fill"
-                            HeightRequest="40"
-                            WidthRequest="40"
+                            HeightRequest="{OnIdiom Phone=30,Tablet=40}"
+                            WidthRequest="{OnIdiom Phone=30,Tablet=40}"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
 
@@ -30,8 +30,8 @@
 
             <ff:CachedImage Source="viewicon"
                             Aspect="Fill"
-                            HeightRequest="40"
-                            WidthRequest="40"
+                            HeightRequest="{OnIdiom Phone=30,Tablet=40}"
+                            WidthRequest="{OnIdiom Phone=30,Tablet=40}"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
 
@@ -50,8 +50,8 @@
 
             <ff:CachedImage Source="chuanbiicon"
                             Aspect="Fill"
-                            HeightRequest="40"
-                            WidthRequest="40"
+                            HeightRequest="{OnIdiom Phone=30,Tablet=40}"
+                            WidthRequest="{OnIdiom Phone=30,Tablet=40}"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
 
@@ -70,8 +70,8 @@
 
             <ff:CachedImage Source="sudungicon"
                             Aspect="Fill"
-                            HeightRequest="40"
-                            WidthRequest="40"
+                            HeightRequest="{OnIdiom Phone=30,Tablet=40}"
+                            WidthRequest="{OnIdiom Phone=30,Tablet=40}"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
 
@@ -87,8 +87,8 @@
             <ff:CachedImage Source="extokenicon"
                             x:Name="tokenicon"
                             Aspect="Fill"
-                            HeightRequest="40"
-                            WidthRequest="40"
+                            HeightRequest="{OnIdiom Phone=30,Tablet=40}"
+                            WidthRequest="{OnIdiom Phone=30,Tablet=40}"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
 
@@ -100,20 +100,36 @@
             <Grid.GestureRecognizers>
                 <TapGestureRecognizer Tapped="tokenpage_tapped"/>
             </Grid.GestureRecognizers>
-            
-        </Grid>
 
+        </Grid>
 
         <Grid>
 
             <ff:CachedImage Source="logouticon"
                             Aspect="Fill"
-                            HeightRequest="40"
-                            WidthRequest="40"
+                            HeightRequest="{OnIdiom Phone=30,Tablet=40}"
+                            WidthRequest="{OnIdiom Phone=30,Tablet=40}"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
 
             <Label Text="Đăng xuất"
+                   FontSize="{OnIdiom Phone=10,Tablet=25}"
+                   Margin="64,0,0,0"
+                   HorizontalTextAlignment="Start"/>
+
+        </Grid>
+
+        <Grid Margin="0,250,0,0">
+
+            <ff:CachedImage Source="Shape"
+                            Aspect="Fill"
+                            WidthRequest="{OnIdiom Phone=30,Tablet=40}"
+                            HeightRequest="{OnIdiom Phone=30,Tablet=40}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="End"
+                            BackgroundColor="White"/>
+
+            <Label Text="Việt Nam"  
                    FontSize="{OnIdiom Phone=10,Tablet=25}"
                    Margin="64,0,0,0"
                    HorizontalTextAlignment="Start"/>

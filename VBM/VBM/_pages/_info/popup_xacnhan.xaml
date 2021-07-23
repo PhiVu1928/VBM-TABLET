@@ -24,7 +24,7 @@
                  VerticalOptions="Center"
                  >
 
-        <Frame WidthRequest="495"
+        <Frame WidthRequest="{OnIdiom Tablet=495, Phone=250}"
                HeightRequest="309"
                CornerRadius="15"
                BackgroundColor="{StaticResource vbmwhite}">
@@ -56,7 +56,7 @@
                                  HorizontalOptions="Fill"
                                  VerticalOptions="Center"
                                  HasShadow="False"
-                                 HeightRequest="85"
+                                 HeightRequest="{OnIdiom Phone=55,Tablet=85}"
                                  CornerRadius="30"
                                  Padding="10">
 
@@ -76,7 +76,7 @@
                                                    WidthRequest="300">
 
                             <Entry Placeholder="Số điện thoại"
-                                   FontSize="25"/>
+                                   FontSize="{OnIdiom Tablet=25, Phone=10}"/>
 
                         </sfinput:SfTextInputLayout>
 

@@ -22,8 +22,8 @@
                 
                 <ff:CachedImage Source="Shape"
                                 Aspect="Fill"
-                                WidthRequest="40"
-                                HeightRequest="40"
+                                WidthRequest="{OnIdiom Phone=30,Tablet=40}"
+                                HeightRequest="{OnIdiom Phone=30,Tablet=40}"
                                 BackgroundColor="White"/>
                 
                 <Label Text="Việt Nam"  
@@ -36,7 +36,7 @@
             
             <StackLayout HorizontalOptions="Center"
                          VerticalOptions="Center"
-                         Margin="0,120,0,0"
+                         Margin="{OnIdiom Phone='0,70,0,0',Tablet='0,120,0,0'}"
                          WidthRequest="{OnIdiom Phone=250,Tablet=400}">
 
                 <Grid>
@@ -171,7 +171,7 @@
                                          HeightRequest="{OnIdiom Phone=56,Tablet=86}"
                                          WidthRequest="278"
                                          CornerRadius="50"
-                                         Margin="60,30,60,0">
+                                         Margin="{OnIdiom Phone='60,0,60,30',Tablet='60,30,60,0'}">
 
                             <Label Text="Đăng nhập"
                                    TextColor="{StaticResource vbmgreen}"

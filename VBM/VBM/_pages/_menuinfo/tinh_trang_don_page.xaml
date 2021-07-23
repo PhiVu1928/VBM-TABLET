@@ -9,7 +9,7 @@
              BackgroundColor="{StaticResource vbmwhite}">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="350"/>
+            <RowDefinition Height="{OnIdiom Phone=300,Tablet=350}"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -154,11 +154,11 @@
 
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="102"/>
+                                <RowDefinition Height="{OnIdiom Phone=65,Tablet=102}"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
 
-                            <Grid Padding="{OnIdiom Phone=0,Tablet=10}"
+                            <Grid Padding="{OnIdiom Phone=10,Tablet=20}"
                                   BackgroundColor="{StaticResource vbmgray}">
 
                                 <Label Text="Nguyễn Văn Khải"
@@ -166,8 +166,7 @@
                                        HorizontalOptions="Start"
                                        VerticalOptions="Center"
                                        TextColor="{StaticResource vbmwhite}"
-                                       FontSize="{OnIdiom Phone=10,Tablet=25}"
-                                       Margin="20,0"/>
+                                       FontSize="{OnIdiom Phone=10,Tablet=25}"/>
 
                                 <Label Text="89232"
                                        HorizontalTextAlignment="Start"
@@ -181,33 +180,32 @@
                                        HorizontalOptions="End"
                                        VerticalOptions="Center"
                                        TextColor="{StaticResource vbmwhite}"
-                                       FontSize="{OnIdiom Phone=13,Tablet=25}"
-                                       WidthRequest="152"
-                                       Margin="0,0,20,0"/>
+                                       FontSize="{OnIdiom Phone=10,Tablet=25}"
+                                       WidthRequest="{OnIdiom Phone=122,Tablet=152}"/>
 
                             </Grid>
 
                             <StackLayout Orientation="Vertical"
-                                         Padding="20"
-                                         Spacing="20"
+                                         Padding="{OnIdiom Phone=10,Tablet=20}"
+                                         Spacing="{OnIdiom Phone=10,Tablet=20}"
                                          Grid.Row="1">
 
                                 <Grid>
 
                                     <Label Text="Đặt tại chỗ"
-                                           FontSize="{OnIdiom Phone=10,Tablet=30}"
+                                           FontSize="{OnIdiom Phone=13,Tablet=30}"
                                            TextColor="{StaticResource vbmgray}"
                                            HorizontalOptions="Start"
                                            VerticalOptions="Center"/>
 
                                     <Label Text="Đơn đã xong"
-                                           FontSize="{OnIdiom Phone=10,Tablet=30}"
+                                           FontSize="{OnIdiom Phone=13,Tablet=30}"
                                            TextColor="{StaticResource vbmgreen}"
                                            HorizontalOptions="Center"
                                            VerticalOptions="Center"/>
 
                                     <Label Text="40.000"
-                                           FontSize="{OnIdiom Phone=15,Tablet=30}"
+                                           FontSize="{OnIdiom Phone=13,Tablet=30}"
                                            TextColor="{StaticResource vbmpinttext}"
                                            HorizontalOptions="End"
                                            VerticalOptions="Center"/>
@@ -216,6 +214,7 @@
                                 </Grid>
 
                                 <StackLayout Orientation="Horizontal"
+                                             HeightRequest="{OnIdiom Phone=47, Tablet=0}"
                                              Spacing="20">
 
                                     <border:SfBorder BackgroundColor="{StaticResource vbmgreen}"

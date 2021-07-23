@@ -90,7 +90,7 @@
                                               OutlineCornerRadius="30">
                         <Entry FontSize="{OnIdiom Phone=10,Tablet=22}"
                                HeightRequest="{OnIdiom Phone=53,Tablet=83}"
-                               Placeholder="Mã số thuê"
+                               Placeholder="Mã số thuế"
                                PlaceholderColor="{StaticResource vbmgray}"
                                HorizontalTextAlignment="Start"
                                HorizontalOptions="Fill"
