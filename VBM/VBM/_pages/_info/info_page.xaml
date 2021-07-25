@@ -159,7 +159,7 @@
 
                                     <StackLayout Orientation="Horizontal" 
                                                  HorizontalOptions="Center"
-                                                 HeightRequest="47"
+                                                 HeightRequest="{OnIdiom Phone=47,Tablet=67}"
                                                  VerticalOptions="Center"
                                                  Margin="{OnIdiom Phone='0',Tablet='0,20,0,0'}"
                                                  Spacing="{OnIdiom Phone=5,Tablet=20}">

@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\New folder (2)\\VBM\\VBM.Android\\VBM.Android.csproj": {}
+    "D:\\VBM-tablet\\VBM\\VBM\\VBM.Android\\VBM.Android.csproj": {}
   },
   "projects": {
-    "D:\\New folder (2)\\VBM\\VBM.Android\\VBM.Android.csproj": {
+    "D:\\VBM-tablet\\VBM\\VBM\\VBM.Android\\VBM.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\New folder (2)\\VBM\\VBM.Android\\VBM.Android.csproj",
+        "projectUniqueName": "D:\\VBM-tablet\\VBM\\VBM\\VBM.Android\\VBM.Android.csproj",
         "projectName": "VBM.Android",
-        "projectPath": "D:\\New folder (2)\\VBM\\VBM.Android\\VBM.Android.csproj",
-        "packagesPath": "C:\\Users\\Phi Hung\\.nuget\\packages\\",
-        "outputPath": "D:\\New folder (2)\\VBM\\VBM.Android\\obj\\",
+        "projectPath": "D:\\VBM-tablet\\VBM\\VBM\\VBM.Android\\VBM.Android.csproj",
+        "packagesPath": "C:\\Users\\Phi Vu\\.nuget\\packages\\",
+        "outputPath": "D:\\VBM-tablet\\VBM\\VBM\\VBM.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Phi Hung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Phi Vu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +34,8 @@
         "frameworks": {
           "monoandroid11.0": {
             "projectReferences": {
-              "D:\\New folder (2)\\VBM\\VBM\\VBM.csproj": {
-                "projectPath": "D:\\New folder (2)\\VBM\\VBM\\VBM.csproj"
+              "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj": {
+                "projectPath": "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj"
               }
             }
           }
@@ -42,32 +44,38 @@
       "frameworks": {
         "monoandroid11.0": {
           "dependencies": {
+            "Syncfusion.Xamarin.SfTabView": {
+              "target": "Package",
+              "version": "[19.2.0.48, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2083, )"
             }
           }
         }
       }
     },
-    "D:\\New folder (2)\\VBM\\VBM\\VBM.csproj": {
+    "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\New folder (2)\\VBM\\VBM\\VBM.csproj",
+        "projectUniqueName": "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj",
         "projectName": "VBM",
-        "projectPath": "D:\\New folder (2)\\VBM\\VBM\\VBM.csproj",
-        "packagesPath": "C:\\Users\\Phi Hung\\.nuget\\packages\\",
-        "outputPath": "D:\\New folder (2)\\VBM\\VBM\\obj\\",
+        "projectPath": "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj",
+        "packagesPath": "C:\\Users\\Phi Vu\\.nuget\\packages\\",
+        "outputPath": "D:\\VBM-tablet\\VBM\\VBM\\VBM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Phi Hung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Phi Vu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -110,31 +118,35 @@
             },
             "Rg.Plugins.Popup": {
               "target": "Package",
-              "version": "[2.0.0.11, )"
+              "version": "[2.0.0.12, )"
             },
             "Syncfusion.Xamarin.Buttons": {
               "target": "Package",
-              "version": "[19.1.0.69, )"
+              "version": "[19.2.0.48, )"
             },
             "Syncfusion.Xamarin.Core": {
               "target": "Package",
-              "version": "[19.1.0.69, )"
+              "version": "[19.2.0.48, )"
             },
             "Syncfusion.Xamarin.SfBusyIndicator": {
               "target": "Package",
-              "version": "[19.1.0.69, )"
+              "version": "[19.2.0.48, )"
             },
             "Syncfusion.Xamarin.SfListView": {
               "target": "Package",
-              "version": "[19.1.0.69, )"
+              "version": "[19.2.0.48, )"
+            },
+            "Syncfusion.Xamarin.SfTabView": {
+              "target": "Package",
+              "version": "[19.2.0.48, )"
             },
             "Xamarin.CommunityToolkit": {
               "target": "Package",
-              "version": "[1.2.0-pre2, )"
+              "version": "[1.3.0-pre1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.0, )"
             },
             "Xamarin.FFImageLoading": {
               "target": "Package",
@@ -146,7 +158,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2083, )"
             },
             "Xamarin.Forms.PancakeView": {
               "target": "Package",

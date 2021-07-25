@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Rg.Plugins.Popup.Extensions;
-using VBM._vbm_objs._vms._checkout;
+using VBM._app_objs._vms._checkout;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

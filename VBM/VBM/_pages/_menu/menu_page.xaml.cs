@@ -2,12 +2,13 @@
 using Syncfusion.GridCommon.ScrollAxis;
 using Syncfusion.ListView.XForms;
 using Syncfusion.ListView.XForms.Control.Helpers;
+using Syncfusion.XForms.TabView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VBM._vbm_objs._vms._menu;
+using VBM._app_objs._vms._menu;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -29,41 +30,23 @@ namespace VBM._pages._menu
             this.BindingContext = vm;
             busyindicator.IsVisible = false;
             busyindicator.IsBusy = false;
-            visualContainer = lstemes.GetVisualContainer();
-            lstemes.ScrollStateChanged += ListView_ScrollStateChanged;
+            createTab();
         }
 
-        private void ScrollRows_Changed(object sender, ScrollChangedEventArgs e)
+        public void createTab()
         {
-            var lastIndex = visualContainer.ScrollRows.LastBodyVisibleLineIndex;
-            var index = (int)lastIndex / 6 + 1;
-            changeTitle(index);
+            tabview.Items.Clear();
+
+            foreach (var items in vm.Sub_Menu_Class_Objs.Where(x => x.name_vn != ""))
+            {
+                tabitem = new SfTabItem();
+                tabitem.Title = items.name_vn;
+                emenu lstemenu = new emenu(items.lst_emes);
+                tabitem.Content = lstemenu;
+                tabview.Items.Add(tabitem);
+            }
         }
 
-        private void ListView_ScrollStateChanged(object sender, ScrollStateChangedEventArgs e)
-        {
-            if (e.ScrollState == ScrollState.Dragging)
-            {
-                var lastIndex = visualContainer.ScrollRows.LastBodyVisibleLineIndex;
-                var index = (int)lastIndex / 6 + 1;
-                changeTitle(index);
-            }
-        }
-        void changeTitle(int index)
-        {
-            foreach (var item in vm.titleGroups)
-            {
-                if (item.index == index)
-                {
-                    item.Selected = true;
-                    lstTitle.ScrollTo((index - 1) * 107, true);
-                }
-                else
-                {
-                    item.Selected = false;
-                }
-            }
-        }
         private void ff_backicon_tapped(object sender, EventArgs e)
         {
             Navigation.RemovePage(this);
@@ -146,42 +129,5 @@ namespace VBM._pages._menu
             }
         }
 
-        async void stlTitle_tapped(object sender, EventArgs e)
-        {
-            this.IsEnabled = false;
-            var ctr = sender as StackLayout;
-            await ctr.ScaleTo(0.8, 1);
-            var cv = (titleGroup)ctr.BindingContext;
-
-            var startIndex = vm.rowsRender.Count;
-            var index = cv.index;
-
-            foreach (var item in vm.titleGroups)
-            {
-                if (item.index == index)
-                {
-                    item.Selected = true;
-                }
-                else
-                {
-                    item.Selected = false;
-                }
-            }
-
-            if (vm.rowsRender.Count < index * 6)
-            {
-                busyindicator.IsVisible = true;
-                for (int i = startIndex; i < index * 6; i++)
-                {
-                    vm.rowsRender.Add(new rowEmesRender(i));
-                }
-            }
-            busyindicator.IsVisible = false;
-            lstTitle.ScrollTo((index - 1) * 107, true);
-            lstemes.ScrollTo((index - 1) * 220, true);
-
-            await ctr.ScaleTo(1, 250);
-            this.IsEnabled = true;
-        }
     }
 }

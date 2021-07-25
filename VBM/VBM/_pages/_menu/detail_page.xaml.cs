@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VBM._vbm_objs._vms._detail;
+using VBM._app_objs._vms._detail;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

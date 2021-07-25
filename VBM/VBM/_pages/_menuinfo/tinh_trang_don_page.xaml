@@ -214,7 +214,7 @@
                                 </Grid>
 
                                 <StackLayout Orientation="Horizontal"
-                                             HeightRequest="{OnIdiom Phone=47, Tablet=0}"
+                                             HeightRequest="{OnIdiom Phone=47, Tablet=67}"
                                              Spacing="20">
 
                                     <border:SfBorder BackgroundColor="{StaticResource vbmgreen}"

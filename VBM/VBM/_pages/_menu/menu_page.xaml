@@ -4,6 +4,7 @@
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:sf="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:tb="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
              xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              xmlns:local="clr-namespace:VBM._pages._menu"
              x:Class="VBM._pages._menu.menu_page"
@@ -55,86 +56,28 @@
 
         <Grid Grid.Row="1"
               Margin="10,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="{OnIdiom Phone=50,Tablet=90}"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
 
-            <sf:SfListView ItemsSource="{Binding titleGroups}"
-                           Orientation="Horizontal"
-                           SelectionBackgroundColor="Transparent"
-                           ItemSize="{OnIdiom Phone=120,Tablet=170}"
-                           ItemSpacing="{OnIdiom Phone='0,0,20,0',Tablet='0,0,70,0'}"
-                           IsScrollBarVisible="False"
-                           x:Name="lstTitle">
+            <tb:SfTabView BackgroundColor="White"                         
+                              x:Name="tabview"
+                          TabHeight="50">
 
-                <sf:SfListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
+                <tb:SfTabView.SelectionIndicatorSettings>
+                    <tb:SelectionIndicatorSettings
+                    Color="{StaticResource vbmlightyellow}" 
+                    Position="Bottom" 
+                    AnimationDuration="500"
+                    StrokeThickness="5"/>
+                </tb:SfTabView.SelectionIndicatorSettings>
 
-                            <StackLayout Orientation="Vertical"
-                                         VerticalOptions="Start">
+                <tb:SfTabItem x:Name="tabitem"
+                              TitleFontColor="{StaticResource vbmgray}"
+                              TitleFontSize="{OnIdiom Phone=15,Tablet=30}"
+                              SelectionColor="{StaticResource vbmgreen}">
+                    
+                </tb:SfTabItem>
 
-                                <Label Text="{Binding name}"
-                                       TextColor="{Binding Color}"
-                                       FontSize="{OnIdiom Phone=13,Tablet=23}"
-                                       HorizontalTextAlignment="Center"/>
+            </tb:SfTabView>
 
-                                <BoxView BackgroundColor="{Binding BoxColor}"
-                                         HeightRequest="7"/>
-
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="stlTitle_tapped"/>
-                                </StackLayout.GestureRecognizers>
-
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </sf:SfListView.ItemTemplate>
-            </sf:SfListView>
-
-            <sf:SfListView ItemsSource="{Binding rowsRender}"
-                           x:Name="lstemes"
-                           LoadMoreCommand="{Binding LoadMoreItemsCommand}"
-                           LoadMoreOption="AutoOnScroll"
-                           ItemSize="{OnIdiom Phone=180,Tablet=230}"
-                           ItemSpacing="{OnIdiom Phone='0,0,0,20',Tablet=0}"
-                           SelectionBackgroundColor="Transparent"
-                           Grid.Row="1">
-                <sf:SfListView.ItemTemplate>
-                    <DataTemplate>
-
-                        <StackLayout Orientation="Horizontal"
-                                     Spacing="{OnIdiom Phone=10,Tablet=70}"
-                                     VerticalOptions="Center"
-                                     HorizontalOptions="Center"
-                                     BindableLayout.ItemsSource="{Binding emes}">
-
-                            <BindableLayout.ItemTemplate>
-                                <DataTemplate>
-                                    <local:emenu />
-                                </DataTemplate>
-                            </BindableLayout.ItemTemplate>
-
-
-                                
-                        </StackLayout>
-                    </DataTemplate>
-                </sf:SfListView.ItemTemplate>
-                <sf:SfListView.FooterTemplate>
-                    <DataTemplate>
-                        <busyindicator:SfBusyIndicator
-                            AnimationType="Material"
-                            HeightRequest="50"
-                            HorizontalOptions="Center"
-                            IsBusy="{Binding isbusy}"
-                            IsVisible="{Binding isbusy}"
-                            TextColor="{StaticResource vbmgreen}"
-                            VerticalOptions="Center"
-                            WidthRequest="40" />
-                    </DataTemplate>
-                </sf:SfListView.FooterTemplate>
-            </sf:SfListView>
 
             <busyindicator:SfBusyIndicator
             x:Name="busyindicator"

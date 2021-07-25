@@ -24,6 +24,7 @@ namespace VBM._pages._menuinfo
             localdb._manager._contents._outline_page1 = this;
             Task.Run(() =>
             {
+                localdb._manager._cached.get_cached_values();
                 localdb._manager._tools.start_prepare_data1();
             });
         }

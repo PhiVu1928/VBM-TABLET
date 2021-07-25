@@ -1088,15 +1088,18 @@
                                 WidthRequest="30"
                                 HeightRequest="30">
                     <ff:CachedImage.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ff_backicon_tapped"/>
+                        <TapGestureRecognizer Tapped="ff_khachicon_tapped"/>
                     </ff:CachedImage.GestureRecognizers>
                 </ff:CachedImage>
 
-                <ff:CachedImage Source="menuiconpress"
+                <ff:CachedImage Source="menuicon"
                                 x:Name="menuicon"
                                 Aspect="Fill"
                                 WidthRequest="30"
                                 HeightRequest="30">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ff_menuicon_tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
                 </ff:CachedImage>
 
                 <ff:CachedImage Source="promotionicon"

@@ -210,7 +210,7 @@
 
                                             <Label Text="{Binding Status}"
                                                    FontSize="{OnIdiom Phone=13,Tablet=30}"
-                                                   TextColor="{StaticResource vbmgreen}"
+                                                   TextColor="{Binding TextColor}"
                                                    HorizontalOptions="Center"
                                                    VerticalOptions="Center"/>
 
@@ -224,7 +224,6 @@
                                         </Grid>
 
                                         <StackLayout Orientation="Horizontal"
-                                                     HeightRequest="{OnIdiom Phone=47, Tablet=0}"
                                                      Spacing="20">
 
                                             <border:SfBorder BackgroundColor="{StaticResource vbmgreen}"

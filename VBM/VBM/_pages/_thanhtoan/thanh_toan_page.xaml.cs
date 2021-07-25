@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 using Rg.Plugins.Popup.Extensions;
-using VBM._vbm_objs._vms._checkout;
+using VBM._app_objs._vms._checkout;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -40,6 +40,30 @@ namespace VBM._pages._thanhtoan
         {
             Navigation.RemovePage(this);
         }
+        async void ff_khachicon_tapped(object sender, EventArgs e)
+        {
+            this.IsEnabled = false;
+            await menuicon.ScaleTo(0.9, 1);
+            await this.FadeTo(0.9, 1);
+            try
+            {
+
+                var homepage = new _pages._home.home_page();
+                await Navigation.PushAsync(homepage);
+                homepage.render();
+                this.IsEnabled = true;
+
+                await menuicon.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+            catch
+            {
+                //error show here
+                await menuicon.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+        }
+
         async void ff_menuicon_tapped(object sender, EventArgs e)
         {
             this.IsEnabled = false;

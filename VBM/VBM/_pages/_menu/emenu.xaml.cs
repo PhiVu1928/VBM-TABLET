@@ -12,9 +12,10 @@ namespace VBM._pages._menu
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class emenu : ContentView
     {
-        public emenu()
+        public emenu(List<vbm.objs.e_menu_obj> e_Menu_Obj)
         {
             InitializeComponent();
+            lstemes.ItemsSource = e_Menu_Obj;
         }
 
         async void TapGestureRecognizer_Tapped(object sender, EventArgs e)

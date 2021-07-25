@@ -17,10 +17,10 @@ namespace VBM._pages._menu {
     public partial class menu_page : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Syncfusion.ListView.XForms.SfListView lstTitle;
+        private global::Syncfusion.XForms.TabView.SfTabView tabview;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Syncfusion.ListView.XForms.SfListView lstemes;
+        private global::Syncfusion.XForms.TabView.SfTabItem tabitem;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator busyindicator;
@@ -40,8 +40,8 @@ namespace VBM._pages._menu {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(menu_page));
-            lstTitle = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.ListView.XForms.SfListView>(this, "lstTitle");
-            lstemes = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.ListView.XForms.SfListView>(this, "lstemes");
+            tabview = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.TabView.SfTabView>(this, "tabview");
+            tabitem = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.TabView.SfTabItem>(this, "tabitem");
             busyindicator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator>(this, "busyindicator");
             khachicon = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::FFImageLoading.Forms.CachedImage>(this, "khachicon");
             menuicon = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::FFImageLoading.Forms.CachedImage>(this, "menuicon");

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VBM._vbm_objs._vms._home;
+using VBM._app_objs._vms._home;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -149,5 +149,7 @@ namespace VBM._pages._home
             await title.ScaleTo(1, 250);
             this.IsEnabled = true;
         }
+
+        
     }
 }

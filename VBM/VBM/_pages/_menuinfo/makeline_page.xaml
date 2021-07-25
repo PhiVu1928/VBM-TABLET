@@ -122,7 +122,7 @@
 
                                     <StackLayout Orientation="Vertical"
                                                  HorizontalOptions="Start"
-                                                 WidthRequest="{OnIdiom Phone=170,Tablet=0}"
+                                                 WidthRequest="{OnIdiom Phone=170,Tablet=400}"
                                                  Spacing="10">
 
                                         <Label Text="Bánh mì thịt chả (L) X1"
@@ -221,7 +221,7 @@
 
                                     <Label Text="Bánh mì thịt chả (L) X1"
                                            HorizontalOptions="Start"
-                                           WidthRequest="{OnIdiom Phone=170,Tablet=0}"
+                                           WidthRequest="{OnIdiom Phone=170,Tablet=400}"
                                            TextColor="{StaticResource vbmgray}"
                                            FontSize="{OnIdiom Phone=15,Tablet=30}"/>
 

@@ -80,7 +80,7 @@
                                                      BackgroundColor="{Binding BorderColor}"
                                                      HorizontalOptions="Start"
                                                      VerticalOptions="Center"
-                                                     Padding="{OnIdiom Phone=10,Tablet=0}">
+                                                     Padding="{OnIdiom Phone=10,Tablet=20}">
                                         <Label Text="{Binding Name}"
                                                TextColor="{Binding TextColor}"
                                                HorizontalTextAlignment="Center"

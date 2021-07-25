@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VBM._vbm_objs._vms._promo;
+using VBM._app_objs._vms._promo;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
