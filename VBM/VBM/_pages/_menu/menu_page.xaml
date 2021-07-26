@@ -71,12 +71,7 @@
                         StrokeThickness="5"/>
                 </tb:SfTabView.SelectionIndicatorSettings>
 
-                <tb:SfTabItem x:Name="tabitem"
-                              TitleFontColor="{StaticResource vbmgray}"
-                              TitleFontSize="{OnIdiom Phone=15,Tablet=30}"
-                              SelectionColor="{StaticResource vbmgreen}">
-                    
-                </tb:SfTabItem>
+                
 
             </tb:SfTabView>
 

@@ -20,9 +20,6 @@ namespace VBM._pages._menu {
         private global::Syncfusion.XForms.TabView.SfTabView tabview;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Syncfusion.XForms.TabView.SfTabItem tabitem;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator busyindicator;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -41,7 +38,6 @@ namespace VBM._pages._menu {
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(menu_page));
             tabview = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.TabView.SfTabView>(this, "tabview");
-            tabitem = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.TabView.SfTabItem>(this, "tabitem");
             busyindicator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator>(this, "busyindicator");
             khachicon = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::FFImageLoading.Forms.CachedImage>(this, "khachicon");
             menuicon = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::FFImageLoading.Forms.CachedImage>(this, "menuicon");

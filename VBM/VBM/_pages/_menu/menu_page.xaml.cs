@@ -30,21 +30,34 @@ namespace VBM._pages._menu
             this.BindingContext = vm;
             busyindicator.IsVisible = false;
             busyindicator.IsBusy = false;
-            createTab();
+            CreateMainEmes();
         }
 
-        public void createTab()
+        
+        public void CreateMainEmes()
         {
-            tabview.Items.Clear();
-
-            foreach (var items in vm.Sub_Menu_Class_Objs.Where(x => x.name_vn != ""))
+            foreach(var items in vm.Main_Menu_Class_Objs)
             {
-                tabitem = new SfTabItem();
-                tabitem.Title = items.name_vn;
-                emenu lstemenu = new emenu(items.lst_emes);
-                tabitem.Content = lstemenu;
-                tabview.Items.Add(tabitem);
-            }
+                foreach(var sub in items.lst_sub_menu)
+                {
+                    if(items.lst_sub_menu.Count == 1)
+                    {
+                        SfTabItem tabitem = new SfTabItem();
+                        tabitem.Title = items.name_vn;
+                        emenu lstemenu = new emenu(sub.lst_emes);
+                        tabitem.Content = lstemenu;
+                        tabview.Items.Add(tabitem);
+                    }
+                    else
+                    {
+                        SfTabItem tabitem = new SfTabItem();
+                        tabitem.Title = sub.name_vn;
+                        emenu lstemenu = new emenu(sub.lst_emes);
+                        tabitem.Content = lstemenu;
+                        tabview.Items.Add(tabitem);
+                    }
+                }    
+            }    
         }
 
         private void ff_backicon_tapped(object sender, EventArgs e)
