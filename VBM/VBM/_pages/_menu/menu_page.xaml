@@ -58,15 +58,17 @@
               Margin="10,0">
 
             <tb:SfTabView BackgroundColor="White"                         
-                              x:Name="tabview"
-                          TabHeight="50">
+                          x:Name="tabview"
+                          TabHeight="50"
+                          TabWidth="110"
+                          VisibleHeaderCount="3">
 
                 <tb:SfTabView.SelectionIndicatorSettings>
                     <tb:SelectionIndicatorSettings
-                    Color="{StaticResource vbmlightyellow}" 
-                    Position="Bottom" 
-                    AnimationDuration="500"
-                    StrokeThickness="5"/>
+                        Color="{StaticResource vbmlightyellow}" 
+                        Position="Bottom" 
+                        AnimationDuration="500"
+                        StrokeThickness="5"/>
                 </tb:SfTabView.SelectionIndicatorSettings>
 
                 <tb:SfTabItem x:Name="tabitem"
