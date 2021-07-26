@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:tb="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
              x:Class="VBM.App">
     <Application.Resources>
         <ResourceDictionary>
@@ -72,6 +73,12 @@
             <Color x:Key="vbmpagebackground">#FFFFFF</Color>
             <Color x:Key="vbmblack">#000000</Color>
 
+            <Style TargetType="tb:SfTabItem">
+                <Setter Property="TitleFontFamily" Value="{StaticResource lr}"/>
+                <Setter Property="TitleFontSize" Value="{OnIdiom Phone=15,Tablet=30}"/>
+                <Setter Property="SelectionColor" Value="{StaticResource vbmdeepgreen}"/>
+                <Setter Property="TitleFontColor" Value="{StaticResource vbmgray}"/>
+            </Style>
             <Style TargetType="Label">
                 <Setter Property="FontFamily" Value="{StaticResource lr}" />
                 <Setter Property="FontSize" Value="15" />
