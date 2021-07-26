@@ -30,11 +30,11 @@ namespace VBM._pages._menu
             this.BindingContext = vm;
             busyindicator.IsVisible = false;
             busyindicator.IsBusy = false;
-            CreateMainEmes();
+            await CreateMainEmes();
         }
 
         
-        public void CreateMainEmes()
+        public async Task CreateMainEmes()    
         {
             foreach(var items in vm.Main_Menu_Class_Objs)
             {

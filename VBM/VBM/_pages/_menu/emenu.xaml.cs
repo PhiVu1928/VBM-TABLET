@@ -12,10 +12,16 @@ namespace VBM._pages._menu
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class emenu : ContentView
     {
+        List<vbm.objs.e_menu_obj> E_Menu_Objs;
         public emenu(List<vbm.objs.e_menu_obj> e_Menu_Obj)
         {
             InitializeComponent();
-            lstemes.ItemsSource = e_Menu_Obj;
+            E_Menu_Objs = new List<vbm.objs.e_menu_obj>();
+            foreach(var item in e_Menu_Obj.Where(x => x.img != "" ))
+            {
+                E_Menu_Objs.Add(item);
+            }
+            lstemes.ItemsSource = E_Menu_Objs;
         }
 
         async void TapGestureRecognizer_Tapped(object sender, EventArgs e)

@@ -37,16 +37,12 @@ namespace VBM._pages._home
             await this.FadeTo(0.9, 1);
             try
             {
-                using (var progress = UserDialogs.Instance.Loading("Loading...", null, null, true, MaskType.Black))
-                {
-                    var menupage = new _pages._menu.menu_page();
-                    await Navigation.PushAsync(menupage,true);
-                    menupage.Render();
-                    this.IsEnabled = true;
-
-                    await menuicon.ScaleTo(1, 100);
-                    await this.FadeTo(1, 100);
-                }                  
+                var menupage = new _pages._menu.menu_page();
+                await Navigation.PushAsync(menupage);
+                await menupage.Render();
+                this.IsEnabled = true;
+                await menuicon.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
             }
             catch
             {
@@ -67,7 +63,6 @@ namespace VBM._pages._home
                 await Navigation.PushAsync(promopage);
                 promopage.Render();
                 this.IsEnabled = true;
-
                 await menuicon.ScaleTo(1, 100);
                 await this.FadeTo(1, 100);
 
