@@ -10,6 +10,7 @@ namespace VBM._app_objs._general
         {
             //tranh null. neu co data cached thi cai do convert sang gtri nay
             _cart_pros = new List<cart_pros>();
+            _cart_temp = new List<cart_temp>();
         }
 
         #region for system data
@@ -43,6 +44,7 @@ namespace VBM._app_objs._general
 
         #region process
         public List<_app_objs._general.cart_pros> _cart_pros { get; set; }
+        public List<_app_objs._general.cart_temp> _cart_temp { get; set; }
         public am_address _selected_address { get; set; }
 
         #endregion

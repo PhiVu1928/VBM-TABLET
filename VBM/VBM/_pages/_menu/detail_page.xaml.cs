@@ -1,4 +1,5 @@
-﻿using Syncfusion.ListView.XForms;
+﻿using Rg.Plugins.Popup.Extensions;
+using Syncfusion.ListView.XForms;
 using Syncfusion.XForms.Border;
 using System;
 using System.Collections.Generic;
@@ -15,56 +16,37 @@ namespace VBM._pages._menu
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class detail_page : ContentPage
     {
-        vmdetail vm;
+        public vmdetail vm;
         public detail_page()
         {
             InitializeComponent();
         }
 
-        public async Task Render()
-        {
-            vm = new vmdetail();
+        public async Task Render(vbm.objs.e_menu_obj e_Menu_Obj)
+        {            
+            vm = new vmdetail(e_Menu_Obj);
             this.BindingContext = vm;
+            lstextras.IsVisible = false;
+            lstgiavi.IsVisible = false;
+            boxgiavi.IsVisible = false;
+            boxnhanbanh.IsVisible = false;
         }
 
-        private void ff_backicon_tapped(object sender, EventArgs e)
+        public void ff_backicon_tapped(object sender, EventArgs e)
         {
-            Application.Current.MainPage.Navigation.RemovePage(this);
-        }
-        async void ff_promo_tapped(object sender, EventArgs e)
-        {
-            this.IsEnabled = false;
-            await promoicon.ScaleTo(0.9, 1);
-            await this.FadeTo(0.9, 1);
-            try
-            {
-
-                var promopage = new _pages._promo.khuyen_mai_page();
-                await Navigation.PushAsync(promopage);
-                promopage.Render();
-                await promoicon.ScaleTo(1, 100);
-                await this.FadeTo(1, 100);
-                this.IsEnabled = true;
-            }
-            catch (Exception)
-            {
-                //error show here
-                await promoicon.ScaleTo(1, 100);
-                await this.FadeTo(1, 100);
-                this.IsEnabled = false;
-            }
+            Navigation.RemovePage(this);
         }
 
-        async void ff_extras_tapped(object sender, EventArgs e)
+        async void ff_spice_tapped(object sender, EventArgs e)
         {
             var border = sender as SfBorder;
-            var select = (extras)border.BindingContext;
-            var cv = select.index;
-            foreach (var items in vm.rowExtrasRenders)
+            var select = (Spice_Size)border.BindingContext;
+            var cv = select.id;
+            foreach (var items in vm.Spice_Objs)
             {
-                foreach (var itemss in items.extras)
+                foreach (var itemss in items.spice_Sizes.Where(x => x.ref_id == select.ref_id))
                 {
-                    if (itemss.index == cv)
+                    if (itemss.id == cv)
                     {
                         itemss.Selected = true;
                     }
@@ -74,23 +56,21 @@ namespace VBM._pages._menu
                     }
                 }
             }
-        
-            
         }
-
         async void ff_drink_tapped(object sender, EventArgs e)
         {
             var border = sender as SfBorder;
             var select = (drink)border.BindingContext;
-            var cv = select.index;
+            await vm.getnuoc(select);
+            var cv = select.name_vn;
             foreach (var items in vm.rowsRender)
             {
-                foreach (var itemss in items.emes)
+                foreach (var itemss in items.drinks)
                 {
-                    if (itemss.index == cv)
+                    if (itemss.name_vn == cv && itemss.Selected == false)
                     {
                         itemss.Selected = true;
-                    }
+                    }   
                     else
                     {
                         itemss.Selected = false;
@@ -98,29 +78,99 @@ namespace VBM._pages._menu
                 }
             }
         }
-        async void ff_size_tapped(object sender, EventArgs e)
+        async void stl_nhanbanh_tapped(object sender, EventArgs e)
         {
-            var border = sender as SfBorder;
-            var select = (Sizes)border.BindingContext;
-            var cv = select.index;
-            foreach (var items in vm.rowSizeRenders)
+            if(lstextras.ItemsSource == null)
             {
-                foreach (var itemss in items.Sizes)
-                {
-                    if (itemss.index == cv)
-                    {
-                        itemss.Selected = true;
-                    }
-                    else
-                    {
-                        itemss.Selected = false;
-                    }
-                }
+                lstextras.ItemsSource = vm.extras;
             }
-
-
+            if (lstextras.IsVisible == true)
+            {
+                lstextras.IsVisible = false;
+                boxnhanbanh.IsVisible = false;
+            }
+            else
+            {
+                lstextras.IsVisible = true;
+                boxnhanbanh.IsVisible = true;
+            }
+        }
+        async void stl_giavi_tapped(object sender, EventArgs e)
+        {           
+            if(lstgiavi.ItemsSource == null)
+            {
+                lstgiavi.ItemsSource = vm.Spice_Objs;
+            }
+            if (lstgiavi.IsVisible == true)
+            {
+                lstgiavi.IsVisible = false;
+                boxgiavi.IsVisible = false;
+            }
+            else
+            {
+                lstgiavi.IsVisible = true;
+                boxgiavi.IsVisible = true;
+            }
         }
 
+        private void decreaseSl_tapped(object sender, EventArgs e)
+        {
+            var lb = sender as Label;
+            var Selected = (extras)lb.BindingContext;
+            var cv = Selected.id;
+            foreach(var item in vm.extras.Where(x => x.id == cv))
+            {
+                if(item.sl <= 0)
+                {
+                    item.sl = 0;
+                }
+                else
+                {
+                    item.sl--;
+                }
+            }
+            vm.TinhTong();
+        } 
+        private void increaseSl_tapped(object sender, EventArgs e)
+        {
+            var lb = sender as Label;
+            var Selected = (extras)lb.BindingContext;
+            var cv = Selected.id;
+            int tong = 0;
+            foreach (var items in vm.extras)
+            {
+                tong += items.sl;
+            }
+            foreach (var item in vm.extras.Where(x => x.id == cv))
+            {
+                
+                if (tong < 3)
+                {
+                    item.sl++;
+                }
+                else
+                {
+                    Application.Current.MainPage.DisplayAlert("Lỗi", "Xin lỗi bạn. Số lượng nhân bánh tối đa cho mỗi bánh mì mà Vua Bánh Mì quy định nên là 3", "OK");
+                }
+            }
+            vm.TinhTong();
+        }
 
+        async void bd_dathang_tapped(object sender, EventArgs e)
+        {
+            await bddathang.ScaleTo(0.9, 1);
+            await this.FadeTo(0.9, 1);
+            try
+            {
+                await vm.DatHang();
+                await Application.Current.MainPage.DisplayAlert("Success", "Đặt hàng thành công", "OK");
+                Navigation.RemovePage(this);
+            }
+            catch(Exception)
+            {
+                await bddathang.FadeTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+        }
     }
 }

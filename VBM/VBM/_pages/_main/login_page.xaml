@@ -5,6 +5,7 @@
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              xmlns:sfinput="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:sfpicker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource vbmwhite}">
     <ScrollView>
@@ -82,11 +83,22 @@
                                                 HorizontalOptions="Start"
                                                 VerticalOptions="Center"/>
 
-                                <Label Text="Danh sách cửa hàng" 
-                                       FontSize="{OnIdiom Phone=10, Tablet=25}" 
-                                       TextColor="#707b77"
-                                       HorizontalOptions="Center"
-                                       VerticalOptions="Center"/>
+                                <sfinput:SfTextInputLayout BackgroundColor="Transparent"
+                                                           FocusedColor="Transparent"
+                                                           UnfocusedColor="Transparent"
+                                                           ContainerType="Outlined"
+                                                           Margin="{OnIdiom Phone='0,5',Tablet='0,4'}">
+                                    <Picker Title="Danh sách cửa hàng"
+                                        x:Name="sfpickstore"                                        
+                                        FontSize="{OnIdiom Phone=13, Tablet=25}"                         
+                                        TextColor="#707b77"
+                                        TitleColor="#707b77"
+                                        WidthRequest="{OnIdiom Phone=120,Tablet=260}"
+                                        HorizontalOptions="Center"                                                   
+                                        ItemsSource="{Binding name}"
+                                        VerticalOptions="Center"/>
+
+                                </sfinput:SfTextInputLayout>
 
                                 <ff:CachedImage Source="Polygon"
                                                 Aspect="Fill"
@@ -171,7 +183,8 @@
                                          HeightRequest="{OnIdiom Phone=56,Tablet=86}"
                                          WidthRequest="278"
                                          CornerRadius="50"
-                                         Margin="{OnIdiom Phone='60,0,60,30',Tablet='60,30,60,0'}">
+                                         Margin="{OnIdiom Phone='60,0,60,30',Tablet='60,30,60,0'}"
+                                         x:Name="btnlogin">
 
                             <Label Text="Đăng nhập"
                                    TextColor="{StaticResource vbmgreen}"

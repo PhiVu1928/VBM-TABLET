@@ -2,7 +2,7 @@
 <FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="VBM._pages._menuinfo.outline_page"
-            xmlns:pages="clr-namespace:VBM._pages._menuinfo"
+            xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
             x:Name="flypage"
             NavigationPage.HasNavigationBar="False"
             FlyoutLayoutBehavior="Popover"
@@ -13,8 +13,18 @@
             </ContentPage>
       </FlyoutPage.Flyout>
     <FlyoutPage.Detail>
-        <ContentPage Title="vbm" BackgroundColor="{StaticResource vbmgreen}">
-            <Grid/>
+        <ContentPage Title="vbm" BackgroundColor="{StaticResource vbmlightyellow}">
+            <Grid>
+                <busyindicator:SfBusyIndicator
+                        x:Name="busyindicator"
+                        AnimationType="Cupertino"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
+                        IsBusy="True"
+                        TextColor="#1d5234"
+                        VerticalOptions="Center"
+                        WidthRequest="50" />
+            </Grid>
         </ContentPage>
     </FlyoutPage.Detail>    
 </FlyoutPage>

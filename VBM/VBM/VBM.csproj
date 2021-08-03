@@ -15,11 +15,12 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.12" />
     <PackageReference Include="sqlite-net-pcl" Version="1.8.0-beta" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.2.0.48" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.2.0.48" />
-    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="19.2.0.48" />
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="19.2.0.48" />
-    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="19.2.0.48" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="19.2.0.49" />
     <PackageReference Include="Xamarin.CommunityToolkit" Version="1.3.0-pre1" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
@@ -33,22 +34,28 @@
     <Compile Update="_pages\_main\login_page.xaml.cs">
       <DependentUpon>login_page.xaml</DependentUpon>
     </Compile>
+    <Compile Update="_pages\_menu\emenu_page.xaml.cs">
+      <DependentUpon>emenu_page.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="_pages\_home\customer_page.xaml">
+    <EmbeddedResource Update="_pages\_customer\customer_page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="_pages\_home\gift_page.xaml">
+    <EmbeddedResource Update="_pages\_customer\gift_page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="_pages\_home\historypage.xaml">
+    <EmbeddedResource Update="_pages\_customer\historypage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="_pages\_customer\home_view.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="_pages\_home\home_page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="_pages\_home\script_page.xaml">
+    <EmbeddedResource Update="_pages\_customer\script_page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="_pages\_info\info_page.xaml">
@@ -87,13 +94,16 @@
     <EmbeddedResource Update="_pages\_menu\detail_page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="_pages\_menu\emenu.xaml">
+    <EmbeddedResource Update="_pages\_menu\emenu_page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="_pages\_menu\menu_page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="_pages\_promo\khuyen_mai_page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="_pages\_thanhtoan\cart_item_page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="_pages\_thanhtoan\discount_page.xaml">

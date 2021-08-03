@@ -21,18 +21,19 @@ namespace VBM._pages._info
 
         async void ff_ok_tapped(object sender, EventArgs e)
         {
-            this.IsEnabled = false;
             await xacnhan.ScaleTo(0.9, 1);
             await xacnhan.FadeTo(0.9, 1);
             try
             {
                 using (var process = UserDialogs.Instance.Loading("Loading...", null, null, true, MaskType.Black))
                 {
-                    var xacnhanpage = new _pages._home.home_page();
-                    await Navigation.PushAsync(xacnhanpage);
-                    xacnhanpage.render();
-                    await Navigation.RemovePopupPageAsync(this);
-                    this.IsEnabled = true;
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        var xacnhanpage = new _pages._home.home_page();
+                        Navigation.PushAsync(xacnhanpage);
+                        xacnhanpage.render();
+                        Navigation.RemovePopupPageAsync(this);
+                    });                    
                     await xacnhan.ScaleTo(1, 100);
                     await this.FadeTo(1, 100);
                 }

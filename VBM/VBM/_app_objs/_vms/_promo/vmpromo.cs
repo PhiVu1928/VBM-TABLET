@@ -7,17 +7,19 @@ namespace VBM._app_objs._vms._promo
 {
     public class vmpromo
     {
-        public ObservableCollection<promo> promos { get; set; }
+        public List<vbm.objs.promo_obj> promos { get; set; }
         public vmpromo()
         {
             createPromo();
         }
         public void createPromo()
         {
-            promos = new ObservableCollection<promo>();
-            for(int i = 0; i < 5; i++)
+            var mg = localdb._manager;
+            var val = mg._varialbles;
+            promos = new List<vbm.objs.promo_obj>();
+            foreach(var items in val._promos)
             {
-                promos.Add(new promo());
+                promos.Add(items);
             }
         }
     }

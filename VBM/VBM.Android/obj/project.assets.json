@@ -231,7 +231,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
-      "Syncfusion.Licensing/19.2.0.48": {
+      "Syncfusion.Licensing/19.2.0.49": {
         "type": "package",
         "compile": {
           "lib/MonoAndroid10.0/Syncfusion.Licensing.dll": {}
@@ -240,10 +240,10 @@
           "lib/MonoAndroid10.0/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Buttons/19.2.0.48": {
+      "Syncfusion.Xamarin.Buttons/19.2.0.49": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.2.0.48",
+          "Syncfusion.Xamarin.Core": "19.2.0.49",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -255,10 +255,10 @@
           "lib/MonoAndroid10.0/Syncfusion.Buttons.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/19.2.0.48": {
+      "Syncfusion.Xamarin.Core/19.2.0.49": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "19.2.0.48",
+          "Syncfusion.Licensing": "19.2.0.49",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -270,7 +270,7 @@
           "lib/MonoAndroid10.0/Syncfusion.Core.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.DataSource/19.2.0.48": {
+      "Syncfusion.Xamarin.DataSource/19.2.0.49": {
         "type": "package",
         "compile": {
           "lib/MonoAndroid10.0/Syncfusion.DataSource.Portable.dll": {}
@@ -279,7 +279,7 @@
           "lib/MonoAndroid10.0/Syncfusion.DataSource.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.GridCommon/19.2.0.48": {
+      "Syncfusion.Xamarin.GridCommon/19.2.0.49": {
         "type": "package",
         "compile": {
           "lib/MonoAndroid10.0/Syncfusion.GridCommon.Portable.dll": {}
@@ -288,10 +288,10 @@
           "lib/MonoAndroid10.0/Syncfusion.GridCommon.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfBusyIndicator/19.2.0.48": {
+      "Syncfusion.Xamarin.SfBusyIndicator/19.2.0.49": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.2.0.48",
+          "Syncfusion.Xamarin.Core": "19.2.0.49",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -305,12 +305,12 @@
           "lib/MonoAndroid10.0/Syncfusion.SfBusyIndicator.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfListView/19.2.0.48": {
+      "Syncfusion.Xamarin.SfListView/19.2.0.49": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.2.0.48",
-          "Syncfusion.Xamarin.DataSource": "19.2.0.48",
-          "Syncfusion.Xamarin.GridCommon": "19.2.0.48",
+          "Syncfusion.Xamarin.Core": "19.2.0.49",
+          "Syncfusion.Xamarin.DataSource": "19.2.0.49",
+          "Syncfusion.Xamarin.GridCommon": "19.2.0.49",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -322,10 +322,27 @@
           "lib/MonoAndroid10.0/Syncfusion.SfListView.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfTabView/19.2.0.48": {
+      "Syncfusion.Xamarin.SfPicker/19.2.0.49": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.2.0.48",
+          "Syncfusion.Xamarin.Core": "19.2.0.49",
+          "Xamarin.Forms": "4.5.0.617"
+        },
+        "compile": {
+          "lib/MonoAndroid10.0/Syncfusion.SfPicker.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10.0/Syncfusion.SfPicker.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTabView/19.2.0.49": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "19.2.0.49",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -1560,11 +1577,12 @@
           "Acr.UserDialogs": "7.1.0.514",
           "Newtonsoft.Json": "13.0.1",
           "Rg.Plugins.Popup": "2.0.0.12",
-          "Syncfusion.Xamarin.Buttons": "19.2.0.48",
-          "Syncfusion.Xamarin.Core": "19.2.0.48",
-          "Syncfusion.Xamarin.SfBusyIndicator": "19.2.0.48",
-          "Syncfusion.Xamarin.SfListView": "19.2.0.48",
-          "Syncfusion.Xamarin.SfTabView": "19.2.0.48",
+          "Syncfusion.Xamarin.Buttons": "19.2.0.49",
+          "Syncfusion.Xamarin.Core": "19.2.0.49",
+          "Syncfusion.Xamarin.SfBusyIndicator": "19.2.0.49",
+          "Syncfusion.Xamarin.SfListView": "19.2.0.49",
+          "Syncfusion.Xamarin.SfPicker": "19.2.0.49",
+          "Syncfusion.Xamarin.SfTabView": "19.2.0.49",
           "Xamarin.CommunityToolkit": "1.3.0-pre1",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.FFImageLoading": "2.4.11.982",
@@ -1930,10 +1948,10 @@
         "sqlitepclraw.provider.e_sqlite3.nuspec"
       ]
     },
-    "Syncfusion.Licensing/19.2.0.48": {
-      "sha512": "9DpnNCTSxYYB9TbGv3uFr5CzFHm2x+uj8c+hkUwHGnDKYmEmlBx8+dxwIUE9/ePKpEYQgGg4c6TdV39xvBbNpQ==",
+    "Syncfusion.Licensing/19.2.0.49": {
+      "sha512": "HN0+d2ukdhS9MDZwHFyX5IkLNQszf4mPpCxVZh+CMGzfXcbrGnps91Pnkr6XP2t89jb3kxbJIg41PIM5/ZEX5w==",
       "type": "package",
-      "path": "syncfusion.licensing/19.2.0.48",
+      "path": "syncfusion.licensing/19.2.0.49",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1955,14 +1973,14 @@
         "lib/netstandard2.0/Syncfusion.Licensing.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
         "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.19.2.0.48.nupkg.sha512",
+        "syncfusion.licensing.19.2.0.49.nupkg.sha512",
         "syncfusion.licensing.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Buttons/19.2.0.48": {
-      "sha512": "oUzRVPpNbXHI/11CdBNTeQlmfPzKpKVnUmFVsh2rKL32PK6th7p4/OQD9tT+voFf4uLshHn+IHwLQCPfakIUhQ==",
+    "Syncfusion.Xamarin.Buttons/19.2.0.49": {
+      "sha512": "JVpiIwI/P0pV+sBRDgC5M4ZxRo6oYQmSK1V/a1aeNEDB1oKovWIumVARctiR/ce9jvOapw/OVpRpaVFyHTuWLA==",
       "type": "package",
-      "path": "syncfusion.xamarin.buttons/19.2.0.48",
+      "path": "syncfusion.xamarin.buttons/19.2.0.49",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1989,14 +2007,14 @@
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Themes/Generic.xaml",
         "lib/uap10.0/Syncfusion.Buttons.XForms.dll",
         "lib/uap10.0/Syncfusion.Buttons.XForms.xml",
-        "syncfusion.xamarin.buttons.19.2.0.48.nupkg.sha512",
+        "syncfusion.xamarin.buttons.19.2.0.49.nupkg.sha512",
         "syncfusion.xamarin.buttons.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Core/19.2.0.48": {
-      "sha512": "jmK3GyPbpQDuqyK7/HKHOtcXBtnwlL8Xr8AiD1rSoIAIq2NlYK0emOXxLYqG9jIyo34fYhl4HhiXokReG7+bYw==",
+    "Syncfusion.Xamarin.Core/19.2.0.49": {
+      "sha512": "p42SxIEt7oab5nINjkEsmVJV1cDMk9ezrGkv8VkNZ+5IOm/Uobp+5KqMsvzJxrEwgWQsLhRsPLt4YDcAWkbWtQ==",
       "type": "package",
-      "path": "syncfusion.xamarin.core/19.2.0.48",
+      "path": "syncfusion.xamarin.core/19.2.0.49",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2024,14 +2042,14 @@
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleVisibleIcon.xaml",
         "lib/uap10.0/Syncfusion.Core.XForms.dll",
         "lib/uap10.0/Syncfusion.Core.XForms.xml",
-        "syncfusion.xamarin.core.19.2.0.48.nupkg.sha512",
+        "syncfusion.xamarin.core.19.2.0.49.nupkg.sha512",
         "syncfusion.xamarin.core.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.DataSource/19.2.0.48": {
-      "sha512": "8dDhkAC8tEg81i9IFsPpJBO1k1CO94ISk5eEsxShMqIbeTq+UOH1AehPOMH/qkJ4vGRuuBekFoITaQOLSHowyg==",
+    "Syncfusion.Xamarin.DataSource/19.2.0.49": {
+      "sha512": "sn9iu0BKl75ToBaLiUglNKh/Pa2y1z1AcJUmBb2k391TNs7cWjE52ROklw/t7yL82XYFSkCAdIlvJ2a+4etECQ==",
       "type": "package",
-      "path": "syncfusion.xamarin.datasource/19.2.0.48",
+      "path": "syncfusion.xamarin.datasource/19.2.0.49",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2047,14 +2065,14 @@
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.dll",
         "lib/uap10.0/Syncfusion.DataSource.Portable.XML",
         "lib/uap10.0/Syncfusion.DataSource.Portable.dll",
-        "syncfusion.xamarin.datasource.19.2.0.48.nupkg.sha512",
+        "syncfusion.xamarin.datasource.19.2.0.49.nupkg.sha512",
         "syncfusion.xamarin.datasource.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.GridCommon/19.2.0.48": {
-      "sha512": "beWkGwLUtdvyt3s0uCzX0mUKX+oRyWexlrvn+bT8wJuy3g13f/qufKH87TWa6F3eOLEL/CdgcrT2YEGp6zrJIA==",
+    "Syncfusion.Xamarin.GridCommon/19.2.0.49": {
+      "sha512": "gFv0+yw+HXi07UiMQl0LKb0lnl99bhg5Ag5H9zPNI7GQTO4yFoRyal24zUayZcrx0sEMhELsjicanjlKjApzVg==",
       "type": "package",
-      "path": "syncfusion.xamarin.gridcommon/19.2.0.48",
+      "path": "syncfusion.xamarin.gridcommon/19.2.0.49",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2072,14 +2090,14 @@
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.dll",
         "lib/uap10.0/Syncfusion.GridCommon.Portable.XML",
         "lib/uap10.0/Syncfusion.GridCommon.Portable.dll",
-        "syncfusion.xamarin.gridcommon.19.2.0.48.nupkg.sha512",
+        "syncfusion.xamarin.gridcommon.19.2.0.49.nupkg.sha512",
         "syncfusion.xamarin.gridcommon.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfBusyIndicator/19.2.0.48": {
-      "sha512": "WJDb+5W1F82Z6nUQyH1nl/oj1FbaiMA2JjBg7rV2rKvBZcMS6Q1iPMX37ctQLkt57M5T8pDx04/zx5ERJEoyVw==",
+    "Syncfusion.Xamarin.SfBusyIndicator/19.2.0.49": {
+      "sha512": "hNkSgV+gdh0JO6aFKfwgkR21B45l8eJPFkwhwdJsABFgCb0kAFA1Q0lL2MFm6yjTBN6KGiGQX9fQlZFFyS3Hww==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfbusyindicator/19.2.0.48",
+      "path": "syncfusion.xamarin.sfbusyindicator/19.2.0.49",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2106,14 +2124,14 @@
         "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.dll",
         "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.xml",
-        "syncfusion.xamarin.sfbusyindicator.19.2.0.48.nupkg.sha512",
+        "syncfusion.xamarin.sfbusyindicator.19.2.0.49.nupkg.sha512",
         "syncfusion.xamarin.sfbusyindicator.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfListView/19.2.0.48": {
-      "sha512": "6gD19h4xFwejd/Ib/+QG8NCOxR6Z1bizX1f0ElT2WKAIC+jwacdNP3vW1pj2LHVjhajhb3GH5sCSCxs4fLydaA==",
+    "Syncfusion.Xamarin.SfListView/19.2.0.49": {
+      "sha512": "NhZOWLuwoW5zEfNXNcSKddiTbMAbtCjYkvu4vG0RnrDAJbeHJD8W7mov6PWKhNLDm0K/ORU6LxOtBQNS0y9Dkw==",
       "type": "package",
-      "path": "syncfusion.xamarin.sflistview/19.2.0.48",
+      "path": "syncfusion.xamarin.sflistview/19.2.0.49",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2136,14 +2154,48 @@
         "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.SfListView.XForms.dll",
         "lib/uap10.0/Syncfusion.SfListView.XForms.xml",
-        "syncfusion.xamarin.sflistview.19.2.0.48.nupkg.sha512",
+        "syncfusion.xamarin.sflistview.19.2.0.49.nupkg.sha512",
         "syncfusion.xamarin.sflistview.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfTabView/19.2.0.48": {
-      "sha512": "lUNnMglV+XbjRj98hNiFqPC0Pd1O4FT5BUf6ADtL4aEIFa6LhLsTTVTB+jB+n6DfEpa9ySITvSQNboKS3/VlKQ==",
+    "Syncfusion.Xamarin.SfPicker/19.2.0.49": {
+      "sha512": "70WHFCKelheesfhfEQpPqZ12+u01FiVrRb4dDYzVItu7F5qPnsD2N1lUXm2stdXMq/VWHfgHzI5drjejvmwo6g==",
       "type": "package",
-      "path": "syncfusion.xamarin.sftabview/19.2.0.48",
+      "path": "syncfusion.xamarin.sfpicker/19.2.0.49",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10.0/Syncfusion.SfPicker.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfPicker.Android.xml",
+        "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.XML",
+        "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.dll",
+        "lib/MonoAndroid90/Syncfusion.SfPicker.Android.dll",
+        "lib/MonoAndroid90/Syncfusion.SfPicker.Android.xml",
+        "lib/MonoAndroid90/Syncfusion.SfPicker.XForms.Android.dll",
+        "lib/MonoAndroid90/Syncfusion.SfPicker.XForms.XML",
+        "lib/MonoAndroid90/Syncfusion.SfPicker.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPicker.XForms.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfPicker.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPicker.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.xml",
+        "lib/netstandard2.0/Syncfusion.SfPicker.XForms.XML",
+        "lib/netstandard2.0/Syncfusion.SfPicker.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfPicker.XForms.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfPicker.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfPicker.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfPicker.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfPicker.XForms.XML",
+        "lib/uap10.0/Syncfusion.SfPicker.XForms.dll",
+        "syncfusion.xamarin.sfpicker.19.2.0.49.nupkg.sha512",
+        "syncfusion.xamarin.sfpicker.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfTabView/19.2.0.49": {
+      "sha512": "16pSwflGi3YkI3tkYCPCZaK7PJl/WH1q0/s6n+tTiTUndJ+TM+uKfZhjxVDJPeq+3Ck77pXQaQq/2FTaRA0RmQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sftabview/19.2.0.49",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2168,7 +2220,7 @@
         "lib/uap10.0/Syncfusion.SfTabView.XForms.UWP/Themes/Generic.xaml",
         "lib/uap10.0/Syncfusion.SfTabView.XForms.dll",
         "lib/uap10.0/Syncfusion.SfTabView.XForms.xml",
-        "syncfusion.xamarin.sftabview.19.2.0.48.nupkg.sha512",
+        "syncfusion.xamarin.sftabview.19.2.0.49.nupkg.sha512",
         "syncfusion.xamarin.sftabview.nuspec"
       ]
     },
@@ -3830,31 +3882,35 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v11.0": [
-      "Syncfusion.Xamarin.SfTabView >= 19.2.0.48",
+      "Syncfusion.Xamarin.SfPicker >= 19.2.0.49",
+      "Syncfusion.Xamarin.SfTabView >= 19.2.0.49",
       "VBM >= 1.0.0",
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2083"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Phi Hung\\.nuget\\packages\\": {},
+    "C:\\Users\\Phi Vu\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\New folder (2)\\VBM\\VBM.Android\\VBM.Android.csproj",
+      "projectUniqueName": "D:\\VBM-tablet\\VBM\\VBM\\VBM.Android\\VBM.Android.csproj",
       "projectName": "VBM.Android",
-      "projectPath": "D:\\New folder (2)\\VBM\\VBM.Android\\VBM.Android.csproj",
-      "packagesPath": "C:\\Users\\Phi Hung\\.nuget\\packages\\",
-      "outputPath": "D:\\New folder (2)\\VBM\\VBM.Android\\obj\\",
+      "projectPath": "D:\\VBM-tablet\\VBM\\VBM\\VBM.Android\\VBM.Android.csproj",
+      "packagesPath": "C:\\Users\\Phi Vu\\.nuget\\packages\\",
+      "outputPath": "D:\\VBM-tablet\\VBM\\VBM\\VBM.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Phi Hung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Phi Vu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -3868,8 +3924,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "D:\\New folder (2)\\VBM\\VBM\\VBM.csproj": {
-              "projectPath": "D:\\New folder (2)\\VBM\\VBM\\VBM.csproj"
+            "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj": {
+              "projectPath": "D:\\VBM-tablet\\VBM\\VBM\\VBM\\VBM.csproj"
             }
           }
         }
@@ -3878,9 +3934,13 @@
     "frameworks": {
       "monoandroid11.0": {
         "dependencies": {
+          "Syncfusion.Xamarin.SfPicker": {
+            "target": "Package",
+            "version": "[19.2.0.49, )"
+          },
           "Syncfusion.Xamarin.SfTabView": {
             "target": "Package",
-            "version": "[19.2.0.48, )"
+            "version": "[19.2.0.49, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

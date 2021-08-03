@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VBM._app_objs._vms._detail;
 using VBM._app_objs._vms._home;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,6 +15,7 @@ namespace VBM._pages._home
     public partial class home_page : ContentPage
     {
         vmhome vm { get; set; }
+        _app_objs._vms._detail.vmdetail vmdetail;
         public home_page()
         {
             InitializeComponent();
@@ -22,25 +24,96 @@ namespace VBM._pages._home
         {
             vm = new vmhome();
             this.BindingContext = vm;
+            var homeview = new VBM._pages._customer.home_view();
+            stlHomeMenu.Children.Add(homeview);
+            homeview.Render();
         }
-
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            var mg = localdb._manager._varialbles._cart_temp;
+            if(mg != null)
+            {
+                Cartcount.Text = mg.Count().ToString();
+            }
+            else
+            {
+                Cartcount.Text = "0";
+            }
+        }
         private void ff_backicon_tapped(object sender, EventArgs e)
         {
             Navigation.RemovePage(this);
-        }      
+        }
 
+        async void ff_homeicon_tapped(object sender, EventArgs e)
+        {
+            await khachicon.ScaleTo(0.9, 1);
+            await this.FadeTo(0.9, 1);
+            try
+            {
+                stlHomeMenu.IsVisible = true;
+                stlEmMenu.IsVisible = false;
+                stlPromoMenu.IsVisible = false;
+                stlCartMenu.IsVisible = false;
+                if(stlHomeMenu.Children.Count == 0)
+                {
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        var homepage = new _pages._customer.home_view();
+                        stlHomeMenu.Children.Add(homepage);
+                        homepage.Render();
+                    });                    
+                }
+                else
+                {
+                    //
+                }                
+                khachicon.Source = "khachiconpress";
+                menuicon.Source = "menuicon";
+                Promoicon.Source = "promotionicon";
+                ffcarticon.Source = "promotionicon1";
+
+                await khachicon.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+            catch
+            {
+                //error show here
+                await khachicon.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+        }
 
         async void ff_menuicon_tapped(object sender, EventArgs e)
         {
-            this.IsEnabled = false;
             await menuicon.ScaleTo(0.9, 1);
             await this.FadeTo(0.9, 1);
             try
             {
-                var menupage = new _pages._menu.menu_page();
-                await Navigation.PushAsync(menupage);
-                await menupage.Render();
-                this.IsEnabled = true;
+                stlHomeMenu.IsVisible = false;
+                stlEmMenu.IsVisible = true;
+                stlPromoMenu.IsVisible = false;
+                stlCartMenu.IsVisible = false;
+                if (stlEmMenu.Children.Count == 0)
+                {
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        var menupage = new _pages._menu.menu_page();
+                        stlEmMenu.Children.Add(menupage);
+                        menupage.Render();
+                    });                    
+                }
+                else
+                {
+                    //
+                }
+                khachicon.Source = "khachicon";
+                menuicon.Source = "menuiconpress";
+                Promoicon.Source = "promotionicon";
+                ffcarticon.Source = "promotionicon1";
+
+
                 await menuicon.ScaleTo(1, 100);
                 await this.FadeTo(1, 100);
             }
@@ -53,17 +126,34 @@ namespace VBM._pages._home
         }
         async void ff_promoicon_tapped(object sender, EventArgs e)
         {
-            this.IsEnabled = false;
-            await menuicon.ScaleTo(0.9, 1);
+            await Promoicon.ScaleTo(0.9, 1);
             await this.FadeTo(0.9, 1);
             try
             {
+                stlHomeMenu.IsVisible = false;
+                stlEmMenu.IsVisible = false;
+                stlPromoMenu.IsVisible = true;
+                stlCartMenu.IsVisible = false;
+                if (stlPromoMenu.Children.Count == 0)
+                {
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        var promopage = new _pages._promo.khuyen_mai_page();
+                        stlPromoMenu.Children.Add(promopage);
+                        promopage.Render();
+                    });
+                    
+                }
+                else
+                {
+                    //
+                }
+                khachicon.Source = "khachicon";
+                menuicon.Source = "menuicon";
+                Promoicon.Source = "promotioniconpress";
+                ffcarticon.Source = "promotionicon1";
 
-                var promopage = new _pages._promo.khuyen_mai_page();
-                await Navigation.PushAsync(promopage);
-                promopage.Render();
-                this.IsEnabled = true;
-                await menuicon.ScaleTo(1, 100);
+                await Promoicon.ScaleTo(1, 100);
                 await this.FadeTo(1, 100);
 
             }
@@ -71,23 +161,32 @@ namespace VBM._pages._home
             {
                 this.IsEnabled = false;
                 //error show here
-                await menuicon.ScaleTo(1, 100);
+                await Promoicon.ScaleTo(1, 100);
                 await this.FadeTo(1, 100);
             }
         }
 
         async void ff_cart_tapped(object sender, EventArgs e)
         {
-            this.IsEnabled = false;
             await carticon.ScaleTo(0.9, 1);
             await this.FadeTo(0.9, 1);
             try
             {
-                var cartpage = new _pages._thanhtoan.thanh_toan_page();
-                await Navigation.PushAsync(cartpage);
-                cartpage.Render();
-                this.IsEnabled = true;
+                stlHomeMenu.IsVisible = false;
+                stlEmMenu.IsVisible = false;
+                stlPromoMenu.IsVisible = false;
+                stlCartMenu.IsVisible = true;
+                stlCartMenu.Children.Clear();
+                Device.BeginInvokeOnMainThread(() => {
 
+                    var cartpage = new _pages._thanhtoan.thanh_toan_page();
+                    stlCartMenu.Children.Add(cartpage);
+                    cartpage.Render();
+                });                
+                khachicon.Source = "khachicon";
+                menuicon.Source = "menuicon";
+                Promoicon.Source = "promotionicon";
+                ffcarticon.Source = "promotioniconpress1";
                 await menuicon.ScaleTo(1, 100);
                 await this.FadeTo(1, 100);
 
@@ -95,55 +194,11 @@ namespace VBM._pages._home
             catch(Exception ex)
             {
                 //error show here
-                App.Current.MainPage.DisplayAlert("error", ex.ToString(), "ok");
                 await menuicon.ScaleTo(1, 100);
                 await this.FadeTo(1, 100);
             }
         }
 
-        async void stl_title_tapped(object sender, EventArgs e)
-        {
-            this.IsEnabled = false;
-            var title = sender as StackLayout;
-            await title.ScaleTo(0.8, 1);
-            var selected = (MenuTab)title.BindingContext;
-            foreach(var items in vm.menuTabs)
-            {
-                if (items.Index == selected.Index)
-                {
-                    if (selected.Index == 0)
-                    {
-                        stlHomeMenu.Children.Clear();
-                        items.Selected = true;
-                        stlHomeMenu.Children.Add(new _pages._home.customer_page());
-                    }
-                    if (selected.Index == 1)
-                    {
-                        stlHomeMenu.Children.Clear();
-                        items.Selected = true;
-                        stlHomeMenu.Children.Add(new _pages._home.script_page());
-                    }
-                    if (selected.Index == 2)
-                    {
-                        stlHomeMenu.Children.Clear();
-                        items.Selected = true;
-                        stlHomeMenu.Children.Add(new _pages._home.gift_page());
-                    }                    
-                    if (selected.Index == 3)
-                    {
-                        stlHomeMenu.Children.Clear();
-                        items.Selected = true;
-                        stlHomeMenu.Children.Add(new _pages._home.historypage());
-                    }                   
-                }
-                else
-                {
-                    items.Selected = false;
-                }
-            }
-            await title.ScaleTo(1, 250);
-            this.IsEnabled = true;
-        }
 
         
     }

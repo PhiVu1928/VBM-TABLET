@@ -5,79 +5,29 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.ComponentModel;
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace VBM._app_objs._vms._home
 {
-    public class vmhome
-    {
-        public ObservableCollection<title> titles { get; set; }
-        public ObservableCollection<MenuTab> menuTabs { get; set; }
-        
-        public vmhome()
-        {
-            titlerender();
-            CreateMenuTab();
-        }
-        
-        public void titlerender()
-        {
-            titles = new ObservableCollection<title>();
-            for(int i = 0; i <= 2; i++)
-            {
-                titles.Add(new title(i));
-            }
-        }
-        void CreateMenuTab()
-        {
-            menuTabs = new ObservableCollection<MenuTab>();
-            for(int i = 0; i <= 3; i++ )
-            {
-                menuTabs.Add(new MenuTab(i));
-            }
-        }
-    }
-    public class title : INotifyPropertyChanged
+    public class vmhome : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         void OnPropertyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-        public bool _selected;
-        public title(int id)
+        public ObservableCollection<MenuTab> menuTabs { get; set; }
+        public vmhome()
         {
-            this.Id = id;
-            if(id == 1)
-            {
-                NameTitle = "history";
-                Icon = "historyicon";
-            }
-            if(id == 2)
-            {
-                NameTitle = "gift";
-                Icon = "gifticon";
-            }
+            CreateMenuTab();
         }
-        public int Id { get; set; }
-        public string NameTitle { get; set; }
-        public string Icon { get; set; }
-        public bool Selected
+        
+        void CreateMenuTab()
         {
-            get
+            menuTabs = new ObservableCollection<MenuTab>();
+            for(int i = 0; i <= 3; i++ )
             {
-                return _selected;
-            }
-            set
-            {
-                _selected = value;
-                if(value)
-                {
-                    Icon = Icon + "press";
-                }
-                else
-                {
-                    Icon = Icon;
-                }
+                menuTabs.Add(new MenuTab(i));
             }
         }
     }
@@ -147,4 +97,5 @@ namespace VBM._app_objs._vms._home
         public int Index { get; set; }
         public string Name { get; set; }
     }
+
 }

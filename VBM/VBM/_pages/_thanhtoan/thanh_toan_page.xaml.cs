@@ -11,7 +11,7 @@ using Syncfusion.XForms.Border;
 namespace VBM._pages._thanhtoan
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class thanh_toan_page : ContentPage
+    public partial class thanh_toan_page : ContentView
     {
         vmthanhtoan vm;
         public thanh_toan_page()
@@ -19,102 +19,19 @@ namespace VBM._pages._thanhtoan
             InitializeComponent();
         }
         
-        protected async override void OnAppearing()
-        {
-            base.OnAppearing();
-            
-        }
         public async Task Render()
         {
+            await Task.Delay(2000);
             vm = new vmthanhtoan();
             BindingContext = vm;
-            this.IsEnabled = false;
-            var popupThanhToan = new _pages._thanhtoan.hinh_thuc_thanh_toan_page();
-            await Navigation.PushPopupAsync(popupThanhToan);
-            
-            popupThanhToan.Render();
-            
-            this.IsEnabled = true;
+            Giohang();
+            busyindicator.IsBusy = false;
+            busyindicator.IsVisible = false;
         }
-        async void ff_backicon_tapped(object sender, EventArgs e)
+        public async Task Giohang()
         {
-            Navigation.RemovePage(this);
+            Lstgiohang.ItemsSource = vm.cart_Temps;
         }
-        async void ff_khachicon_tapped(object sender, EventArgs e)
-        {
-            this.IsEnabled = false;
-            await menuicon.ScaleTo(0.9, 1);
-            await this.FadeTo(0.9, 1);
-            try
-            {
-
-                var homepage = new _pages._home.home_page();
-                await Navigation.PushAsync(homepage);
-                homepage.render();
-                this.IsEnabled = true;
-
-                await menuicon.ScaleTo(1, 100);
-                await this.FadeTo(1, 100);
-            }
-            catch
-            {
-                //error show here
-                await menuicon.ScaleTo(1, 100);
-                await this.FadeTo(1, 100);
-            }
-        }
-
-        async void ff_menuicon_tapped(object sender, EventArgs e)
-        {
-            this.IsEnabled = false;
-            await menuicon.ScaleTo(0.9, 1);
-            await this.FadeTo(0.9, 1);
-            try
-            {
-                using (var progress = UserDialogs.Instance.Loading("Loading...", null, null, true, MaskType.Black))
-                {
-                    var menupage = new _pages._menu.menu_page();
-                    await Navigation.PushAsync(menupage);
-                    menupage.Render();
-                    this.IsEnabled = true;
-
-                    await menuicon.ScaleTo(1, 100);
-                    await this.FadeTo(1, 100);
-                }
-            }
-            catch
-            {
-                //error show here
-                await menuicon.ScaleTo(1, 100);
-                await this.FadeTo(1, 100);
-            }
-        }
-        
-        async void ff_promo_tapped(object sender, EventArgs e)
-        {
-            this.IsEnabled = false;
-            await promoicon.ScaleTo(0.9, 1);
-            await this.FadeTo(0.9, 1);
-            try
-            {
-
-                var promopage = new _pages._promo.khuyen_mai_page();
-                await Navigation.PushAsync(promopage);
-                promopage.Render();
-                this.IsEnabled = true;
-
-                await promoicon.ScaleTo(1, 100);
-                await this.FadeTo(1, 100);
-            }
-            catch (Exception)
-            {
-                //error show here
-                await promoicon.ScaleTo(1, 100);
-                await this.FadeTo(1, 100);
-                this.IsEnabled = false;
-            }
-        }
-
         async void ff_thanhtoan_tapped(object sender, EventArgs e)
         {
             this.IsEnabled = false;

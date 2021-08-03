@@ -18,14 +18,8 @@ namespace VBM._pages._info
         }
         protected override void OnAppearing()
         {
-            base.OnAppearing();
-            localdb._manager = new _app_objs._general.app_manager();
-            localdb._manager._contents._outline_page = this;
-            Task.Run(() =>
-            {
-                localdb._manager._cached.get_cached_values();
-                localdb._manager._tools.start_prepare_data();
-            });
+            base.OnAppearing();            
+            
         }
         public async void start_app()
         {
@@ -35,6 +29,8 @@ namespace VBM._pages._info
             var fpage = new VBM._pages._info.menu_info_page();
             flypage.Flyout = fpage;
             flypage.Title = "vbm";
+            busyindicator.IsRunning = false;
+            busyindicator.IsVisible = false;
         }
 
         public void open_flyout()

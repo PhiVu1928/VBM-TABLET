@@ -14,8 +14,16 @@
         </ContentPage>
     </FlyoutPage.Flyout>
     <FlyoutPage.Detail>
-        <ContentPage Title="vbm" BackgroundColor="{StaticResource vbmgreen}">
-            <Grid/>
+        <ContentPage Title="vbm" BackgroundColor="{StaticResource vbmwhite}">
+            <Grid>
+                <ActivityIndicator
+                        x:Name="busyindicator"
+                        HeightRequest="100"
+                        HorizontalOptions="Center"
+                        IsRunning="True"
+                        VerticalOptions="Center"
+                        WidthRequest="100" />
+            </Grid>
         </ContentPage>
     </FlyoutPage.Detail>
 </FlyoutPage>

@@ -27,6 +27,8 @@ namespace VBM._pages._menuinfo
                 localdb._manager._cached.get_cached_values();
                 localdb._manager._tools.start_prepare_data1();
             });
+            busyindicator.IsVisible = false;
+            busyindicator.IsBusy = false;
         }
 
         public void start_app()

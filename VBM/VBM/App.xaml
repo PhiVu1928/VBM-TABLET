@@ -74,6 +74,8 @@
             <Color x:Key="vbmpagebackground">#FFFFFF</Color>
             <Color x:Key="vbmblack">#000000</Color>
 
+
+            
             <Style TargetType="tb:SfTabItem">
                 <Setter Property="TitleFontFamily" Value="{StaticResource lr}"/>
                 <Setter Property="TitleFontSize" Value="{OnIdiom Phone=15,Tablet=25}"/>

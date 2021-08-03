@@ -133,8 +133,11 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker">
+      <Version>19.2.0.49</Version>
+    </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfTabView">
-      <Version>19.2.0.48</Version>
+      <Version>19.2.0.49</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
@@ -307,5 +310,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\onbttn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\promotioniconpress1.png" />
   </ItemGroup>
 </Project>

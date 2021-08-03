@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             x:Class="VBM._pages._thanhtoan.cart_item_page">
+    <border:SfBorder CornerRadius="40"
+                                     BorderColor="WhiteSmoke"
+                                     BorderWidth="2"
+                                     BackgroundColor="{StaticResource vbmwhite}"
+                                     HasShadow="False"
+                                     Margin="10">
+
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="{OnIdiom Phone=51,Tablet=71}"/>
+                <RowDefinition Height="{OnIdiom Phone=170,Tablet=*}"/>
+            </Grid.RowDefinitions>
+
+            <Grid Padding="{OnIdiom Phone=0,Tablet=20}"
+                                  BackgroundColor="{StaticResource vbmdeepgreen}">
+
+                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start"
+                                             Margin="17,0,0,0"
+                                             Spacing="20">
+
+
+                    <Label Text="×"
+                                           FontSize="{OnIdiom Phone=10,Tablet=23}"
+                                           TextColor="{StaticResource vbmwhite}"/>
+
+                    <Label Text="{Binding total,StringFormat='{0:N0}'}"
+                                           FontSize="{OnIdiom Phone=10,Tablet=23}"
+                                           TextColor="{StaticResource vbmlightyellow}"/>
+
+                </StackLayout>
+
+                <Label Text="Dòng combo"
+                                       FontSize="{OnIdiom Phone=10,Tablet=23}"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource vbmwhite}"
+                                       Margin="0,0,17,0"/>
+
+            </Grid>
+
+            <StackLayout Grid.Row="1"
+                                         Orientation="Vertical"
+                                         Padding="10">
+                <Grid>
+
+                    <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start"
+                                             Spacing="10">
+
+                        <Label Text="{Binding name_vn}"
+                                           TextColor="{StaticResource vbmgray}"
+                                           FontSize="{OnIdiom Phone=10,Tablet=30}"/>
+
+                        <Label Text="{Binding size_name_vn}"
+                                           TextColor="{StaticResource vbmgray}"
+                                           FontSize="{OnIdiom Phone=10,Tablet=30}"/>
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal"
+                                                 HeightRequest="{OnIdiom Phone=40,Tablet=60}"
+                                             HorizontalOptions="End"
+                                             VerticalOptions="Center"
+                                             Spacing="15">
+
+                        <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                                     BorderColor="Transparent"
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     HeightRequest="60"
+                                                     WidthRequest="{OnIdiom Phone=84,Tablet=174}"
+                                                     HorizontalOptions="End"
+                                                     VerticalOptions="Center">
+
+                            <StackLayout Orientation="Horizontal"
+                                                     VerticalOptions="Center"
+                                                     HorizontalOptions="Center"
+                                                     Spacing="{OnIdiom Phone=10,Tablet=15}">
+
+                                <Label Text="-"
+                                                   FontSize="{OnIdiom Phone=13,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                <Label Text="{Binding item_sl}"
+                                                   FontSize="{OnIdiom Phone=13,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                <Label Text="+"
+                                                   FontSize="{OnIdiom Phone=13,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                            </StackLayout>
+
+                        </border:SfBorder>
+
+                        <Label Text="{Binding size_price,StringFormat='{0:N0}'}"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=10,Tablet=25}"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"/>
+
+                    </StackLayout>
+
+
+                </Grid>
+
+
+                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             Spacing="20">
+                    <CollectionView ItemsSource="{Binding spice_Sizes}"
+                                    HeightRequest="{OnIdiom Phone=20,Tablet=40}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Horizontal" HorizontalItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding name_vn}"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=10,Tablet=20}"/>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+
+
+
+                <Grid>
+
+                    <StackLayout Orientation="Horizontal"
+                                                 HeightRequest="{OnIdiom Phone=40,Tablet=75}"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start"
+                                             Spacing="15">
+                        <CollectionView ItemsSource="{Binding Extras}"
+                                        HeightRequest="75">
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Horizontal" HorizontalItemSpacing="{OnIdiom Phone=5,Tablet=15}"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <border:SfBorder BackgroundColor="{StaticResource vbmdeeplightgray}"
+                                                     BorderColor="Transparent"
+                                                     WidthRequest="{OnIdiom Phone=85,Tablet=181}"                                                     
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     HeightRequest="60">
+
+                                        <Label Text="{Binding name_vn}"
+                                               FontSize="{OnIdiom Phone=10,Tablet=20}"
+                                               TextColor="{StaticResource vbmwhite}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+
+                                    </border:SfBorder>
+
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                    </StackLayout>                    
+
+                </Grid>
+                <Grid>
+                    <CollectionView ItemsSource="{Binding cart_Nuocs}"
+                                HeightRequest="{OnIdiom Phone=40,Tablet=60}"
+                                HorizontalOptions="FillAndExpand">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Horizontal"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid WidthRequest="{OnIdiom Phone=275,Tablet=550}">
+
+                                    <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Start">
+
+                                        <Label Text="{Binding name_vn}"
+                                           TextColor="{StaticResource vbmgray}"
+                                           FontSize="{OnIdiom Phone=10,Tablet=30}"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"/>
+
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal"
+                                                 HeightRequest="{OnIdiom Phone=40,Tablet=60}"
+                                             HorizontalOptions="End"
+                                             VerticalOptions="Center">
+
+                                        <border:SfBorder BackgroundColor="{StaticResource vbmlightgray}"
+                                                     BorderColor="Transparent"
+                                                     HasShadow="False"
+                                                     CornerRadius="50"
+                                                     HeightRequest="60"
+                                                     WidthRequest="{OnIdiom Phone=84,Tablet=174}"
+                                                     HorizontalOptions="End"
+                                                     VerticalOptions="Center">
+
+                                            <StackLayout Orientation="Horizontal"
+                                                     VerticalOptions="Center"
+                                                     HorizontalOptions="Center"
+                                                     Spacing="{OnIdiom Phone=10,Tablet=15}">
+
+                                                <Label Text="-"
+                                                   FontSize="{OnIdiom Phone=13,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                                <Label Text="{Binding sl}"
+                                                   FontSize="{OnIdiom Phone=13,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                                <Label Text="+"
+                                                   FontSize="{OnIdiom Phone=13,Tablet=23}"
+                                                   TextColor="{StaticResource vbmgray}"/>
+
+                                            </StackLayout>
+
+                                        </border:SfBorder>
+
+                                        <Label Text="{Binding price,StringFormat='{0:N0}'}"
+                                           TextColor="{StaticResource vbmpinttext}"
+                                           FontSize="{OnIdiom Phone=10,Tablet=25}"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"/>
+
+                                    </StackLayout>
+
+
+                                </Grid>
+
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </Grid>
+
+
+            </StackLayout>
+
+
+        </Grid>
+
+    </border:SfBorder>
+
+</ContentView>

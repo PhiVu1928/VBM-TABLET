@@ -5,6 +5,7 @@ using FFImageLoading.Forms.Platform;
 using Foundation;
 using Syncfusion.ListView.XForms.iOS;
 using Syncfusion.SfBusyIndicator.XForms.iOS;
+using Syncfusion.SfPicker.XForms.iOS;
 using Syncfusion.XForms.iOS.Border;
 using Syncfusion.XForms.iOS.Buttons;
 using UIKit;
@@ -27,6 +28,7 @@ namespace VBM.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             Rg.Plugins.Popup.Popup.Init();
+            SfPickerRenderer.Init();
             SfBusyIndicatorRenderer.Init();
             SfListViewRenderer.Init();
             SfBorderRenderer.Init();

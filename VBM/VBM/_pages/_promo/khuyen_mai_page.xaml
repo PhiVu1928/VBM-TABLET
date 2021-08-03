@@ -1,204 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:sf="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
-             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              x:Class="VBM._pages._promo.khuyen_mai_page"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource vbmwhite}">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="{OnIdiom Phone=65,Tablet=115}"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="{OnIdiom Phone=80,Tablet=115}"/>
-        </Grid.RowDefinitions>
+    <Grid Margin="{OnIdiom Phone='0',Tablet='0,50,0,0'}">
 
-        <StackLayout Margin="0,46,0,0"
-                     Orientation="Vertical"
-                     Spacing="40">
-
-            <Grid>
-
-                <ff:CachedImage Source="Stroke"
-                                WidthRequest="50"
-                                HeightRequest="25"
-                                HorizontalOptions="Start"
-                                VerticalOptions="Center"
-                                BackgroundColor="White">
-                    <ff:CachedImage.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ff_backicon_tapped"/>
-                    </ff:CachedImage.GestureRecognizers>
-                </ff:CachedImage>
-
-                <Label Text="Nguyễn Văn Khải"
-                       FontSize="{OnIdiom Phone=16,Tablet=36}"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       HorizontalTextAlignment="Center"/>
-
-                <ff:CachedImage Source="refreshicon"
-                                HorizontalOptions="End"
-                                VerticalOptions="Center"
-                                WidthRequest="40"
-                                HeightRequest="40"
-                                Margin="0,0,28,0"
-                                BackgroundColor="White"/>
-
-
-            </Grid>
-
-        </StackLayout>
-
-        <Grid Grid.Row="1"
-              Margin="0,50,0,0">
-
-            <sf:SfListView ItemsSource="{Binding promos}"
-                           Orientation="Vertical"
+        <sf:SfListView Orientation="Vertical"
                            IsScrollBarVisible="False"
                            ItemSize="{OnIdiom Phone=120,Tablet=190}"
                            ItemSpacing="20,10"
-                           SelectionBackgroundColor="Transparent">
-                <sf:SfListView.ItemTemplate>
-                    <DataTemplate>
-                        <border:SfBorder CornerRadius="60"
+                           SelectionBackgroundColor="Transparent"
+                           x:Name="lstpromo">
+            <sf:SfListView.ItemTemplate>
+                <DataTemplate>
+                    <border:SfBorder CornerRadius="60"
                                          BorderWidth="0"
                                          BorderColor="{StaticResource vbmdeeplightgray}"
                                          HasShadow="True"
                                          ShadowColor="{StaticResource vbmdeeplightgray}">
-                            
-                            <Grid>
 
-                                <ff:CachedImage Source="Group"
+                        <Grid>
+
+                            <ff:CachedImage Source="Group"
                                                 Aspect="Fill"
                                                 WidthRequest="{OnIdiom Phone=84,Tablet=134}"
                                                 HeightRequest="74"
                                                 BackgroundColor="Transparent"
                                                 HorizontalOptions="End"/>
 
-                                <StackLayout Padding="{OnIdiom Phone=15,Tablet=30}"
+                            <StackLayout Padding="{OnIdiom Phone=15,Tablet=30}"
                                              Orientation="Vertical"
                                              HorizontalOptions="Start"
                                              VerticalOptions="Center"
                                              Spacing="10">
 
-                                    <Label Text="{Binding Name}"
+                                <Label Text="{Binding name_vn}"
                                            TextColor="{StaticResource vbmdeepgreen}"
                                            FontSize="{OnIdiom Phone=15,Tablet=35}"
                                            FontAttributes="Bold"
                                            HorizontalOptions="Start"
                                            VerticalOptions="Start"/>
 
-                                    <StackLayout Orientation="Horizontal"
+                                <StackLayout Orientation="Horizontal"
                                                  Spacing="26">
 
-                                        <ff:CachedImage Source="timeicon"
+                                    <ff:CachedImage Source="timeicon"
                                                         Aspect="Fill"
                                                         WidthRequest="{OnIdiom Phone=25,Tablet=35}"
-                                                        HeightRequest="15"/>
+                                                        HeightRequest="25"/>
 
-                                        <Label Text="{Binding Time}"
+                                    <Label Text=""
                                                FontSize="{OnIdiom Phone=15,Tablet=25}"
                                                TextColor="{StaticResource vbmgray}"/>
 
-                                    </StackLayout>
-
                                 </StackLayout>
 
-                            </Grid>
-                        </border:SfBorder>
+                            </StackLayout>
 
-                    </DataTemplate>
-                </sf:SfListView.ItemTemplate>
-            </sf:SfListView>
-            
-        </Grid>
+                        </Grid>
+                    </border:SfBorder>
 
-        <Grid Grid.Row="2">
-
-            <StackLayout Orientation="Horizontal"
-                         HorizontalOptions="Center"
-                         VerticalOptions="Center"
-                         Spacing="{OnIdiom Phone=40,Tablet=100}">
-
-                <ff:CachedImage Source="khachicon"
-                                Aspect="Fill"
-                                WidthRequest="30"
-                                HeightRequest="30">
-                    <ff:CachedImage.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ff_khachicon_tapped"/>
-                    </ff:CachedImage.GestureRecognizers>
-                </ff:CachedImage>
-
-                <ff:CachedImage Source="menuicon"
-                                x:Name="menuicon"
-                                Aspect="Fill"
-                                WidthRequest="30"
-                                HeightRequest="30">
-                    <ff:CachedImage.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ff_menuicon_tapped"/>
-                    </ff:CachedImage.GestureRecognizers>
-                </ff:CachedImage>
-
-                <ff:CachedImage Source="promotioniconpress"
-                                x:Name="promoicon"
-                                Aspect="Fill"
-                                WidthRequest="30"
-                                HeightRequest="30">                    
-                </ff:CachedImage>
-
-            </StackLayout>
-
-            <Grid HorizontalOptions="End"
-                  VerticalOptions="Center">
-
-                <border:SfBorder WidthRequest="193"
-                                 HeightRequest="93"
-                                 CornerRadius="50"
-                                 BackgroundColor="{StaticResource vbmlightyellow}"
-                                 BorderColor="{StaticResource vbmwhite}"
-                                 HasShadow="False"
-                                 HorizontalOptions="End"
-                                 VerticalOptions="Center"
-                                 Margin="{OnIdiom Phone='0,0,-125,10',Tablet='0,0,-65,10'}"
-                                 x:Name="carticon">
-
-                    <ff:CachedImage Source="promotionicon1"
-                                    WidthRequest="30"
-                                    HeightRequest="30"
-                                    HorizontalOptions="Start"
-                                    VerticalOptions="Center"
-                                    Margin="30,0"
-                                    Aspect="Fill"/>
-                    <border:SfBorder.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ff_cart_tapped"/>
-                    </border:SfBorder.GestureRecognizers>
-                </border:SfBorder>
-
-                <border:SfBorder WidthRequest="34"
-                                 HeightRequest="34"
-                                 CornerRadius="30"
-                                 BackgroundColor="Red"
-                                 BorderColor="{StaticResource vbmwhite}"
-                                 HasShadow="False"
-                                 HorizontalOptions="Start"
-                                 VerticalOptions="Start">
-
-                    <Label Text="2"
-                           FontSize="20"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           TextColor="{StaticResource vbmwhite}"/>
-
-                </border:SfBorder>
-
-            </Grid>
-
-
-
-        </Grid>
-
+                </DataTemplate>
+            </sf:SfListView.ItemTemplate>
+        </sf:SfListView>
+        <busyindicator:SfBusyIndicator
+                        x:Name="busyindicator"
+                        AnimationType="Cupertino"
+                        HeightRequest="100"
+                        HorizontalOptions="Center"
+                        IsBusy="True"
+                        TextColor="#1d5234"
+                        VerticalOptions="Center"
+                        WidthRequest="100" />
     </Grid>
 
-</ContentPage>
+</ContentView>

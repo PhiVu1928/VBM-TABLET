@@ -247,12 +247,18 @@ namespace VBM._app_objs._general
             {
                 var system_tasks = new List<Task>();
                 system_tasks.Add(Task.Run(() => { val._menus = com.get_menus(); }));
+                system_tasks.Add(Task.Run(() => { val._exts_spis = com.get_all_extras_spices(); }));
+                system_tasks.Add(Task.Run(() => { val._promos = com.get_promos(); }));
+                system_tasks.Add(Task.Run(() => { val._stores = com.get_stores(); }));
 
                 Task.WaitAll(system_tasks.ToArray());
 
-                if(val._menus != null)
+                if(val._menus != null && val._exts_spis != null && val._cart_temp != null && val._promos != null)
                 {
                     mg._cached.update_menu(val._menus);
+                    mg._cached.update_exts_spis(val._exts_spis);
+                    mg._cached.update_promos(val._promos);
+                    mg._cached.update_stores(val._stores);
                     start_app();
                 }    
             }
@@ -267,7 +273,7 @@ namespace VBM._app_objs._general
             var bg = localdb._manager;
             Device.BeginInvokeOnMainThread(() =>
             {
-                bg._contents._outline_page.start_app();
+                bg._contents._cover_page.start_app();
             });
 
         }

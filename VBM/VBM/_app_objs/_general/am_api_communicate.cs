@@ -55,7 +55,6 @@ namespace VBM._app_objs._general
             }
             return null;
         }
-
         public List<vbm.objs.main_menu_class_obj> get_menus()
         {
             if (!isconnect())

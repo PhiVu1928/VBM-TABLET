@@ -52,6 +52,8 @@ namespace VBM._app_objs._general
                             try
                             {
                                 menu = JsonConvert.DeserializeObject<List<vbm.objs.main_menu_class_obj>>(t1.DBValue);
+                                localdb._manager._varialbles._menus = JsonConvert.DeserializeObject<List<vbm.objs.main_menu_class_obj>>(t1.DBValue);
+
                             }
                             catch { }
                             break;
@@ -93,6 +95,16 @@ namespace VBM._app_objs._general
                             catch { }
                             break;
                         }
+                    case "added_cart_temp":
+                        {
+                            try
+                            {
+                                added_carttemp = JsonConvert.DeserializeObject<List<cart_temp>>(t1.DBValue);
+                                localdb._manager._varialbles._cart_temp = JsonConvert.DeserializeObject<List<cart_temp>>(t1.DBValue);
+                            }
+                            catch { }
+                            break;
+                        }
                     case "stores":
                         {
                             try
@@ -128,6 +140,7 @@ namespace VBM._app_objs._general
         public long ticks { get; set; }
         public vbm.objs.dataversion version { get; set; }
         public List<cart_pros> added_pros { get; set; }
+        public List<cart_temp> added_carttemp { get; set; }
         public _app_utils.SQLiteBase DeviceDB { get; set; }
         #endregion
 
@@ -261,7 +274,18 @@ namespace VBM._app_objs._general
                 //error log
             }
         }
+        public void update_added_carttemp(List<cart_temp> data)
+        {
+            try
+            {
+                DeviceDB.ChangeDBStore("added_cart_temp", JsonConvert.SerializeObject(data));
+                added_carttemp = data;
+            }
+            catch(Exception e)
+            {
 
+            }
+        }
         public void update_added_pros(ObservableCollection<cart_pros> data)
         {
             try

@@ -1,17 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
-             xmlns:sf="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
-             x:Class="VBM._pages._menu.detail_page"
-             NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource vbmwhite}">
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                 xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+                 xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:animation="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 xmlns:sf="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+                 x:Class="VBM._pages._menu.detail_page"
+                 NavigationPage.HasNavigationBar="False"
+                 BackgroundColor="{StaticResource vbmwhite}">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="115"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="190"/>
+            <RowDefinition Height="{OnIdiom Tablet=190,Phone=100}"/>
         </Grid.RowDefinitions>
 
         <StackLayout Margin="0,46,0,0"
@@ -31,7 +34,7 @@
                     </ff:CachedImage.GestureRecognizers>
                 </ff:CachedImage>
 
-                <Label Text="Bánh mì thịt chả"
+                <Label Text="{Binding SelectedItem.name_vn}"
                        FontSize="{OnIdiom Phone=16,Tablet=36}"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
@@ -51,46 +54,37 @@
         </StackLayout>
 
         <ScrollView Grid.Row="1"
-                    Padding="30">
-            
+                    Padding="15">
+
             <StackLayout Orientation="Vertical">
 
-                <sf:SfListView ItemsSource="{Binding rowSizeRenders}"
-                               Orientation="Vertical"    
-                               HeightRequest="{OnIdiom Phone=50,Tablet=100}"
+                <sf:SfListView ItemsSource="{Binding Sizes}"
+                               x:Name="lstsizes"
+                               Orientation="Horizontal" 
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               HeightRequest="{OnIdiom Phone=70,Tablet=100}"
                                SelectionBackgroundColor="Transparent"
-                               ItemSize="{OnIdiom Phone=40,Tablet=80}"
+                               SelectedItem="{Binding Path=SelectedSize,Mode=TwoWay}"
+                               ItemSpacing="10"
+                               ItemSize="{OnIdiom Phone=90,Tablet=170}"
                                IsScrollBarVisible="False">
                     <sf:SfListView.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout Spacing="20"
-                                         Orientation="Horizontal"
-                                         HorizontalOptions="Center"
-                                         VerticalOptions="Center"
-                                         BackgroundColor="Transparent"
-                                         BindableLayout.ItemsSource="{Binding Sizes}">
-                                <BindableLayout.ItemTemplate>
-                                    <DataTemplate>
-                                        <border:SfBorder WidthRequest="225"
+                            <border:SfBorder WidthRequest="225"
                                                          HeightRequest="65"
                                                          CornerRadius="50"
                                                          BackgroundColor="{Binding BorderColor}"
                                                          BorderColor="Transparent"
                                                          HasShadow="False">
 
-                                            <Label Text="{Binding Name}"
+                                <Label Text="{Binding size_name_vn}"
                                                    TextColor="{Binding TextColor}"
                                                    HorizontalOptions="Center"
                                                    VerticalOptions="Center"
                                                    FontSize="{OnIdiom Phone=15,Tablet=30}"/>
-                                            <border:SfBorder.GestureRecognizers>
-                                                <TapGestureRecognizer Tapped="ff_size_tapped"/>
-                                            </border:SfBorder.GestureRecognizers>
-                                        </border:SfBorder>
-                                    </DataTemplate>
-                                </BindableLayout.ItemTemplate>
 
-                            </StackLayout>
+                            </border:SfBorder>
                         </DataTemplate>
                     </sf:SfListView.ItemTemplate>
                 </sf:SfListView>
@@ -99,12 +93,12 @@
                 <sf:SfListView ItemsSource="{Binding rowsRender}"
                                Orientation="Vertical"
                                SelectionBackgroundColor="Transparent"
-                               ItemSize="{OnIdiom Phone=80,Tablet=100}"
-                               HeightRequest="{OnIdiom Phone=180,Tablet=200}">
-                    
+                               ItemSize="{OnIdiom Phone=50,Tablet=100}"
+                               HeightRequest="{OnIdiom Phone=130,Tablet=200}">
+
                     <sf:SfListView.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout BindableLayout.ItemsSource="{Binding emes}"
+                            <StackLayout BindableLayout.ItemsSource="{Binding drinks}"
                                          Orientation="Horizontal"
                                          HorizontalOptions="Center"
                                          VerticalOptions="Center"
@@ -115,13 +109,13 @@
                                     <DataTemplate>
                                         <border:SfBorder BackgroundColor="{Binding BorderColor}"
                                                          x:Name="sfborders"
-                                                         WidthRequest="234"
-                                                         HeightRequest="69"
+                                                         WidthRequest="{OnIdiom Tablet=234,Phone=150}"
+                                                         HeightRequest="{OnIdiom Tablet=69,Phone=40}"
                                                          CornerRadius="50"
                                                          BorderColor="Transparent"
                                                          HasShadow="False">
 
-                                            <Label Text="{Binding Name}"
+                                            <Label Text="{Binding name_vn}"
                                                    x:Name="emesname"
                                                    TextColor="{Binding TextColor}"
                                                    FontSize="{OnIdiom Phone=10,Tablet=20}"
@@ -163,6 +157,9 @@
                                             Aspect="Fill"
                                             HorizontalOptions="End"
                                             VerticalOptions="Center"/>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="stl_giavi_tapped"/>
+                            </StackLayout.GestureRecognizers>
                         </StackLayout>
 
                         <BoxView BackgroundColor="{StaticResource vbmlightyellow}"
@@ -170,25 +167,28 @@
                                  WidthRequest="316"
                                  VerticalOptions="End"
                                  HorizontalOptions="Center"
-                                 Margin="0,40,0,0"/>
+                                 Margin="0,40,0,0"
+                                 x:Name="boxgiavi"/>
 
                     </Grid>
 
-                    <sf:SfListView ItemsSource="{Binding rowExtrasRenders}"
+                    <sf:SfListView ItemsSource="{Binding Spice_Objs}"
+                                   x:Name="lstgiavi"
                                    Orientation="Vertical"
                                    HorizontalOptions="Fill"
                                    ItemSize="{OnIdiom Phone=50,Tablet=70}"
                                    ItemSpacing="10"
                                    SelectionBackgroundColor="Transparent"
-                                   HeightRequest="{OnIdiom Phone=300,Tablet=400}">
+                                   HeightRequest="{OnIdiom Phone=500,Tablet=700}">
                         <sf:SfListView.ItemTemplate>
                             <DataTemplate>
                                 <border:SfBorder CornerRadius="50"
+                                                 HeightRequest="60"
                                                  WidthRequest="800"
                                                  VerticalOptions="Center">
                                     <StackLayout Orientation="Horizontal"
                                                  VerticalOptions="Center"
-                                                 BindableLayout.ItemsSource="{Binding extras}">
+                                                 BindableLayout.ItemsSource="{Binding spice_Sizes}">
                                         <BindableLayout.ItemTemplate>
                                             <DataTemplate>
                                                 <border:SfBorder HorizontalOptions="FillAndExpand"
@@ -199,14 +199,14 @@
                                                                  BorderColor="Transparent"
                                                                  HasShadow="False">
 
-                                                    <Label Text="{Binding Name}"
+                                                    <Label Text="{Binding name_vn}"
                                                            FontSize="{OnIdiom Phone=10,Tablet=20}"
                                                            TextColor="{Binding TextColor}"
                                                            HorizontalOptions="Center"
                                                            VerticalOptions="Center"
                                                            HorizontalTextAlignment="Center"/>
                                                     <border:SfBorder.GestureRecognizers>
-                                                        <TapGestureRecognizer Tapped="ff_extras_tapped"/>
+                                                        <TapGestureRecognizer Tapped="ff_spice_tapped"/>
                                                     </border:SfBorder.GestureRecognizers>
                                                 </border:SfBorder>
                                             </DataTemplate>
@@ -241,18 +241,27 @@
                                             Aspect="Fill"
                                             HorizontalOptions="End"
                                             VerticalOptions="Center"/>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="stl_nhanbanh_tapped"/>
+                            </StackLayout.GestureRecognizers>
                         </StackLayout>
-                        
+                        <BoxView BackgroundColor="{StaticResource vbmlightyellow}"
+                                 HeightRequest="4"
+                                 WidthRequest="316"
+                                 VerticalOptions="End"
+                                 HorizontalOptions="Center"
+                                 Margin="0,40,0,0"
+                                 x:Name="boxnhanbanh"/>
                     </Grid>
 
                     <Grid>
 
-                        <sf:SfListView ItemsSource="{Binding toppings}"
+                        <sf:SfListView x:Name="lstextras"
                                        Orientation="Vertical"
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"
                                        IsScrollBarVisible="False"
-                                       HeightRequest="{OnIdiom Phone=400,Tablet=600}"
+                                       HeightRequest="{OnIdiom Phone=1500,Tablet=2100}"
                                        ItemSize="{OnIdiom Phone=50,Tablet=75}"
                                        ItemSpacing="10"
                                        SelectionBackgroundColor="Transparent">
@@ -260,13 +269,13 @@
                                 <DataTemplate>
                                     <Grid>
 
-                                        <Label Text="{Binding Name}"
-                                               FontSize="{OnIdiom Phone=10,Tablet=25}"
+                                        <Label Text="{Binding name_vn}"
+                                               FontSize="{OnIdiom Phone=10,Tablet=20}"
                                                HorizontalOptions="Start"
                                                VerticalOptions="Center"
                                                TextColor="{StaticResource vbmgray}"/>
 
-                                        <Label Text="5,000"
+                                        <Label Text="{Binding price}"
                                                FontSize="{OnIdiom Phone=10,Tablet=25}"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center"
@@ -288,15 +297,23 @@
 
                                                 <Label Text="-"
                                                        FontSize="{OnIdiom Phone=15,Tablet=30}"
-                                                       TextColor="{StaticResource vbmgray}"/>
+                                                       TextColor="{StaticResource vbmgray}">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="decreaseSl_tapped"/>
+                                                    </Label.GestureRecognizers>
+                                                </Label>
 
-                                                <Label Text="0"
+                                                <Label Text="{Binding sl}"
                                                        FontSize="{OnIdiom Phone=15,Tablet=30}"
                                                        TextColor="{StaticResource vbmgray}"/>
 
                                                 <Label Text="+"
                                                        FontSize="{OnIdiom Phone=15,Tablet=30}"
-                                                       TextColor="{StaticResource vbmgray}"/>
+                                                       TextColor="{StaticResource vbmgray}">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="increaseSl_tapped"/>
+                                                    </Label.GestureRecognizers>
+                                                </Label>
 
                                             </StackLayout>
 
@@ -323,10 +340,10 @@
             <border:SfBorder BackgroundColor="{StaticResource vbmlightyellow}"
                              BorderColor="Transparent"
                              CornerRadius="50"
-                             HeightRequest="70"
-                             WidthRequest="{OnIdiom Phone=215,Tablet=430}"
+                             HeightRequest="{OnIdiom Tablet=70,Phone=40}"
+                             WidthRequest="{OnIdiom Phone=215,Tablet=300}"
                              VerticalOptions="Start"
-                             HorizontalOptions="End"
+                             HorizontalOptions="{OnIdiom Phone=Start,Tablet=Center}"
                              HasShadow="False"
                              Margin="0,0,25,0">
 
@@ -340,17 +357,25 @@
                                  Spacing="{OnIdiom Phone=10,Tablet=30}">
 
                         <Label Text="-"
-                               FontSize="{OnIdiom Phone=15,Tablet=30}"/>
+                               FontSize="{OnIdiom Phone=15,Tablet=30}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding DecreaseQuantityCommand}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
 
-                        <Label Text="1"
+                        <Label Text="{Binding ItemQuantity}"
                                FontSize="{OnIdiom Phone=15,Tablet=30}"/>
 
                         <Label Text="+"
-                               FontSize="{OnIdiom Phone=15,Tablet=30}"/>
+                               FontSize="{OnIdiom Phone=15,Tablet=30}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding IncreaseQuantityCommand}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
 
                     </StackLayout>
 
-                    <Label Text="40,000"
+                    <Label Text="{Binding Total,StringFormat='{0:N0}'}"
                            FontSize="{OnIdiom Phone=15,Tablet=30}"
                            HorizontalOptions="End"
                            VerticalOptions="Center"
@@ -358,86 +383,31 @@
                            TextColor="{StaticResource vbmpinttext}"/>
 
                 </Grid>
-                
+
             </border:SfBorder>
 
-            <StackLayout Orientation="Horizontal"
-                         HorizontalOptions="Center"
-                         VerticalOptions="End"
-                         Spacing="{OnIdiom Phone=40,Tablet=100}"
-                         Margin="0,0,0,40">
-
-                <ff:CachedImage Source="khachicon"
-                                Aspect="Fill"
-                                WidthRequest="30"
-                                HeightRequest="30">
-                    <ff:CachedImage.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ff_backicon_tapped"/>
-                    </ff:CachedImage.GestureRecognizers>
-                </ff:CachedImage>
-
-                <ff:CachedImage Source="menuiconpress"
-                                x:Name="menuicon"
-                                Aspect="Fill"
-                                WidthRequest="30"
-                                HeightRequest="30">
-                </ff:CachedImage>
-
-                <ff:CachedImage Source="promotionicon"
-                                x:Name="promoicon"
-                                Aspect="Fill"
-                                WidthRequest="30"
-                                HeightRequest="30">
-                    <ff:CachedImage.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ff_promo_tapped"/>
-                    </ff:CachedImage.GestureRecognizers>
-                </ff:CachedImage>
-
-            </StackLayout>
-
-            <Grid HorizontalOptions="End"
-                  VerticalOptions="End">
-
-                <border:SfBorder WidthRequest="193"
-                                 HeightRequest="93"
-                                 CornerRadius="50"
-                                 BackgroundColor="{StaticResource vbmlightyellow}"
-                                 BorderColor="{StaticResource vbmwhite}"
-                                 HasShadow="False"
-                                 HorizontalOptions="End"
-                                 VerticalOptions="Center"
-                                 Margin="{OnIdiom Phone='0,0,-125,10',Tablet='0,0,-65,10'}">
-
-                    <ff:CachedImage Source="promotionicon1"
-                                    WidthRequest="30"
-                                    HeightRequest="30"
-                                    HorizontalOptions="Start"
-                                    VerticalOptions="Center"
-                                    Margin="30,0"
-                                    Aspect="Fill"/>
-
-                </border:SfBorder>
-
-                <border:SfBorder WidthRequest="34"
-                                 HeightRequest="34"
-                                 CornerRadius="30"
-                                 BackgroundColor="Red"
-                                 BorderColor="{StaticResource vbmwhite}"
-                                 HasShadow="False"
-                                 HorizontalOptions="Start"
-                                 VerticalOptions="Start">
-
-                    <Label Text="2"
-                           FontSize="20"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           TextColor="{StaticResource vbmwhite}"/>
-
-                </border:SfBorder>
-
-            </Grid>
+            <border:SfBorder BackgroundColor="{StaticResource vbmlightyellow}"
+                             BorderColor="Transparent"
+                             CornerRadius="50"
+                             HeightRequest="{OnIdiom Tablet=70,Phone=40}"
+                             WidthRequest="{OnIdiom Phone=90,Tablet=150}"
+                             HorizontalOptions="End"
+                             VerticalOptions="Start"
+                             HasShadow="False"
+                             Margin="0,0,10,0"
+                             x:Name="bddathang">
+                <Label Text="Đặt hàng"
+                       FontSize="{OnIdiom Phone=15,Tablet=30}"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                <border:SfBorder.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="bd_dathang_tapped"/>
+                </border:SfBorder.GestureRecognizers>
+            </border:SfBorder>
 
         </Grid>
 
     </Grid>
+
 </ContentPage>

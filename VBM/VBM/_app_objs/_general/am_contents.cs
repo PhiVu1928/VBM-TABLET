@@ -12,5 +12,6 @@ namespace VBM._app_objs._general
         }
         public _pages._menuinfo.outline_page _outline_page1 { get; set; }
         public _pages._info.outline_page _outline_page { get; set; }
+        public _pages._main.cover_page _cover_page { get; set; }
     }
 }

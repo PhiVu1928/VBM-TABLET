@@ -2,21 +2,26 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace VBM._app_objs._vms._checkout
 {
-    public class vmthanhtoan
+    public class vmthanhtoan :INotifyPropertyChanged
     {
-        public ObservableCollection<Payment> payments { get; set; }
-        public ObservableCollection<Discount> discounts { get; set; }
-        public ObservableCollection<PTTT> pTTTs { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
+        void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
         public vmthanhtoan()
         {
             createpayments();
             createDiscount();
             createPttt();
+            Rendergiohang();
         }
         void createpayments()
         {
@@ -42,7 +47,36 @@ namespace VBM._app_objs._vms._checkout
                 pTTTs.Add(new PTTT(i));
             }
         }
-        
+        void Rendergiohang()
+        {            
+            var carts = localdb._manager._varialbles._cart_temp;
+            cart_Temps = new List<_general.cart_temp>();
+            foreach (var item in carts)
+            {
+                cart_Temps.Add(item);
+                cartTotal += item.total;  
+            }
+        }
+        #region bien
+        public ObservableCollection<Payment> payments { get; set; }
+        public ObservableCollection<Discount> discounts { get; set; }
+        public ObservableCollection<PTTT> pTTTs { get; set; }
+        public List<_general.cart_temp> cart_Temps { get; set; }
+        double cartTotal_;
+        public double cartTotal
+        {
+            get
+            {
+                return cartTotal_;
+            }
+            set
+            {
+                cartTotal_ = value;
+                OnPropertyChanged("cartTotal");
+            }
+        }
+       
+        #endregion
     }
     public class Discount : INotifyPropertyChanged
     {
