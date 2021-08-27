@@ -138,7 +138,7 @@
                                  HorizontalOptions="Start"
                                  VerticalOptions="Start">
 
-                    <Label Text="{Binding cartcount}"
+                    <Label Text="{Binding Cartcount}"
                            x:Name="Cartcount"
                            FontSize="{OnIdiom Phone=10,Tablet=20}"
                            HorizontalOptions="Center"

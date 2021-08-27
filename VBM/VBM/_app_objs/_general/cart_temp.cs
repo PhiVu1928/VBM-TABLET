@@ -12,15 +12,18 @@ namespace VBM._app_objs._general
             name_vn = cart.name_vn;
             name_en = cart.name_en;
             item_sl = cart.item_sl;
-            nuoc_sl= cart.nuoc_sl;
             size_name_vn = cart.size_name_vn;
             size_name_en = cart.size_name_en;
             size_price = cart.size_price;
+            nguyengia = cart.nguyengia;
             name_drink_en = cart.name_drink_en;
             name_drink_vn = cart.name_drink_vn;
             extras_price_total = cart.extras_price_total;
-            nuoc_price = cart.nuoc_price;
             total = cart.total;
+            order_type = cart.order_type;
+            order_node = cart.order_node;
+            order_name_vn = cart.order_name_vn;
+            order_name_en = cart.order_name_en;
             spice_Sizes = new List<cart_spices>();
             Extras = new List<cart_extra>();
             cart_Nuocs = new List<cart_nuoc>();
@@ -44,12 +47,16 @@ namespace VBM._app_objs._general
         public string size_name_vn { get; set; }
         public string size_name_en { get; set; }
         public double size_price { get; set; }
+        public double nguyengia { get; set; }
         public double extras_price_total { get; set; }
         public string name_drink_vn { get; set; }
         public string name_drink_en { get; set; }
-        public double nuoc_price { get; set; }
-        public int nuoc_sl { get; set; }
         public double total { get; set; }
+        public string order_node { get; set; }
+        public int order_type { get; set; }
+        public string order_name_vn { get; set; }
+        public string order_name_en { get; set; }
+
         public List<cart_nuoc> cart_Nuocs { get; set; }
         public List<cart_spices> spice_Sizes { get; set; }
         public List<cart_extra> Extras { get; set; }

@@ -17,6 +17,7 @@ namespace vbm
         public static string version_url = $"{port}/api/UserData/get_data_ver";
         public static string promo_url = $"{port}/api/UserData/all_promotions";
         public static string promo_detail_url = $"{port}/api/UserData/promo_menu";
+        public static string voucher_url = $"{port}/api/UserData/getNewVouchers";
         public static string banner_url = $"{port}/api/UserData/vbm_banners";
         public static string culture_url = $"{port}/api/UserData/vbm_culture";
         public static string define_shipping_store_url = $"{port}/api/UserData/define_shipping_store";

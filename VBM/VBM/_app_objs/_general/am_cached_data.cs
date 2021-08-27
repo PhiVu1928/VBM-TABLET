@@ -136,7 +136,7 @@ namespace VBM._app_objs._general
         public List<vbm.objs.vbm_store> stores { get; set; }
         public List<vbm.objs.main_menu_class_obj> menu { get; set; }
         public vbm.objs.emenu_info_return exts_spis { get; set; }
-        public string phoneno { get; set; } = "0947968745";
+        public string phoneno { get; set; } = "0704895013";
         public long ticks { get; set; }
         public vbm.objs.dataversion version { get; set; }
         public List<cart_pros> added_pros { get; set; }

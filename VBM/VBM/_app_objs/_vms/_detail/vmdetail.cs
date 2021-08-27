@@ -16,62 +16,193 @@ namespace VBM._app_objs._vms._detail
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-        public Command IncreaseQuantityCommand { get; set; }
-
-        public Command DecreaseQuantityCommand { get; set; }
-        public vmdetail(vbm.objs.e_menu_obj e_Menu_Obj)
+        public vmdetail()
         {
-            SelectedItem = e_Menu_Obj;
             IncreaseQuantityCommand = new Command(() => ItemQuantity++);
             DecreaseQuantityCommand = new Command(() => ItemQuantity--);
-            createSize();
-            createExtra();
-            createRows();
-            ItemQuantity = 1;
         }
 
         #region process
+        public async Task GetSelectedItem(vbm.objs.e_menu_obj e_Menu_Obj)
+        {
+            SelectedItem = e_Menu_Obj;
+            createSize();
+            await Task.Run(() => { createSpice(); });
+            await Task.Run(() => { createExtra(); });
+            await Task.Run(() => { createRows(); });         
+            ItemQuantity = 1;
+
+        }
+        public async Task GetSelectedPromoItem(vbm.objs.promo_emenus promo_Emenus)
+        {
+            SelectedPromoItem = promo_Emenus;
+            createSize();
+            await Task.Run(() => { createSpice(); });
+            await Task.Run(() => { createExtra(); });
+            await Task.Run(() => { createRows(); });
+            ItemQuantity = 1;
+        }
+
         public void createSize()
         {
             Sizes = new List<Sizes>();
-            foreach (var item in SelectedItem.lst_size.OrderBy(x => x.price))
+            if(SelectedItem != null)
             {
-                Sizes.Add(new Sizes(item));
-            }
-        }
-
-        void createExtra()
-        {
-            var mg = localdb._manager;
-            extras = new List<extras>();
-            Spice_Objs = new List<Spice_Obj>();
-            foreach (var items in mg._cached.exts_spis.extras)
-            {
-                foreach (var mons in items.mons)
+                foreach (var item in SelectedItem.lst_size.OrderBy(x => x.price))
                 {
-                    extras.Add(new extras(items));
-                }
-            }
-            foreach (var items in mg._cached.exts_spis.spices)
-            {
-                foreach (var mons in items.mons)
-                {
-                    if (mons == SelectedItem.class_id)
+                    if (item.size_name_en == "Small")
                     {
-                        Spice_Objs.Add(new Spice_Obj(items));
+                        Sizes.Add(new Sizes
+                        {
+                            id = item.id,
+                            size_name_en = "S",
+                            size_name_vn = "S",
+                            size = item.size,
+                            price = item.price,
+                            Selected = true,
+                        });
+                    }
+                    if (item.size_name_en == "Medium")
+                    {
+                        Sizes.Add(new Sizes
+                        {
+                            id = item.id,
+                            size_name_en = "M",
+                            size_name_vn = "M",
+                            size = item.size,
+                            price = item.price,
+                        });
+                    }
+                    if (item.size_name_en == "Large")
+                    {
+                        Sizes.Add(new Sizes
+                        {
+                            id = item.id,
+                            size_name_en = "L",
+                            size_name_vn = "L",
+                            size = item.size,
+                            price = item.price,
+                        });
+                    }
+                    if (item.size_name_vn == "")
+                    {
+                        Sizes.Add(new Sizes
+                        {
+                            id = item.id,
+                            size_name_en = "",
+                            size_name_vn = "",
+                            size = item.size,
+                            price = item.price,
+                            Selected = true
+                        });
+                    }
+                }
+
+            }
+            else
+            {
+                foreach (var item in SelectedPromoItem.lstsizes.OrderBy(x => x.dongia))
+                {
+                    if (item.name_en == "Small")
+                    {
+                        Sizes.Add(new Sizes
+                        {
+                            id = item.id,
+                            size_name_en = "S",
+                            size_name_vn = "S",
+                            price = item.dongia,
+                            size = item.size,
+                        });
+                    }
+                    if (item.name_en == "Medium")
+                    {
+                        Sizes.Add(new Sizes
+                        {
+                            id = item.id,
+                            size_name_en = "M",
+                            size_name_vn = "M",
+                            price = item.dongia,
+                            size = item.size,
+                            Selected = true
+                        });
+                    }
+                    if (item.name_en == "Large")
+                    {
+                        Sizes.Add(new Sizes
+                        {
+                            id = item.id,
+                            size_name_en = "L",
+                            size_name_vn = "L",
+                            price = item.dongia,
+                            size = item.size,
+                        });
                     }
                 }
 
             }
         }
 
-        void createRows()
+        public async Task createExtra()
+        {
+            var mg = localdb._manager;
+            extras = new List<extras>();
+            Device.BeginInvokeOnMainThread(() => 
+            {
+                foreach (var items in mg._cached.exts_spis.extras)
+                {
+                    foreach (var mons in items.mons)
+                    {
+                        extras.Add(new extras(items));
+                    }
+                }
+            });
+        }
+        public async Task createSpice()
+        {
+            var mg = localdb._manager;
+            Spice_Objs = new List<Spice_Obj>();
+            if (SelectedItem != null)
+            {
+                foreach (var items in mg._cached.exts_spis.spices)
+                {
+                    foreach (var mons in items.mons)
+                    {
+                        if (mons == SelectedItem.class_id)
+                        {
+                            Spice_Objs.Add(new Spice_Obj(items));
+                        }
+                    }
+
+                }
+            }
+            else
+            {
+                foreach (var items in mg._cached.exts_spis.spices)
+                {
+                    foreach (var mons in items.mons)
+                    {
+                        if (mons == SelectedPromoItem.promo_id)
+                        {
+                            Spice_Objs.Add(new Spice_Obj(items));
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+        public async Task createRows()
         {
             rowsRender = new ObservableCollection<rowEmesRender>();
-            for (int i = 0; i < 2; i++)
+            Device.BeginInvokeOnMainThread(() =>
             {
-                rowsRender.Add(new rowEmesRender(i));
-            }
+                for (int i = 0; i < 2; i++)
+                {
+                    rowsRender.Add(new rowEmesRender(i));
+                }
+            });
         }
         void countcart()
         {
@@ -85,7 +216,7 @@ namespace VBM._app_objs._vms._detail
                 cartcount = 0;
             }
         }
-        public async Task getnuoc(drink drink)
+        public void getnuoc(drink drink)
         {
             chonnuoc = drink;
         }
@@ -120,6 +251,7 @@ namespace VBM._app_objs._vms._detail
             }
             if(SizeGia != null && chonnuoc != null)
             {
+                chonnuoc.price = 9000;
                 Total = (SizeGia * ItemQuantity) + (chonnuoc.price) + tongextras;
             }
         }
@@ -162,21 +294,70 @@ namespace VBM._app_objs._vms._detail
                     }
                 }
                 carts = new List<cart>();
-                carts.Add(new cart
+                if(SelectedItem != null)
                 {
-                    index = SelectedItem.index,
-                    name_vn = SelectedItem.name_vn,
-                    name_en = SelectedItem.name_en,
-                    item_sl = ItemQuantity,
-                    size_price = SizeGia,
-                    extras_price_total = extras_price_total,
-                    size_name_en = size_name_en,
-                    size_name_vn = size_name_vn,
-                    total = Total,
-                    drinks = nuoc,
-                    Extras = ts,
-                    spice_Sizes = tp
-                });
+                    if (nuoc.Count != 0)
+                    {
+                        carts.Add(new cart
+                        {
+                            index = SelectedItem.index,
+                            name_vn = SelectedItem.name_vn,
+                            name_en = SelectedItem.name_en,
+                            item_sl = ItemQuantity,
+                            nguyengia = SizeGia,
+                            size_price = SizeGia,
+                            extras_price_total = extras_price_total,
+                            size_name_en = size_name_en,
+                            size_name_vn = size_name_vn,
+                            order_name_vn = "Dòng combo",
+                            total = Total,
+                            drinks = nuoc,
+                            Extras = ts,
+                            spice_Sizes = tp
+                        });
+                    }
+                    else
+                    {
+                        carts.Add(new cart
+                        {
+                            index = SelectedItem.index,
+                            name_vn = SelectedItem.name_vn,
+                            name_en = SelectedItem.name_en,
+                            item_sl = ItemQuantity,
+                            nguyengia = SizeGia,
+                            size_price = SizeGia,
+                            extras_price_total = extras_price_total,
+                            size_name_en = size_name_en,
+                            size_name_vn = size_name_vn,
+                            order_name_vn = "",
+                            total = Total,
+                            drinks = nuoc,
+                            Extras = ts,
+                            spice_Sizes = tp
+                        });
+                    }
+                }
+                else
+                {
+                    carts.Add(new cart
+                    {
+                        index = SelectedPromoItem.promo_id,
+                        name_vn = SelectedPromoItem.name_vn,
+                        name_en = SelectedPromoItem.name_en,
+                        item_sl = ItemQuantity,
+                        nguyengia = SizeGia,
+                        size_price = SizeGia,
+                        extras_price_total = extras_price_total,
+                        size_name_en = size_name_en,
+                        size_name_vn = size_name_vn,
+                        order_name_vn = "Nâng size miễn phí",
+                        total = Total,
+                        drinks = nuoc,
+                        Extras = ts,
+                        spice_Sizes = tp
+                    });
+                }
+                
 
                 foreach (var item in carts)
                 {
@@ -199,6 +380,23 @@ namespace VBM._app_objs._vms._detail
 
 
         #region bien
+        public Command IncreaseQuantityCommand { get; set; }
+
+        public Command DecreaseQuantityCommand { get; set; }
+        //lay item promo duoc chon
+        vbm.objs.promo_emenus SelectedPromoItem_;
+        public vbm.objs.promo_emenus SelectedPromoItem
+        {
+            get
+            {
+                return SelectedPromoItem_;
+            }
+            set
+            {
+                SelectedPromoItem_ = value;
+                OnPropertyChanged("SelectedPromoItem");
+            }
+        }
         public double SizeGia = 0;
         public string size_name_vn = "";
         public string size_name_en = "";
@@ -568,51 +766,6 @@ namespace VBM._app_objs._vms._detail
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-        public Sizes(vbm.objs.e_menu_size_obj e_Menu_Size_Obj)
-        {
-            if(e_Menu_Size_Obj.size_name_en == "Small")
-            {
-                this.id = e_Menu_Size_Obj.id;
-                this.size = e_Menu_Size_Obj.size;
-                this.size_name_vn = "S";
-                this.size_name_en = e_Menu_Size_Obj.size_name_en;
-                this.name_vn = e_Menu_Size_Obj.name_vn;
-                this.name_en = e_Menu_Size_Obj.name_en;
-                this.price = e_Menu_Size_Obj.price;
-            }
-            if(e_Menu_Size_Obj.size_name_en == "Medium")
-            {
-                this.id = e_Menu_Size_Obj.id;
-                this.size = e_Menu_Size_Obj.size;
-                this.size_name_vn = "M";
-                this.size_name_en = e_Menu_Size_Obj.size_name_en;
-                this.name_vn = e_Menu_Size_Obj.name_vn;
-                this.name_en = e_Menu_Size_Obj.name_en;
-                this.price = e_Menu_Size_Obj.price;
-                Selected = true;
-            }
-            if(e_Menu_Size_Obj.size_name_en == "Large")
-            {
-                this.id = e_Menu_Size_Obj.id;
-                this.size = e_Menu_Size_Obj.size;
-                this.size_name_vn = "L";
-                this.size_name_en = e_Menu_Size_Obj.size_name_en;
-                this.name_vn = e_Menu_Size_Obj.name_vn;
-                this.name_en = e_Menu_Size_Obj.name_en;
-                this.price = e_Menu_Size_Obj.price;
-            }
-            if (e_Menu_Size_Obj.size_name_en == "")
-            {
-                this.id = e_Menu_Size_Obj.id;
-                this.size = e_Menu_Size_Obj.size;
-                this.size_name_vn = e_Menu_Size_Obj.size_name_vn;
-                this.size_name_en = e_Menu_Size_Obj.size_name_en;
-                this.name_vn = e_Menu_Size_Obj.name_vn;
-                this.name_en = e_Menu_Size_Obj.name_en;
-                this.price = e_Menu_Size_Obj.price;
-                Selected = true;
-            }
-        }
         public long id { get; set; }
         public int size { get; set; }
         public string size_name_vn { get; set; }
@@ -785,6 +938,7 @@ namespace VBM._app_objs._vms._detail
         public string name_vn { get; set; }
         public string name_en { get; set; }
         public int item_sl { get; set; }
+        public double nguyengia { get; set; }
         public double extras_price_total { get; set; }
         public string size_name_vn { get; set; }
         public string size_name_en { get; set; }
@@ -792,6 +946,11 @@ namespace VBM._app_objs._vms._detail
         public string name_drink_vn { get; set; }
         public string name_drink_en { get; set; }
         public double nuoc_price { get; set; }
+        public string order_node { get; set; }
+        public int order_type { get; set; }
+        public string order_name_vn { get; set; }
+        public string order_name_en { get; set; }
+
         public int nuoc_sl { get; set; }
         public double total { get; set; }
         public List<drink> drinks { get; set; }

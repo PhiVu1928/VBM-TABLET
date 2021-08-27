@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VBM._app_objs._general;
+using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Forms;
 
 namespace VBM._app_objs._vms._menu
@@ -18,17 +19,34 @@ namespace VBM._app_objs._vms._menu
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-        public ObservableCollection<vbm.objs.main_menu_class_obj> Main_Menu_Class_Objs { get; set; }
-        public List<vbm.objs.sub_menu_class_obj> Sub_Menu_Class_Objs { get; set; }
         public vmmenu()
         {
-            E_Menu_Objs = new List<vbm.objs.e_menu_obj>();
-            createmenu();
-            createEmes();
             LoadMoreItemsCommand = new Command<object>(LoadMoreItems);
+            Task.Run(() => { createmenu(); });
         }
-        List<vbm.objs.e_menu_obj> e_Menu_Objs_;
-        public List<vbm.objs.e_menu_obj> E_Menu_Objs
+        #region bien
+        public ObservableCollection<vbm.objs.main_menu_class_obj> Main_Menu_Class_Objs { get; set; }
+
+        public Command LoadMoreItemsCommand { get; set; }
+
+
+        TabItemCollection sfTabItems_;
+
+        public TabItemCollection sfTabItems
+        {
+            get
+            {
+                return sfTabItems_;
+            }
+            set
+            {
+                sfTabItems_ = value;
+                OnPropertyChanged("sfTabItems");
+            }
+        }
+
+        ObservableRangeCollection<vbm.objs.e_menu_obj> e_Menu_Objs_;
+        public ObservableRangeCollection<vbm.objs.e_menu_obj> E_Menu_Objs
         {
             get
             {
@@ -41,19 +59,7 @@ namespace VBM._app_objs._vms._menu
             }
         }
 
-        void createmenu()
-        {
-
-            Main_Menu_Class_Objs = new ObservableCollection<vbm.objs.main_menu_class_obj>();
-            var mg = localdb._manager;
-            foreach(var item in mg._cached.menu)
-            {
-                Main_Menu_Class_Objs.Add(item);
-            }    
-        }
-        
-        
-
+        public ObservableRangeCollection<vbm.objs.e_menu_obj> emenu_temp { get; set; }
         bool isbusy_;
         public bool isbusy
         {
@@ -80,37 +86,92 @@ namespace VBM._app_objs._vms._menu
                 OnPropertyChanged("emenus");
             }
         }
-        void createEmes()
+        #endregion
+
+        #region process
+        async void createmenu()
         {
-            emenus = new ObservableCollection<emenu>();
-            for(int i = 0; i < 9; i++)
+
+            Main_Menu_Class_Objs = new ObservableCollection<vbm.objs.main_menu_class_obj>();
+            var mg = localdb._manager;
+            Device.BeginInvokeOnMainThread(() =>
             {
-                emenus.Add(new emenu());
-            }
+                foreach (var item in mg._cached.menu)
+                {
+                    Main_Menu_Class_Objs.Add(item);
+                }
+            });
+            await Task.Run(() => { createtabiem(); }); 
+        }
+        async Task createtabiem()
+        {
+            sfTabItems = new TabItemCollection();
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                foreach (var item in Main_Menu_Class_Objs)
+                {
+                    foreach (var sub in item.lst_sub_menu)
+                    {
+                        if (item.lst_sub_menu.Count == 1)
+                        {
+                            SfTabItem tabItem = new SfTabItem();
+                            tabItem.Title = item.name_vn;
+                            sfTabItems.Add(tabItem);
+                        }
+                        else
+                        {
+                            SfTabItem tabItem = new SfTabItem();
+                            tabItem.Title = sub.name_vn;
+                            sfTabItems.Add(tabItem);
+                        }
+                    }
+                }
+            });
         }
 
-        public Command LoadMoreItemsCommand { get; set; }
+        async Task render_emenu(int item, int itemsize)
+        {
+            E_Menu_Objs = new ObservableRangeCollection<vbm.objs.e_menu_obj>();
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                foreach (var items in emenu_temp.Skip(item).Take(itemsize))
+                {
+                    E_Menu_Objs.Add(items);
+                }
+            });            
+        }
+        public async Task create_emenu(List<vbm.objs.e_menu_obj> e_Menu_Objs)
+        {
+            emenu_temp = new ObservableRangeCollection<vbm.objs.e_menu_obj>();
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                foreach (var item in e_Menu_Objs.Where(x => x.img != ""))
+                {
+                    emenu_temp.Add(item);
+                }
+            });
+            await Task.Run(() => { render_emenu(0, 9); });
+        }
         public async void LoadMoreItems(object obj)
         {
             isbusy = true;
             await Task.Delay(2500);
-            var index = 3;
-            if (index + 3 < E_Menu_Objs.Count)
+            var index = E_Menu_Objs.Count();
+            if (index < emenu_temp.Count())
             {
-                for (int i = 0; i < 3; i++)
+                foreach (var items in emenu_temp.Skip(index).Take(6))
                 {
-                    //rowsRender.Add(new rowEmesRender(i));
+                    E_Menu_Objs.Add(items);
                 }
             }
             else
             {
-                for (int i = 0; i < E_Menu_Objs.Count() - index; i++)
-                {
-                    //rowsRender.Add(new rowEmesRender(i));
-                }
+                //log errors
             }
             isbusy = false;
         }
+        #endregion
+
 
     }
 

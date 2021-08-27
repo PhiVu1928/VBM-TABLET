@@ -11,25 +11,30 @@
     <ContentView.Resources>
         <vm:ImageConverter x:Key="ImageConverter"/>
     </ContentView.Resources>
-    <sf:SfListView         x:Name="lstemes"
+    <StackLayout>
+        <sf:SfListView     x:Name="lstemes"
                            ItemsSource="{Binding E_Menu_Objs}"
                            ItemSize="230"
-                   Margin="0,20,0,0"
+                           Margin="0,20,0,0"
+                           LoadMoreCommand="{Binding LoadMoreItemsCommand}"
+                           LoadMoreOption="AutoOnScroll"
                            ItemSpacing="{OnIdiom Phone='0,0,0,20',Tablet=0}"
                            SelectionBackgroundColor="Transparent"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Start"
                            Grid.Row="1">
-        <sf:SfListView.LayoutManager>
-            <sf:GridLayout SpanCount="{OnIdiom Phone=2, Tablet=3}"/>
-        </sf:SfListView.LayoutManager>
-        <sf:SfListView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout Orientation="Horizontal"                             
+            <sf:SfListView.LayoutManager>
+                <sf:GridLayout SpanCount="{OnIdiom Phone=2, Tablet=3}"/>
+            </sf:SfListView.LayoutManager>
+            <sf:SfListView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal"                             
                                 Spacing="{OnIdiom Phone=10,Tablet=70}"
                                 VerticalOptions="Center"
                                 HorizontalOptions="Center">
-                    <Grid>
+                        <Grid>
 
-                        <border:SfBorder BackgroundColor="{StaticResource vbmwhite}"
+                            <border:SfBorder BackgroundColor="{StaticResource vbmwhite}"
                                          HeightRequest="197"
                                          WidthRequest="161"
                                          BorderWidth="1"
@@ -39,9 +44,9 @@
                                          CornerRadius="30"
                                          HorizontalOptions="Center"
                                          VerticalOptions="Center">
-                            <Grid>
+                                <Grid>
 
-                                <Label Text="{Binding name_vn}"
+                                    <Label Text="{Binding name_vn}"
                                        FontSize="{OnIdiom Phone=13,Tablet=18}"
                                        FontAttributes="Bold"
                                        Margin="25,20"
@@ -49,36 +54,36 @@
                                        VerticalOptions="End"
                                        HorizontalTextAlignment="Center"/>
 
-                            </Grid>
+                                </Grid>
 
 
 
-                        </border:SfBorder>
+                            </border:SfBorder>
 
-                        <border:SfBorder WidthRequest="{OnIdiom Phone=113,Tablet=123}"
+                            <border:SfBorder WidthRequest="{OnIdiom Phone=113,Tablet=123}"
                                          HeightRequest="{OnIdiom Phone=128,Tablet=138}"
                                          CornerRadius="20"
                                          HasShadow="False"
                                          HorizontalOptions="Center"
                                          VerticalOptions="Start">
-                            <ff:CachedImage Source="{Binding img,Converter={StaticResource ImageConverter}}"
+                                <ff:CachedImage Source="{Binding img,Converter={StaticResource ImageConverter}}"
                                             Aspect="Fill"/>
-                        </border:SfBorder>
+                            </border:SfBorder>
 
-                        <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Grid.GestureRecognizers>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Grid.GestureRecognizers>
 
 
-                    </Grid>
+                        </Grid>
 
-                </StackLayout>
+                    </StackLayout>
 
-            </DataTemplate>
-        </sf:SfListView.ItemTemplate>
-        <sf:SfListView.FooterTemplate>
-            <DataTemplate>
-                <busyindicator:SfBusyIndicator
+                </DataTemplate>
+            </sf:SfListView.ItemTemplate>
+            <sf:SfListView.FooterTemplate>
+                <DataTemplate>
+                    <busyindicator:SfBusyIndicator
                             AnimationType="Material"
                             HeightRequest="50"
                             HorizontalOptions="Center"
@@ -87,8 +92,11 @@
                             TextColor="{StaticResource vbmgreen}"
                             VerticalOptions="Center"
                             WidthRequest="40" />
-            </DataTemplate>
-        </sf:SfListView.FooterTemplate>
-    </sf:SfListView>
+                </DataTemplate>
+            </sf:SfListView.FooterTemplate>
+        </sf:SfListView>
 
+    </StackLayout>
+
+    
 </ContentView>

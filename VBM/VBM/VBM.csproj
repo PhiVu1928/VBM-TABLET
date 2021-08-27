@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -36,6 +36,9 @@
     </Compile>
     <Compile Update="_pages\_menu\emenu_page.xaml.cs">
       <DependentUpon>emenu_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="_pages\_promo\promo_menu.xaml.cs">
+      <DependentUpon>promo_menu.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -101,6 +104,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="_pages\_promo\khuyen_mai_page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="_pages\_promo\promo_menu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="_pages\_thanhtoan\cart_item_page.xaml">

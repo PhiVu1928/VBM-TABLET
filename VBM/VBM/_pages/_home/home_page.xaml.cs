@@ -26,20 +26,14 @@ namespace VBM._pages._home
             this.BindingContext = vm;
             var homeview = new VBM._pages._customer.home_view();
             stlHomeMenu.Children.Add(homeview);
+            vm.rendercarttotal();
             homeview.Render();
         }
+        
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            var mg = localdb._manager._varialbles._cart_temp;
-            if(mg != null)
-            {
-                Cartcount.Text = mg.Count().ToString();
-            }
-            else
-            {
-                Cartcount.Text = "0";
-            }
+            vm.rendercarttotal();
         }
         private void ff_backicon_tapped(object sender, EventArgs e)
         {

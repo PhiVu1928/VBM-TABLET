@@ -21,7 +21,7 @@ namespace VBM._pages._thanhtoan
         
         public async Task Render()
         {
-            await Task.Delay(2000);
+            await Task.Delay(500);
             vm = new vmthanhtoan();
             BindingContext = vm;
             Giohang();
@@ -135,5 +135,112 @@ namespace VBM._pages._thanhtoan
                 }
             }
         }
+        async void lbldeletecart_tapped(object sender, EventArgs e)
+        {
+            var ctr = sender as Label;
+            await ctr.ScaleTo(0.9, 1);
+            await this.FadeTo(0.9, 1);
+            try
+            {
+                var cv = (cart_temp)ctr.BindingContext;
+                vm.deleteitemcart(cv);
+                vm.rendertotal();
+            }
+            catch (Exception ex)
+            {
+                //log error
+                App.Current.MainPage.DisplayAlert("error", ex.ToString(), "ok");
+                await ctr.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+        }
+
+        async void lbldecreasecartitem_tapped(object sender, EventArgs e)
+        {
+            var ctr = sender as Label;
+            await ctr.ScaleTo(0.9, 1);
+            await this.FadeTo(0.9, 1);
+            try
+            {
+                var cv = (cart_temp)ctr.BindingContext;
+                var index = cv.index;
+                foreach (var item in vm.cart_Temps)
+                {
+                    if (index == item.index)
+                    {
+                        item.item_sl--;
+                        item.size_price = item.nguyengia * item.item_sl;
+                        if (item.cart_Nuocs.Count != 0)
+                        {
+                            foreach (var items in item.cart_Nuocs)
+                            {
+                                item.total = item.size_price + items.price + item.extras_price_total;
+                            }
+                        }
+                        else
+                        {
+                            item.total = item.size_price + item.extras_price_total;
+
+                        }
+                        if (item.item_sl == 0 )
+                        {
+                            vm.deleteitemcart(cv);
+                            vm.rendertotal();
+                        }
+                        else { }
+                    }
+                    else { }
+                }
+                vm.rendertotal();
+
+            }
+            catch (Exception)
+            {
+                //log error
+                await ctr.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+        }
+
+        async void lblincreasecartitem_tapped(object sender, EventArgs e)
+        {
+            var ctr = sender as Label;
+            await ctr.ScaleTo(0.9, 1);
+            await this.FadeTo(0.9, 1);
+            try
+            {
+                var cv = (cart_temp)ctr.BindingContext;
+                var index = cv.index;
+                foreach(var item in vm.cart_Temps)
+                {
+                    if(index == item.index)
+                    {
+                        item.item_sl++;
+                        item.size_price = item.nguyengia * item.item_sl;
+                        if(item.cart_Nuocs.Count != 0)
+                        {
+                            foreach (var items in item.cart_Nuocs)
+                            {
+                                item.total = item.size_price + items.price + item.extras_price_total;
+                            }
+                        }
+                        else
+                        {
+                            item.total = item.size_price + item.extras_price_total;
+
+                        }
+                    }
+                    else { }
+                }
+                vm.rendertotal();
+            }
+            catch (Exception)
+            {
+                //log error
+                await ctr.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+        }
+
     }
 }

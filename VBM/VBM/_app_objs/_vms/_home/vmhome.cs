@@ -21,7 +21,31 @@ namespace VBM._app_objs._vms._home
         {
             CreateMenuTab();
         }
-        
+        int Cartcount_;
+        public int Cartcount
+        {
+            get
+            {
+                return Cartcount_;
+            }
+            set
+            {
+                Cartcount_ = value;
+                OnPropertyChanged("Cartcount");
+            }
+        }
+        public void rendercarttotal()
+        {
+            var mg = localdb._manager._varialbles._cart_temp;
+            if (mg != null)
+            {
+                Cartcount = mg.Count();
+            }
+            else
+            {
+                Cartcount = 0;
+            }
+        }
         void CreateMenuTab()
         {
             menuTabs = new ObservableCollection<MenuTab>();

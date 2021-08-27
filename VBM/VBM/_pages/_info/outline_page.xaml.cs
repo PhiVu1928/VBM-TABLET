@@ -21,9 +21,8 @@ namespace VBM._pages._info
             base.OnAppearing();            
             
         }
-        public async void start_app()
+        public async Task start_app()
         {
-            await Task.Delay(1000);
             var hpage = new VBM._pages._info.info_page();
             flypage.Detail = hpage;
             var fpage = new VBM._pages._info.menu_info_page();

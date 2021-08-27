@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using vbm.objs;
 using VBM._app_objs._vms._detail;
 
 using Xamarin.Forms;
@@ -23,15 +24,34 @@ namespace VBM._pages._menu
         }
 
         public async Task Render(vbm.objs.e_menu_obj e_Menu_Obj)
-        {            
-            vm = new vmdetail(e_Menu_Obj);
-            this.BindingContext = vm;
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                vm = new vmdetail();
+                vm.GetSelectedItem(e_Menu_Obj);
+                this.BindingContext = vm;
+                SelectItem.Text = vm.SelectedItem.name_vn;
+            });
             lstextras.IsVisible = false;
             lstgiavi.IsVisible = false;
             boxgiavi.IsVisible = false;
             boxnhanbanh.IsVisible = false;
         }
-
+        public async Task RenderPromo(vbm.objs.promo_emenus promo_Emenus)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                vm = new vmdetail();
+                vm.GetSelectedPromoItem(promo_Emenus);
+                this.BindingContext = vm;
+                SelectItem.Text = vm.SelectedPromoItem.name_vn;
+            });
+            lstnuoc.IsVisible = false;
+            lstextras.IsVisible = false;
+            lstgiavi.IsVisible = false;
+            boxgiavi.IsVisible = false;
+            boxnhanbanh.IsVisible = false;
+        }
         public void ff_backicon_tapped(object sender, EventArgs e)
         {
             Navigation.RemovePage(this);
@@ -61,7 +81,7 @@ namespace VBM._pages._menu
         {
             var border = sender as SfBorder;
             var select = (drink)border.BindingContext;
-            await vm.getnuoc(select);
+            vm.getnuoc(select);
             var cv = select.name_vn;
             foreach (var items in vm.rowsRender)
             {

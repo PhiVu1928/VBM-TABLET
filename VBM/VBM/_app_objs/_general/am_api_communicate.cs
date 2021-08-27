@@ -74,7 +74,24 @@ namespace VBM._app_objs._general
             }
             return null;
         }
-
+        public List<vbm.objs.promo_obj> get_vouchers()
+        {
+            if(!isconnect())
+            {
+                //log error
+                return null;
+            }
+            var result = tools.get_voucher(channel).Result;
+            if(result.success)
+            {
+                return JsonConvert.DeserializeObject<List<vbm.objs.promo_obj>>(JsonConvert.SerializeObject(result.data));
+            }
+            else
+            {
+                //log error
+            }
+            return null;
+        }
         public vbm.objs.emenu_info_return get_all_extras_spices()
         {
             if (!isconnect())
@@ -194,7 +211,24 @@ namespace VBM._app_objs._general
             }
             return null;
         }
-
+        public List<vbm.objs.promostep> get_promo_detail(int shopid,int promoid )
+        {
+            if(!isconnect())
+            {
+                //log errors
+                return null;
+            }
+            var result = tools.get_promo_detail(channel, shopid, promoid).Result;
+            if(result.success)
+            {
+                return JsonConvert.DeserializeObject<List<vbm.objs.promostep>>(JsonConvert.SerializeObject(result.data));
+            }
+            else
+            {
+                //log errors
+            }
+            return null;
+        }
         public vbm.objs.promotion_time check_promo_time(int promoid, int shopid)
         {
             if (!isconnect())

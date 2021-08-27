@@ -199,7 +199,7 @@ namespace VBM._app_objs._general
                                             start_app();
                                         }
                                         else
-                                        {
+                                        {   
                                             //alert error
                                         }
                                     }
@@ -248,7 +248,7 @@ namespace VBM._app_objs._general
                 var system_tasks = new List<Task>();
                 system_tasks.Add(Task.Run(() => { val._menus = com.get_menus(); }));
                 system_tasks.Add(Task.Run(() => { val._exts_spis = com.get_all_extras_spices(); }));
-                system_tasks.Add(Task.Run(() => { val._promos = com.get_promos(); }));
+                system_tasks.Add(Task.Run(() => { val._promos = com.get_vouchers(); }));
                 system_tasks.Add(Task.Run(() => { val._stores = com.get_stores(); }));
 
                 Task.WaitAll(system_tasks.ToArray());

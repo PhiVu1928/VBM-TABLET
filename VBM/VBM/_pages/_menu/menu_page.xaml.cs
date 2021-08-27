@@ -1,4 +1,5 @@
 ﻿using Syncfusion.XForms.TabView;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using VBM._app_objs._vms._menu;
@@ -15,13 +16,31 @@ namespace VBM._pages._menu
         public menu_page()
         {
             InitializeComponent();
+            
         }
         public async Task Render()
         {
             vm = new vmmenu();
             this.BindingContext = vm;
-            CreateMainEmes();
-            await Task.Delay(2000);
+            await Task.Delay(200);
+            tabview.SelectionChanged += Handle_SelectionChanged;
+            if (tabview.Items[tabview.SelectedIndex].Content == null)
+            {
+                foreach (var item in vm.Main_Menu_Class_Objs)
+                {
+                    foreach (var sub in item.lst_sub_menu)
+                    {
+                        if (sub.name_vn == "Bánh mì")
+                        {
+                            emenu_page lstemenu = new emenu_page();
+                            lstemenu.Rendermenu(sub.lst_emes);
+                            tabview.Items[tabview.SelectedIndex].Content = lstemenu;
+                            break;
+                        }
+                    }
+                }
+            }
+
             busyindicator.IsBusy = false;
             busyindicator.IsVisible = false;
         }
@@ -70,6 +89,41 @@ namespace VBM._pages._menu
         }
 
 
+        void Handle_SelectionChanged(object sender, Syncfusion.XForms.TabView.SelectionChangedEventArgs e)
+        {
+            if(tabview.Items[e.Index].Content == null)
+            {
+                Device.BeginInvokeOnMainThread(() => {
+                    foreach (var items in vm.Main_Menu_Class_Objs)
+                    {
+                        if (items.name_vn == e.Name)
+                        {
+                            foreach (var item in items.lst_sub_menu)
+                            {
+                                emenu_page lstemenu = new emenu_page();
+                                lstemenu.Rendermenu(item.lst_emes);
+                                tabview.Items[e.Index].Content = lstemenu;
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            foreach (var sub in items.lst_sub_menu)
+                            {
+                                if (sub.name_vn == e.Name)
+                                {
+                                    emenu_page lstemenu = new emenu_page();
+                                    lstemenu.Rendermenu(sub.lst_emes);
+                                    tabview.Items[e.Index].Content = lstemenu;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                });
+            }
+        }
 
     }
 }

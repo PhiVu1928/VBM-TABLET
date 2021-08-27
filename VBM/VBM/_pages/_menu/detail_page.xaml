@@ -34,11 +34,11 @@
                     </ff:CachedImage.GestureRecognizers>
                 </ff:CachedImage>
 
-                <Label Text="{Binding SelectedItem.name_vn}"
-                       FontSize="{OnIdiom Phone=16,Tablet=36}"
+                <Label FontSize="{OnIdiom Phone=16,Tablet=36}"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
-                       HorizontalTextAlignment="Center"/>
+                       HorizontalTextAlignment="Center"
+                       x:Name="SelectItem"/>
 
                 <ff:CachedImage Source="refreshicon"
                                 BackgroundColor="White"
@@ -67,7 +67,7 @@
                                SelectionBackgroundColor="Transparent"
                                SelectedItem="{Binding Path=SelectedSize,Mode=TwoWay}"
                                ItemSpacing="10"
-                               ItemSize="{OnIdiom Phone=90,Tablet=170}"
+                               ItemSize="{OnIdiom Phone=110,Tablet=170}"
                                IsScrollBarVisible="False">
                     <sf:SfListView.ItemTemplate>
                         <DataTemplate>
@@ -94,7 +94,8 @@
                                Orientation="Vertical"
                                SelectionBackgroundColor="Transparent"
                                ItemSize="{OnIdiom Phone=50,Tablet=100}"
-                               HeightRequest="{OnIdiom Phone=130,Tablet=200}">
+                               HeightRequest="{OnIdiom Phone=130,Tablet=200}"
+                               x:Name="lstnuoc">
 
                     <sf:SfListView.ItemTemplate>
                         <DataTemplate>
@@ -285,7 +286,7 @@
                                                          BorderColor="Transparent"
                                                          HasShadow="False"
                                                          CornerRadius="50"
-                                                         WidthRequest="{OnIdiom Phone=82,Tablet=172}"
+                                                         WidthRequest="{OnIdiom Phone=102,Tablet=172}"
                                                          HeightRequest="60"
                                                          HorizontalOptions="End"
                                                          VerticalOptions="Center">
@@ -296,7 +297,7 @@
                                                          Spacing="15">
 
                                                 <Label Text="-"
-                                                       FontSize="{OnIdiom Phone=15,Tablet=30}"
+                                                       FontSize="{OnIdiom Phone=20,Tablet=35}"
                                                        TextColor="{StaticResource vbmgray}">
                                                     <Label.GestureRecognizers>
                                                         <TapGestureRecognizer Tapped="decreaseSl_tapped"/>
@@ -308,7 +309,7 @@
                                                        TextColor="{StaticResource vbmgray}"/>
 
                                                 <Label Text="+"
-                                                       FontSize="{OnIdiom Phone=15,Tablet=30}"
+                                                       FontSize="{OnIdiom Phone=20,Tablet=35}"
                                                        TextColor="{StaticResource vbmgray}">
                                                     <Label.GestureRecognizers>
                                                         <TapGestureRecognizer Tapped="increaseSl_tapped"/>
@@ -341,7 +342,7 @@
                              BorderColor="Transparent"
                              CornerRadius="50"
                              HeightRequest="{OnIdiom Tablet=70,Phone=40}"
-                             WidthRequest="{OnIdiom Phone=215,Tablet=300}"
+                             WidthRequest="{OnIdiom Phone=255,Tablet=300}"
                              VerticalOptions="Start"
                              HorizontalOptions="{OnIdiom Phone=Start,Tablet=Center}"
                              HasShadow="False"
@@ -354,10 +355,13 @@
                                  Orientation="Horizontal"
                                  WidthRequest="131"
                                  HeightRequest="35"
-                                 Spacing="{OnIdiom Phone=10,Tablet=30}">
+                                 Spacing="{OnIdiom Phone=15,Tablet=25}">
 
                         <Label Text="-"
-                               FontSize="{OnIdiom Phone=15,Tablet=30}">
+                               FontSize="{OnIdiom Phone=20,Tablet=35}"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               HorizontalTextAlignment="Center">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding DecreaseQuantityCommand}"/>
                             </Label.GestureRecognizers>
@@ -367,7 +371,7 @@
                                FontSize="{OnIdiom Phone=15,Tablet=30}"/>
 
                         <Label Text="+"
-                               FontSize="{OnIdiom Phone=15,Tablet=30}">
+                               FontSize="{OnIdiom Phone=20,Tablet=35}">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding IncreaseQuantityCommand}"/>
                             </Label.GestureRecognizers>
@@ -390,7 +394,7 @@
                              BorderColor="Transparent"
                              CornerRadius="50"
                              HeightRequest="{OnIdiom Tablet=70,Phone=40}"
-                             WidthRequest="{OnIdiom Phone=90,Tablet=150}"
+                             WidthRequest="{OnIdiom Phone=110,Tablet=150}"
                              HorizontalOptions="End"
                              VerticalOptions="Start"
                              HasShadow="False"

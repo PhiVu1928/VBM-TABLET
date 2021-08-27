@@ -109,7 +109,7 @@
                         <DataTemplate>
                             <StackLayout Orientation="Vertical">
                                 <Label Text="{Binding Name}"
-                                       FontSize="{OnIdiom Phone=15,Tablet=25}"
+                                       FontSize="{OnIdiom Phone=12,Tablet=25}"
                                        FontAttributes="Bold"
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"

@@ -24,7 +24,7 @@ namespace VBM._pages._main
             Task.Run(() =>
             {
                 localdb._manager._cached.get_cached_values();
-                localdb._manager._tools.start_prepare_data();
+                localdb._manager._tools.start_prepare_data2();
             });
         }
         public async void start_app()

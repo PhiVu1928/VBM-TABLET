@@ -21,6 +21,8 @@ namespace VBM._app_objs._general
         public List<vbm.objs.main_menu_class_obj> _menus { get; set; }
         public vbm.objs.emenu_info_return _exts_spis { get; set; }
         public List<vbm.objs.vbm_store> _stores { get; set; }
+        public vbm.objs.vbm_store _store_selected { get; set; }
+        public List<vbm.objs.promostep> _promosteps { get; set; }
 
         #endregion
 

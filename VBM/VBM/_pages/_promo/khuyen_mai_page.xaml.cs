@@ -1,4 +1,5 @@
 ﻿using Acr.UserDialogs;
+using Syncfusion.XForms.Border;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,6 @@ namespace VBM._pages._promo
         }
         public async Task Render()
         {
-            await Task.Delay(2000);
             vm = new vmpromo();
             this.BindingContext = vm;
             Device.BeginInvokeOnMainThread(() =>
@@ -36,8 +36,31 @@ namespace VBM._pages._promo
         {
             lstpromo.ItemsSource = vm.promos;
         }
-  
 
-
+        async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            var ctr = sender as SfBorder;
+            var cv = (vbm.objs.promo_obj)ctr.BindingContext;
+            await ctr.ScaleTo(0.9, 1);
+            await this.FadeTo(0.9, 1);
+            try
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    Task.Delay(500);
+                    var promo_detail = new VBM._pages._promo.promo_menu();
+                    Navigation.PushAsync(promo_detail);
+                    promo_detail.Render(cv);
+                });
+                await ctr.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+            catch
+            {
+                await ctr.ScaleTo(1, 100);
+                await this.FadeTo(1, 100);
+            }
+            
+        }
     }
 }

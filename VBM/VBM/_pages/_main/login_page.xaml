@@ -89,14 +89,15 @@
                                                            ContainerType="Outlined"
                                                            Margin="{OnIdiom Phone='0,5',Tablet='0,4'}">
                                     <Picker Title="Danh sách cửa hàng"
-                                        x:Name="sfpickstore"                                        
-                                        FontSize="{OnIdiom Phone=13, Tablet=25}"                         
-                                        TextColor="#707b77"
-                                        TitleColor="#707b77"
-                                        WidthRequest="{OnIdiom Phone=120,Tablet=260}"
-                                        HorizontalOptions="Center"                                                   
-                                        ItemsSource="{Binding name}"
-                                        VerticalOptions="Center"/>
+                                            x:Name="sfpickstore"          
+                                            SelectedItem="{Binding shopname}"
+                                            FontSize="{OnIdiom Phone=13, Tablet=25}"                         
+                                            TextColor="#707b77"
+                                            TitleColor="#707b77"                                            
+                                            WidthRequest="{OnIdiom Phone=120,Tablet=260}"
+                                            HorizontalOptions="Center"                                                   
+                                            ItemsSource="{Binding name}"
+                                            VerticalOptions="Center"/>
 
                                 </sfinput:SfTextInputLayout>
 

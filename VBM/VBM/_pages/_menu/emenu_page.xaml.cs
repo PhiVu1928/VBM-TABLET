@@ -7,6 +7,7 @@ using VBM._app_objs._vms._menu;
 using Rg.Plugins.Popup.Extensions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Acr.UserDialogs;
 
 namespace VBM._pages._menu
 {
@@ -20,12 +21,10 @@ namespace VBM._pages._menu
         }
         public async Task Rendermenu(List<vbm.objs.e_menu_obj> e_Menu_Obj)
         {
+            await Task.Delay(500);
             vmmenu = new vmmenu();
+            await Task.Run(() => { vmmenu.create_emenu(e_Menu_Obj); }); 
             this.BindingContext = vmmenu;
-            foreach (var item in e_Menu_Obj.Where(x => x.img != ""))
-            {
-                vmmenu.E_Menu_Objs.Add(item);
-            }
         }            
             
 
@@ -36,15 +35,15 @@ namespace VBM._pages._menu
             this.FadeTo(0.8, 1);
             try
             {
-                Device.BeginInvokeOnMainThread(() =>
+                using(var process = UserDialogs.Instance.Loading("Loading...",null,null,true,MaskType.Black))
                 {
                     var cv = (vbm.objs.e_menu_obj)ctr.BindingContext;
                     var detail = new _pages._menu.detail_page();
-                    Navigation.PushAsync(detail);
+                    await Navigation.PushAsync(detail);
                     detail.Render(cv);
-                });                
-                await ctr.ScaleTo(1, 100);
-                this.FadeTo(1, 100);
+                    await ctr.ScaleTo(1, 100);
+                    this.FadeTo(1, 100);
+                }                
             }
             catch(Exception)
             {

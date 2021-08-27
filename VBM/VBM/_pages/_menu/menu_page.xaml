@@ -13,6 +13,7 @@
                       x:Name="tabview"
                       TabHeight="50"
                       TabWidth="110"
+                      Items="{Binding sfTabItems}"
                       VisibleHeaderCount="3">
 
             <tb:SfTabView.SelectionIndicatorSettings>

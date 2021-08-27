@@ -27,8 +27,12 @@
 
 
                     <Label Text="×"
-                                           FontSize="{OnIdiom Phone=10,Tablet=23}"
-                                           TextColor="{StaticResource vbmwhite}"/>
+                                           FontSize="{OnIdiom Phone=10,Tablet=40}"
+                                           TextColor="{StaticResource vbmwhite}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="lbldeletecart_tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
 
                     <Label Text="{Binding total,StringFormat='{0:N0}'}"
                                            FontSize="{OnIdiom Phone=10,Tablet=23}"
@@ -36,7 +40,7 @@
 
                 </StackLayout>
 
-                <Label Text="Dòng combo"
+                <Label Text="{Binding order_name_vn}"
                                        FontSize="{OnIdiom Phone=10,Tablet=23}"
                                        HorizontalOptions="End"
                                        VerticalOptions="Center"
@@ -87,7 +91,11 @@
 
                                 <Label Text="-"
                                                    FontSize="{OnIdiom Phone=13,Tablet=23}"
-                                                   TextColor="{StaticResource vbmgray}"/>
+                                                   TextColor="{StaticResource vbmgray}">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="lbldecreasecartitem_tapped"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
 
                                 <Label Text="{Binding item_sl}"
                                                    FontSize="{OnIdiom Phone=13,Tablet=23}"
@@ -95,7 +103,11 @@
 
                                 <Label Text="+"
                                                    FontSize="{OnIdiom Phone=13,Tablet=23}"
-                                                   TextColor="{StaticResource vbmgray}"/>
+                                                   TextColor="{StaticResource vbmgray}">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="lblincreasecartitem_tapped"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
 
                             </StackLayout>
 
@@ -157,6 +169,7 @@
                                         <Label Text="{Binding name_vn}"
                                                FontSize="{OnIdiom Phone=10,Tablet=20}"
                                                TextColor="{StaticResource vbmwhite}"
+                                               HorizontalTextAlignment="Center"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center"/>
 
@@ -178,7 +191,7 @@
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Grid WidthRequest="{OnIdiom Phone=275,Tablet=550}">
+                                <Grid WidthRequest="{OnIdiom Phone=355,Tablet=550}">
 
                                     <StackLayout Orientation="Horizontal"
                                              VerticalOptions="Center"
@@ -213,7 +226,11 @@
 
                                                 <Label Text="-"
                                                    FontSize="{OnIdiom Phone=13,Tablet=23}"
-                                                   TextColor="{StaticResource vbmgray}"/>
+                                                   TextColor="{StaticResource vbmgray}">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="lbldecreasedrinkcartitem_tapped"/>
+                                                    </Label.GestureRecognizers>
+                                                </Label>
 
                                                 <Label Text="{Binding sl}"
                                                    FontSize="{OnIdiom Phone=13,Tablet=23}"
@@ -221,7 +238,11 @@
 
                                                 <Label Text="+"
                                                    FontSize="{OnIdiom Phone=13,Tablet=23}"
-                                                   TextColor="{StaticResource vbmgray}"/>
+                                                   TextColor="{StaticResource vbmgray}">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="lblincreasedrinkcartitem_tapped"/>
+                                                    </Label.GestureRecognizers>
+                                                </Label>
 
                                             </StackLayout>
 
